@@ -19,6 +19,7 @@ Type 'q()' to quit R.
 
 > roxygen2::roxygenize(".")
 Loading required package: document
+Writing NAMESPACE
 Skipping invalid path:  .asciidoc.Rd 
 > 
 > 

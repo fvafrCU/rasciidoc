@@ -17,7 +17,7 @@ downloaded 3.5 MB
 * installing *source* package ‘digest’ ...
 ** package ‘digest’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpzNdM4J/R.INSTALL8cd13093cbb/digest/src'
+make[1]: Entering directory '/tmp/RtmpPXHLz1/R.INSTALL145721404bb/digest/src'
 gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c aes.c -o aes.o
 gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c crc32.c -o crc32.o
 gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c digest.c -o digest.o
@@ -30,8 +30,8 @@ gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -f
 gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c sha256.c -o sha256.o
 gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c xxhash.c -o xxhash.o
 gcc -shared -L/usr/local/lib -o digest.so aes.o crc32.o digest.o init.o md5.o pmurhash.o raes.o sha1.o sha2.o sha256.o xxhash.o
-make[1]: Leaving directory '/tmp/RtmpzNdM4J/R.INSTALL8cd13093cbb/digest/src'
-installing to /tmp/Rtmpy54TWm/file8916375fb9e/digest/libs
+make[1]: Leaving directory '/tmp/RtmpPXHLz1/R.INSTALL145721404bb/digest/src'
+installing to /tmp/RtmpdTbgtK/file141ccac45f3/digest/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -44,7 +44,7 @@ installing to /tmp/Rtmpy54TWm/file8916375fb9e/digest/libs
 * installing *source* package ‘Rcpp’ ...
 ** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpUNSimU/R.INSTALL8ff59410fa9/Rcpp/src'
+make[1]: Entering directory '/tmp/RtmpNg6cvl/R.INSTALL14892d6c56e1/Rcpp/src'
 g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
 g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
 g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
@@ -52,8 +52,8 @@ g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr
 g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
 g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
 g++ -shared -L/usr/local/lib -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
-make[1]: Leaving directory '/tmp/RtmpUNSimU/R.INSTALL8ff59410fa9/Rcpp/src'
-installing to /tmp/Rtmpy54TWm/file8916375fb9e/Rcpp/libs
+make[1]: Leaving directory '/tmp/RtmpNg6cvl/R.INSTALL14892d6c56e1/Rcpp/src'
+installing to /tmp/RtmpdTbgtK/file141ccac45f3/Rcpp/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -136,7 +136,7 @@ config.status: creating src/install.libs.R
     LIBS=  
 
 ** libs
-make[1]: Entering directory '/tmp/RtmpocYwOe/R.INSTALL924628d2c04/stringi/src'
+make[1]: Entering directory '/tmp/RtmpLUhvs7/R.INSTALL14ae6768da6d/stringi/src'
 g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_brkiter.cpp -o stri_brkiter.o
 g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_collator.cpp -o stri_collator.o
 g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_common.cpp -o stri_common.o
@@ -222,8 +222,8 @@ g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG
 g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_utils.cpp -o stri_utils.o
 g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_wrap.cpp -o stri_wrap.o
 g++ -std=gnu++11 -shared -L/usr/local/lib -o stringi.so stri_brkiter.o stri_collator.o stri_common.o stri_compare.o stri_container_base.o stri_container_bytesearch.o stri_container_listint.o stri_container_listraw.o stri_container_listutf8.o stri_container_regex.o stri_container_usearch.o stri_container_utf16.o stri_container_utf8.o stri_container_utf8_indexable.o stri_encoding_conversion.o stri_encoding_detection.o stri_encoding_management.o stri_escape.o stri_exception.o stri_ICU_settings.o stri_join.o stri_length.o stri_pad.o stri_prepare_arg.o stri_random.o stri_reverse.o stri_search_class_count.o stri_search_class_detect.o stri_search_class_extract.o stri_search_class_locate.o stri_search_class_replace.o stri_search_class_split.o stri_search_class_startsendswith.o stri_search_class_subset.o stri_search_class_trim.o stri_search_common.o stri_search_coll_count.o stri_search_coll_detect.o stri_search_coll_extract.o stri_search_coll_locate.o stri_search_coll_replace.o stri_search_coll_split.o stri_search_coll_startsendswith.o stri_search_coll_subset.o stri_search_boundaries_count.o stri_search_boundaries_extract.o stri_search_boundaries_locate.o stri_search_boundaries_split.o stri_search_fixed_count.o stri_search_fixed_detect.o stri_search_fixed_extract.o stri_search_fixed_locate.o stri_search_fixed_replace.o stri_search_fixed_split.o stri_search_fixed_subset.o stri_search_fixed_startsendswith.o stri_search_in.o stri_search_other_replace.o stri_search_other_split.o stri_search_regex_count.o stri_search_regex_detect.o stri_search_regex_extract.o stri_search_regex_locate.o stri_search_regex_match.o stri_search_regex_replace.o stri_search_regex_split.o stri_search_regex_subset.o stri_sort.o stri_stats.o stri_stringi.o stri_sub.o stri_test.o stri_time_zone.o stri_time_calendar.o stri_time_symbols.o stri_time_format.o stri_trans_casemap.o stri_trans_other.o stri_trans_normalization.o stri_trans_transliterate.o stri_ucnv.o stri_uloc.o stri_utils.o stri_wrap.o -L/usr/lib/x86_64-linux-gnu -licui18n -licuuc -licudata
-make[1]: Leaving directory '/tmp/RtmpocYwOe/R.INSTALL924628d2c04/stringi/src'
-installing via 'install.libs.R' to /tmp/Rtmpy54TWm/file8916375fb9e/stringi
+make[1]: Leaving directory '/tmp/RtmpLUhvs7/R.INSTALL14ae6768da6d/stringi/src'
+installing via 'install.libs.R' to /tmp/RtmpdTbgtK/file141ccac45f3/stringi
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -234,7 +234,7 @@ installing via 'install.libs.R' to /tmp/Rtmpy54TWm/file8916375fb9e/stringi
 * DONE (stringi)
 
 The downloaded source packages are in
-	‘/tmp/Rtmpy54TWm/downloaded_packages’
+	‘/tmp/RtmpdTbgtK/downloaded_packages’
 * installing *source* package ‘asciidoc’ ...
 ** R
 ** inst

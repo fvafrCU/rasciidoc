@@ -1,4 +1,4 @@
-<cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cs/fvafrcu/asciidoc/R/asciidoc.R: line 48 counts 83 characters.
-/home/nik/git/cs/fvafrcu/asciidoc/R/asciidoc.R: line 49 counts 87 characters.
+<cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cs/fvafrcu/asciidoc/R/asciidoc.R: line 49 counts 83 characters.
+/home/nik/git/cs/fvafrcu/asciidoc/R/asciidoc.R: line 50 counts 87 characters.
  /home/nik/git/cs/fvafrcu/asciidoc/R/asciidoc.R  asciidoc  line 19: found width 83 max_line_width was 80
 line 20: found width 87 max_line_width was 80>

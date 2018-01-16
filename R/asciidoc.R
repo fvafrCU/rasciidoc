@@ -26,6 +26,7 @@
 #' auto-checking the file's name.
 #' @param ... arguments passed to `.asciidoc`.
 #' @return The output's file names.
+#' @export
 asciidoc <- function(file_name, ..., knit = NA) {
     basename <- sub("\\..*", "", file_name)
     out_files <- NULL
