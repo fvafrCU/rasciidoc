@@ -1,6 +1,3 @@
-checking dependencies in R code ... WARNING
-'::' or ':::' import not declared from: ‘document’
-
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 

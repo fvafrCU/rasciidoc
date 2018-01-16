@@ -18,8 +18,7 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > roxygen2::roxygenize(".")
-Writing asciidoc-package.Rd
+Loading required package: document
 Skipping invalid path:  .asciidoc.Rd 
-Writing asciidoc.Rd
 > 
 > 
