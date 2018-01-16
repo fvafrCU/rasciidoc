@@ -45,19 +45,18 @@ asciidoc <- function(file_name, ..., knit = NA) {
     out_files <- c(out_files, out_file)
     begin_no_slidy_pattern <- "//end_no_slide"
     if (any(grepl(begin_no_slidy_pattern, readLines(file_name)))) {
-            sl <- document::get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
-                                                   begin_pattern = begin_no_slidy_pattern, 
-                                                   end_pattern = "//begin_no_slide",
-                                                   from_first_line = TRUE, 
-                                                   to_last_line = TRUE)
-            slide_file <- tempfile()
-            sl <- sub("(:numbered:)", "// \\1", sl) 
-            writeLines(sl, slide_file)
-            out_file <- paste0(basename, "_slidy.html")
-            .asciidoc(slide_file, "-b slidy", paste("-o", out_file))
-    out_files <- c(out_files, out_file)
-}
+        sl <- document::get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
+                                               begin_pattern = begin_no_slidy_pattern, 
+                                               end_pattern = "//begin_no_slide",
+                                               from_first_line = TRUE, 
+                                               to_last_line = TRUE)
+        slide_file <- tempfile()
+        sl <- sub("(:numbered:)", "// \\1", sl) 
+        writeLines(sl, slide_file)
+        out_file <- paste0(basename, "_slidy.html")
+        .asciidoc(slide_file, "-b slidy", paste("-o", out_file))
+        out_files <- c(out_files, out_file)
+    }
     return(out_files)
 }
- asciidoc("index.Rasciidoc")
 

@@ -1,0 +1,6 @@
+Loading asciidoc
+Loading required package: testthat
+Testing asciidoc
+Testing asciidoc:::throw(): .
+
+DONE ===========================================================================

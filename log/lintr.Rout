@@ -1,0 +1,18 @@
+R/asciidoc.R:48:1: style: lines should not be more than 80 characters.
+        sl <- document::get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R/asciidoc.R:49:1: style: lines should not be more than 80 characters.
+                                               begin_pattern = begin_no_slidy_pattern, 
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R/asciidoc.R:49:87: style: Trailing whitespace is superfluous.
+                                               begin_pattern = begin_no_slidy_pattern, 
+                                                                                      ^
+R/asciidoc.R:51:71: style: Trailing whitespace is superfluous.
+                                               from_first_line = TRUE, 
+                                                                      ^
+R/asciidoc.R:54:48: style: Trailing whitespace is superfluous.
+        sl <- sub("(:numbered:)", "// \\1", sl) 
+                                               ^
+R/asciidoc.R:62:1: style: Trailing blank lines are superfluous.
+
+^

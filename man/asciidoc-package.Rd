@@ -3,9 +3,9 @@
 \docType{package}
 \name{asciidoc-package}
 \alias{asciidoc-package}
-\title{What it Does (One Line, Title Case)}
+\title{Create Reports Using `knitr` and `asciidoc`}
 \description{
-A description is a paragraph consisting of one or more sentences.
+I want to use asciidoc for html and slidy.
 }
 \details{
 You will find the details in\cr
