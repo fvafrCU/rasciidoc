@@ -1,11 +1,12 @@
 Package: asciidoc
-Title: What the Package Does (one line, title case)
+Title: Create Reports Using `knitr` and `asciidoc`
 Version: 0.0.0.9000
-Authors@R:
-    person(family = "foobar",
+Authors@R: 
+    person(given = "Andreas Dominik",
+           family = "Cullmann",
            role = c("aut", "cre"),
-           email = "none@nowhere.no")
-Description: What the package does (one paragraph).
+           email = "adc-r@arcor.de")
+Description: I want to use asciidoc for html and slidy.
 Depends: R (>= 3.3.3)
 License: BSD_2_clause + file LICENSE
 Encoding: UTF-8

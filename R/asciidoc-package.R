@@ -1,6 +1,6 @@
-#' What it Does (One Line, Title Case)
+#' Create Reports Using `knitr` and `asciidoc`
 #'
-#' A description is a paragraph consisting of one or more sentences.
+#' I want to use asciidoc for html and slidy.
 #'
 #' You will find the details in\cr
 #' \code{vignette("An_Introduction_to_asciidoc", package = "asciidoc")}.

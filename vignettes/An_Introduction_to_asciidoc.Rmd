@@ -10,9 +10,9 @@ vignette: >
 ---
 
 # Teaser
-What the package does (one paragraph). 
+I want to use asciidoc for html and slidy. 
 
 # Features
- 
+This was inspired by http://kbroman.org/knitr_knutshell/pages/asciidoc.html 
 
 # A Minimal Example
