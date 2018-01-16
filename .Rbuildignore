@@ -1,0 +1,10 @@
+^.*\.tar\.gz$
+^asciidoc\.Rcheck$
+^cran-comments\.md$
+^\.Rprofile$
+^Makefile$
+^devel\.R$
+^README\.Rmd$
+^README-.*\.png$
+^\.travis\.yml$
+^log$

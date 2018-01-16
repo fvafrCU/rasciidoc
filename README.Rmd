@@ -1,0 +1,25 @@
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# asciidoc
+Please read the
+[vignette](https://htmlpreview.github.io/?https://github.com/fvafrCU/asciidoc/blob/master/inst/doc/An_Introduction_to_asciidoc.html).
+
+Or, after installation, the help page:
+```{r, eval = FALSE}
+help("asciidoc-package", package = "asciidoc")
+```
+```{r, echo = FALSE}
+  # insert developement page
+  help_file <- file.path("man", "asciidoc-package.Rd")
+  captured <- gsub('_\b', '',  capture.output(tools:::Rd2txt(help_file) ))
+  cat(captured, sep = "\n")
+```
+

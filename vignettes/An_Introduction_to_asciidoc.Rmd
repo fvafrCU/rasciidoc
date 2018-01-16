@@ -1,0 +1,18 @@
+---
+title: "An Introduction to *asciidoc*"
+author: 
+date: 2018-01-16, 07:58:50
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An Introduction to asciidoc }
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Teaser
+What the package does (one paragraph). 
+
+# Features
+ 
+
+# A Minimal Example
