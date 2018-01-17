@@ -1,18 +1,20 @@
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Version contains large components (0.0.0.9000)
-
 Found the following (possibly) invalid URLs:
+  URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html
+    From: inst/doc/An_Introduction_to_asciidoc.html
+    Status: Error
+    Message: libcurl error code 6:
+    	Could not resolve host: kbroman.org
   URL: https://htmlpreview.github.io/?https://github.com/fvafrCU/asciidoc/blob/master/inst/doc/An_Introduction_to_asciidoc.html
     From: README.md
     Status: Error
-    Message: libcurl error code 35:
-      	gnutls_handshake() failed: An unexpected TLS packet was received.
+    Message: libcurl error code 6:
+    	Could not resolve host: htmlpreview.github.io
 missing argument: --repo
 Error in strsplit(travis_session_info, "\n") : non-character argument
 Calls: <Anonymous> -> unlist -> strsplit
-In addition: Warning messages:
-1: 'DESCRIPTION' file has an 'Encoding' field and re-encoding is not possible 
-2: running command ''sudo' travis logs --repo ' had status 1 
+In addition: Warning message:
+running command ''sudo' travis logs --repo ' had status 1 
 Execution halted

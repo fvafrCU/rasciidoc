@@ -7,7 +7,7 @@
 #' @param ... arguments passed to `asciidoc` via \code{\link{system2}}.
 #' @return \code{\link[base:invisible]{Invisibly}}`asciidoc`'s return value.
 #' @export
-render <- function(file_name, ...) {
+asciidoc <- function(file_name, ...) {
     if (nchar(Sys.which("asciidoc")) == 0)
         stop("Can't find program `asciidoc`.")
     if (nchar(Sys.which("source-highlight")) == 0)
@@ -41,18 +41,18 @@ run_knitr <- function(file_name, knit = NA) {
 #' Knit and Render an `asciidoc` File
 #' 
 #' Knit (if required) and render an `asciidoc` file. 
-#' @inheritParams render
+#' @inheritParams asciidoc
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
 #' Set to \code{\link{TRUE}}
 #' to force knitting or to \code{\link{FALSE}} (anything apart from 
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
-#' @return The return value of \code{\link{render}}.
+#' @return The return value of \code{\link{asciidoc}}.
 #' @export
-render_r <- function(file_name, knit = NA, ...) {
+render <- function(file_name, knit = NA, ...) {
     adoc <- run_knitr(file_name, knit = knit)
-    status <- render(adoc, ...)
+    status <- asciidoc(adoc, ...)
     return(status)
 }
 
@@ -61,12 +61,12 @@ render_r <- function(file_name, knit = NA, ...) {
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
-render_r_slides <- function(file_name, knit = NA) {
+render_slides <- function(file_name, knit = NA) {
     out_files <- NULL
     adoc <- run_knitr(file_name, knit = knit)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
-    render(file_name, paste("-o", out_file))
+    asciidoc(adoc, paste("-o", out_file))
     out_files <- c(out_files, out_file)
     begin_no_slidy_pattern <- "//end_no_slide"
     if (any(grepl(begin_no_slidy_pattern, readLines(adoc)))) {
@@ -79,7 +79,7 @@ render_r_slides <- function(file_name, knit = NA) {
         sl <- sub("(:numbered:)", "// \\1", sl) 
         writeLines(sl, slide_file)
         out_file <- paste0(basename, "_slidy.html")
-        render(slide_file, "-b slidy", paste("-o", out_file))
+        asciidoc(slide_file, "-b slidy", paste("-o", out_file))
         out_files <- c(out_files, out_file)
     }
     return(out_files)

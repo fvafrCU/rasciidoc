@@ -1,22 +1,25 @@
-* using log directory ‘/home/nik/git/cs/fvafrcu/asciidoc/asciidoc.Rcheck’
-* using R Under development (unstable) (2017-10-01 r73423)
+* using log directory ‘/home/nik/git/cyclops/fvafrcu/asciidoc/asciidoc.Rcheck’
+* using R Under development (unstable) (2017-08-15 r73096)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘asciidoc/DESCRIPTION’ ... OK
-* this is package ‘asciidoc’ version ‘0.0.0.9000’
+* this is package ‘asciidoc’ version ‘0.1.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Version contains large components (0.0.0.9000)
-
 Found the following (possibly) invalid URLs:
+  URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html
+    From: inst/doc/An_Introduction_to_asciidoc.html
+    Status: Error
+    Message: libcurl error code 6:
+    	Could not resolve host: kbroman.org
   URL: https://htmlpreview.github.io/?https://github.com/fvafrCU/asciidoc/blob/master/inst/doc/An_Introduction_to_asciidoc.html
     From: README.md
     Status: Error
-    Message: libcurl error code 35:
-      	gnutls_handshake() failed: An unexpected TLS packet was received.
+    Message: libcurl error code 6:
+    	Could not resolve host: htmlpreview.github.io
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
