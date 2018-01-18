@@ -12,11 +12,11 @@ help("asciidoc-package", package = "asciidoc")
 ```
 
 ```
-#> What it Does (One Line, Title Case)
+#> Create Reports Using 'knitr' and 'asciidoc'
 #> 
 #> Description:
 #> 
-#>      A description is a paragraph consisting of one or more sentences.
+#>      I want to use asciidoc for html and slidy.
 #> 
 #> Details:
 #> 

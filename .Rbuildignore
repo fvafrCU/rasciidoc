@@ -1,5 +1,5 @@
 ^.*\.tar\.gz$
-^asciidoc\.Rcheck$
+^rasciidoc\.Rcheck$
 ^cran-comments\.md$
 ^\.Rprofile$
 ^Makefile$

@@ -19,7 +19,7 @@ disable knitting.}
 \item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
 }
 \value{
-The return value of \code{\link{asciidoc}}.
+The return value of \code{\link{rasciidoc}}.
 }
 \description{
 Knit (if required) and render an `asciidoc` file.

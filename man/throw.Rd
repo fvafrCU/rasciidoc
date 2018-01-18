@@ -16,15 +16,15 @@ throw(message_string, system_call = sys.call(-1), ...)
 }
 \value{
 The function does never return anything, it stops with a
-condition of class c("error", "asciidoc", "condition").
+condition of class c("error", "rasciidoc", "condition").
 }
 \description{
-Throws a condition of class c("error", "asciidoc", "condition").
+Throws a condition of class c("error", "rasciidoc", "condition").
 }
 \details{
-We use this condition as an error dedicated to \pkg{ asciidoc.}
+We use this condition as an error dedicated to \pkg{ rasciidoc.}
 }
 \examples{
-tryCatch(asciidoc:::throw("Hello error!"), asciidoc = function(e) return(e))
+tryCatch(rasciidoc:::throw("Hello error!"), rasciidoc = function(e) return(e))
 }
 \keyword{internal}

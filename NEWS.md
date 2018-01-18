@@ -1,3 +1,3 @@
-# asciidoc 0.1.0
+# rasciidoc 0.1.0
 
 * Added core functionality.

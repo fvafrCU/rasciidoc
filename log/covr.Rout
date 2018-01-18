@@ -1,11 +1,11 @@
      filename     functions line value
-1  R/render.R      asciidoc   11     0
-2  R/render.R      asciidoc   12     0
-3  R/render.R      asciidoc   13     0
-4  R/render.R      asciidoc   14     0
-5  R/render.R      asciidoc   15     0
-6  R/render.R      asciidoc   16     0
-7  R/render.R      asciidoc   17     0
+1  R/render.R     rasciidoc   11     0
+2  R/render.R     rasciidoc   12     0
+3  R/render.R     rasciidoc   13     0
+4  R/render.R     rasciidoc   14     0
+5  R/render.R     rasciidoc   15     0
+6  R/render.R     rasciidoc   16     0
+7  R/render.R     rasciidoc   17     0
 12 R/render.R     run_knitr   21     0
 13 R/render.R     run_knitr   22     0
 14 R/render.R     run_knitr   23     0
@@ -48,6 +48,6 @@
 51 R/render.R render_slides   83     0
 52 R/render.R render_slides   84     0
 53 R/render.R render_slides   85     0
-asciidoc Coverage: 7.55%
+rasciidoc Coverage: 7.55%
 R/render.R: 0.00%
 R/throw.R: 100.00%

@@ -1,20 +1,17 @@
+checking DESCRIPTION meta-information ... WARNING
+Dependence on R version ‘3.3.3’ not with patchlevel 0
+
+checking for unstated dependencies in ‘tests’ ... WARNING
+'library' or 'require' call not declared from: ‘asciidoc’
+
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Found the following (possibly) invalid URLs:
-  URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html
-    From: inst/doc/An_Introduction_to_asciidoc.html
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: kbroman.org
-  URL: https://htmlpreview.github.io/?https://github.com/fvafrCU/asciidoc/blob/master/inst/doc/An_Introduction_to_asciidoc.html
-    From: README.md
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: htmlpreview.github.io
-missing argument: --repo
+New submission
+no build yet for fvafrCU/rasciidoc
 Error in strsplit(travis_session_info, "\n") : non-character argument
 Calls: <Anonymous> -> unlist -> strsplit
 In addition: Warning message:
-running command ''sudo' travis logs --repo ' had status 1 
+In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
+  running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1
 Execution halted

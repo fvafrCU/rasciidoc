@@ -1,4 +1,4 @@
 library(testthat)
-library(asciidoc)
+library(rasciidoc)
 
-test_check("asciidoc")
+test_check("rasciidoc")

@@ -1,5 +1,6 @@
-  WORD    FOUND IN
-knitr   asciidoc-package.Rd:6, title:1
-slidy   asciidoc-package.Rd:8, render_slides.Rd:5,23, description:1
+  WORD       FOUND IN
+asciidoc   rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render.Rd:5,10,19,25, render_slides.Rd:5,10,23, title:1, description:1
+knitr      rasciidoc-package.Rd:6, title:1
+slidy      rasciidoc-package.Rd:8, render_slides.Rd:5,23, description:1
 Warning message:
 spell check failed 

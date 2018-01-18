@@ -1,5 +1,4 @@
-Skipping 1 packages not available: document
-* installing *source* package ‘asciidoc’ ...
+* installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -8,5 +7,5 @@ Skipping 1 packages not available: document
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded
-* DONE (asciidoc)
+* DONE (rasciidoc)
 [1] TRUE

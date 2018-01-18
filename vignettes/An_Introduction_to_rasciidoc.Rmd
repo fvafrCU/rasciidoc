@@ -1,10 +1,10 @@
 ---
-title: "An Introduction to *asciidoc*"
+title: "An Introduction to *rasciidoc*"
 author: 
-date: 2018-01-16, 07:58:50
+date: 2018-01-18, 11:08:08
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{An Introduction to asciidoc }
+  %\VignetteIndexEntry{An Introduction to rasciidoc }
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

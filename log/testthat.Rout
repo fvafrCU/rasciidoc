@@ -1,6 +1,6 @@
-Loading asciidoc
+Loading rasciidoc
 Loading required package: testthat
-Testing asciidoc
-Testing asciidoc:::throw(): .
+Testing rasciidoc
+Testing rasciidoc:::throw(): .
 
 DONE ===========================================================================
