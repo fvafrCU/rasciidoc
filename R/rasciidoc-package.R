@@ -3,10 +3,10 @@
 #' I want to use asciidoc for html and slidy.
 #'
 #' You will find the details in\cr
-#' \code{vignette("An_Introduction_to_asciidoc", package = "asciidoc")}.
+#' \code{vignette("An_Introduction_to_asciidoc", package = "rasciidoc")}.
 #'
-#' @name asciidoc-package
-#' @aliases asciidoc-package
+#' @name rasciidoc-package
+#' @aliases rasciidoc-package
 #' @docType package
 #' @keywords package
 NULL

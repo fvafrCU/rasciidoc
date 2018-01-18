@@ -5,9 +5,9 @@
 #'
 #' @param file_name The file to run `asciidoc` on.
 #' @param ... arguments passed to `asciidoc` via \code{\link{system2}}.
-#' @return \code{\link[base:invisible]{Invisibly}}`asciidoc`'s return value.
+#' @return \code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
 #' @export
-asciidoc <- function(file_name, ...) {
+rasciidoc <- function(file_name, ...) {
     if (nchar(Sys.which("asciidoc")) == 0)
         stop("Can't find program `asciidoc`.")
     if (nchar(Sys.which("source-highlight")) == 0)
@@ -41,18 +41,18 @@ run_knitr <- function(file_name, knit = NA) {
 #' Knit and Render an `asciidoc` File
 #' 
 #' Knit (if required) and render an `asciidoc` file. 
-#' @inheritParams asciidoc
+#' @inheritParams rasciidoc
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
 #' Set to \code{\link{TRUE}}
 #' to force knitting or to \code{\link{FALSE}} (anything apart from 
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
-#' @return The return value of \code{\link{asciidoc}}.
+#' @return The return value of \code{\link{rasciidoc}}.
 #' @export
 render <- function(file_name, knit = NA, ...) {
     adoc <- run_knitr(file_name, knit = knit)
-    status <- asciidoc(adoc, ...)
+    status <- rasciidoc(adoc, ...)
     return(status)
 }
 
@@ -66,7 +66,7 @@ render_slides <- function(file_name, knit = NA) {
     adoc <- run_knitr(file_name, knit = knit)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
-    asciidoc(adoc, paste("-o", out_file))
+    rasciidoc(adoc, paste("-o", out_file))
     out_files <- c(out_files, out_file)
     begin_no_slidy_pattern <- "//end_no_slide"
     if (any(grepl(begin_no_slidy_pattern, readLines(adoc)))) {
@@ -79,7 +79,7 @@ render_slides <- function(file_name, knit = NA) {
         sl <- sub("(:numbered:)", "// \\1", sl) 
         writeLines(sl, slide_file)
         out_file <- paste0(basename, "_slidy.html")
-        asciidoc(slide_file, "-b slidy", paste("-o", out_file))
+        rasciidoc(slide_file, "-b slidy", paste("-o", out_file))
         out_files <- c(out_files, out_file)
     }
     return(out_files)

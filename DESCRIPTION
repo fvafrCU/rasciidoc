@@ -1,4 +1,4 @@
-Package: asciidoc
+Package: rasciidoc
 Title: Create Reports Using `knitr` and `asciidoc`
 Version: 0.1.0
 Authors@R: 
