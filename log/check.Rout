@@ -25,7 +25,10 @@ New submission
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... WARNING
 Dependence on R version ‘3.3.3’ not with patchlevel 0
-* checking top-level files ... OK
+* checking top-level files ... WARNING
+Conversion of ‘README.md’ failed:
+pandoc: Failed to retrieve https://cranlogs.r-pkg.org/badges/rasciidoc
+ResponseTimeout
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -54,8 +57,7 @@ Dependence on R version ‘3.3.3’ not with patchlevel 0
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
 * checking examples ... OK
-* checking for unstated dependencies in ‘tests’ ... WARNING
-'library' or 'require' call not declared from: ‘asciidoc’
+* checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
   Running ‘testthat.R’
