@@ -8,10 +8,4 @@ checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
-no build yet for fvafrCU/rasciidoc
-Error in strsplit(travis_session_info, "\n") : non-character argument
-Calls: <Anonymous> -> unlist -> strsplit
-In addition: Warning message:
-In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
-  running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1
-Execution halted
+displaying logs for fvafrCU/rasciidoc#1.1
