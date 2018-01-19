@@ -84,5 +84,3 @@ render_slides <- function(file_name, knit = NA) {
     }
     return(out_files)
 }
-
-

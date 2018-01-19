@@ -1,15 +1,13 @@
-* using log directory ‘/home/qwer/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck’
-* using R Under development (unstable) (2018-01-12 r74112)
+* using log directory ‘/home/nik/git/cs/fvafrcu/rasciidoc/rasciidoc.Rcheck’
+* using R Under development (unstable) (2017-10-01 r73423)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘rasciidoc/DESCRIPTION’ ... OK
-* this is package ‘rasciidoc’ version ‘0.1.0’
+* this is package ‘rasciidoc’ version ‘0.2.0’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... NOTE
+* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-New submission
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -18,17 +16,15 @@ New submission
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking serialized R objects in the sources ... OK
 * checking whether package ‘rasciidoc’ can be installed ... OK
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
-* checking DESCRIPTION meta-information ... WARNING
-Dependence on R version ‘3.3.3’ not with patchlevel 0
+* checking DESCRIPTION meta-information ... OK
 * checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://cranlogs.r-pkg.org/badges/rasciidoc
-ResponseTimeout
+pandoc: Could not fetch https://travis-ci.org/fvafrCU/rasciidoc.svg?branch=master
+InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -66,4 +62,4 @@ ResponseTimeout
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 WARNINGs, 1 NOTE
+Status: 1 WARNING

@@ -1,6 +1,6 @@
 Package: rasciidoc
 Title: Create Reports Using `knitr` and `asciidoc`
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person(given = "Andreas Dominik",
            family = "Cullmann",
@@ -11,12 +11,13 @@ Depends: R (>= 3.3.3)
 License: BSD_2_clause + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr,
-    rmarkdown,
+Suggests: rmarkdown,
     testthat,
     RUnit,
     devtools,
     rprojroot
-Imports: document
+Imports: document,
+    knitr,
+    highr
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1

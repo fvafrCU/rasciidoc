@@ -1,4 +1,4 @@
-RUNIT TEST PROTOCOL -- Thu Jan 18 17:30:24 2018 
+RUNIT TEST PROTOCOL -- Fri Jan 19 14:22:55 2018 
 *********************************************** 
 Number of test functions: 1 
 Number of errors: 0 
@@ -16,7 +16,7 @@ Test Suite: rasciidoc_unit_test
 Test function regexp: ^test_+ 
 Test file regexp: ^.*\.[rR] 
 Involved directory: 
-/home/qwer/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests 
+/home/nik/git/cs/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests 
 --------------------------- 
-Test file: /home/qwer/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests/runit-throw.R 
+Test file: /home/nik/git/cs/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests/runit-throw.R 
 test_exception: (1 checks) ... OK (0 seconds)

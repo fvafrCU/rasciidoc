@@ -1,3 +1,289 @@
+Installing 5 packages: digest, knitr, Rcpp, stringi, yaml
+trying URL 'http://cloud.r-project.org/src/contrib/digest_0.6.14.tar.gz'
+Content type 'application/x-gzip' length 121494 bytes (118 KB)
+==================================================
+downloaded 118 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/knitr_1.18.tar.gz'
+Content type 'application/x-gzip' length 649748 bytes (634 KB)
+==================================================
+downloaded 634 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/Rcpp_0.12.14.tar.gz'
+Content type 'application/x-gzip' length 3756532 bytes (3.6 MB)
+==================================================
+downloaded 3.6 MB
+
+trying URL 'http://cloud.r-project.org/src/contrib/stringi_1.1.6.tar.gz'
+Content type 'application/x-gzip' length 3647049 bytes (3.5 MB)
+==================================================
+downloaded 3.5 MB
+
+trying URL 'http://cloud.r-project.org/src/contrib/yaml_2.1.16.tar.gz'
+Content type 'application/x-gzip' length 85275 bytes (83 KB)
+==================================================
+downloaded 83 KB
+
+* installing *source* package ‘digest’ ...
+** package ‘digest’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpgirNP1/R.INSTALL3eb46ded6964/digest/src'
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c aes.c -o aes.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c crc32.c -o crc32.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c digest.c -o digest.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c md5.c -o md5.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c pmurhash.c -o pmurhash.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c raes.c -o raes.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c sha1.c -o sha1.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c sha2.c -o sha2.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c sha256.c -o sha256.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c xxhash.c -o xxhash.o
+gcc -shared -L/usr/local/lib -o digest.so aes.o crc32.o digest.o init.o md5.o pmurhash.o raes.o sha1.o sha2.o sha256.o xxhash.o
+make[1]: Leaving directory '/tmp/RtmpgirNP1/R.INSTALL3eb46ded6964/digest/src'
+installing to /tmp/RtmpXExVI8/file3e793b91d04/digest/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (digest)
+* installing *source* package ‘Rcpp’ ...
+** package ‘Rcpp’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpICL0Pd/R.INSTALL3ee61bf9323f/Rcpp/src'
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c api.cpp -o api.o
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
+g++  -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
+g++ -shared -L/usr/local/lib -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
+make[1]: Leaving directory '/tmp/RtmpICL0Pd/R.INSTALL3ee61bf9323f/Rcpp/src'
+installing to /tmp/RtmpXExVI8/file3e793b91d04/Rcpp/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (Rcpp)
+* installing *source* package ‘stringi’ ...
+** package ‘stringi’ successfully unpacked and MD5 sums checked
+checking for local ICUDT_DIR... icu55/data
+checking for R_HOME... /home/nik/svn/R/r-devel/build
+checking for R... /home/nik/svn/R/r-devel/build/bin/R
+checking for R >= 3.1.0 for C++11 use... yes
+checking for R < 3.4.0 for CXX1X flag use... no
+checking for cat... /bin/cat
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... g++ -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking elf.h usability... yes
+checking elf.h presence... yes
+checking for elf.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++11 accepts -g... yes
+checking whether the C++ compiler supports the long long type... yes
+checking whether the compiler implements namespaces... yes
+checking whether the compiler supports Standard Template Library... yes
+checking whether std::map is available... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking with pkg-config for the system ICU4C... 57.1
+checking for ICU4C >= 52... yes
+checking for additional required CPPFLAGS, LDFLAGS, and LIBS... done
+checking whether we may build an ICU4C-based project... yes
+checking programmatically for sufficient U_ICU_VERSION_MAJOR_NUM... yes
+checking for available ICU data library (ucnv, uloc, utrans)... yes
+checking for available ICU data library (ucol)... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/uconfig_local.h
+config.status: creating src/install.libs.R
+
+*** stringi configure summary:
+    ICU_FOUND=1
+    STRINGI_CXXSTD=CXX_STD=CXX11
+    STRINGI_CFLAGS=   -fpic
+    STRINGI_CPPFLAGS=-I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H
+    STRINGI_CXXFLAGS=   -fpic
+    STRINGI_LDFLAGS=-L/usr/lib/x86_64-linux-gnu  
+    STRINGI_LIBS=-licui18n -licuuc -licudata  
+
+*** compiler settings used:
+    CC=gcc
+    CPP=g++ -E
+    LD=g++
+    CFLAGS=-g -O2 -fpic  
+    CPPFLAGS=-I/usr/local/include   -UDEBUG -DNDEBUG
+    CXX=g++ -std=gnu++11
+    CXXFLAGS=-g -O2 -fpic  
+    LDFLAGS=  
+    LIBS=  
+
+** libs
+make[1]: Entering directory '/tmp/RtmpqVJ3if/R.INSTALL3f0a6aa21e5e/stringi/src'
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_brkiter.cpp -o stri_brkiter.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_collator.cpp -o stri_collator.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_common.cpp -o stri_common.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_compare.cpp -o stri_compare.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_base.cpp -o stri_container_base.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_bytesearch.cpp -o stri_container_bytesearch.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_listint.cpp -o stri_container_listint.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_listraw.cpp -o stri_container_listraw.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_listutf8.cpp -o stri_container_listutf8.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_regex.cpp -o stri_container_regex.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_usearch.cpp -o stri_container_usearch.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_utf16.cpp -o stri_container_utf16.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_utf8.cpp -o stri_container_utf8.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_container_utf8_indexable.cpp -o stri_container_utf8_indexable.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_encoding_conversion.cpp -o stri_encoding_conversion.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_encoding_detection.cpp -o stri_encoding_detection.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_encoding_management.cpp -o stri_encoding_management.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_escape.cpp -o stri_escape.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_exception.cpp -o stri_exception.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_ICU_settings.cpp -o stri_ICU_settings.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_join.cpp -o stri_join.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_length.cpp -o stri_length.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_pad.cpp -o stri_pad.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_prepare_arg.cpp -o stri_prepare_arg.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_random.cpp -o stri_random.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_reverse.cpp -o stri_reverse.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_count.cpp -o stri_search_class_count.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_detect.cpp -o stri_search_class_detect.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_extract.cpp -o stri_search_class_extract.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_locate.cpp -o stri_search_class_locate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_replace.cpp -o stri_search_class_replace.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_split.cpp -o stri_search_class_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_startsendswith.cpp -o stri_search_class_startsendswith.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_subset.cpp -o stri_search_class_subset.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_class_trim.cpp -o stri_search_class_trim.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_common.cpp -o stri_search_common.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_count.cpp -o stri_search_coll_count.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_detect.cpp -o stri_search_coll_detect.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_extract.cpp -o stri_search_coll_extract.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_locate.cpp -o stri_search_coll_locate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_replace.cpp -o stri_search_coll_replace.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_split.cpp -o stri_search_coll_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_startsendswith.cpp -o stri_search_coll_startsendswith.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_coll_subset.cpp -o stri_search_coll_subset.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_boundaries_count.cpp -o stri_search_boundaries_count.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_boundaries_extract.cpp -o stri_search_boundaries_extract.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_boundaries_locate.cpp -o stri_search_boundaries_locate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_boundaries_split.cpp -o stri_search_boundaries_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_count.cpp -o stri_search_fixed_count.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_detect.cpp -o stri_search_fixed_detect.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_extract.cpp -o stri_search_fixed_extract.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_locate.cpp -o stri_search_fixed_locate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_replace.cpp -o stri_search_fixed_replace.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_split.cpp -o stri_search_fixed_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_subset.cpp -o stri_search_fixed_subset.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_fixed_startsendswith.cpp -o stri_search_fixed_startsendswith.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_in.cpp -o stri_search_in.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_other_replace.cpp -o stri_search_other_replace.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_other_split.cpp -o stri_search_other_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_count.cpp -o stri_search_regex_count.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_detect.cpp -o stri_search_regex_detect.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_extract.cpp -o stri_search_regex_extract.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_locate.cpp -o stri_search_regex_locate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_match.cpp -o stri_search_regex_match.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_replace.cpp -o stri_search_regex_replace.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_split.cpp -o stri_search_regex_split.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_search_regex_subset.cpp -o stri_search_regex_subset.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_sort.cpp -o stri_sort.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_stats.cpp -o stri_stats.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_stringi.cpp -o stri_stringi.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_sub.cpp -o stri_sub.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_test.cpp -o stri_test.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_time_zone.cpp -o stri_time_zone.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_time_calendar.cpp -o stri_time_calendar.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_time_symbols.cpp -o stri_time_symbols.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_time_format.cpp -o stri_time_format.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_trans_casemap.cpp -o stri_trans_casemap.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_trans_other.cpp -o stri_trans_other.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_trans_normalization.cpp -o stri_trans_normalization.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_trans_transliterate.cpp -o stri_trans_transliterate.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_ucnv.cpp -o stri_ucnv.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_uloc.cpp -o stri_uloc.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_utils.cpp -o stri_utils.o
+g++ -std=gnu++11 -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I.    -UDEBUG -DNDEBUG -DU_HAVE_ELF_H  -I/usr/local/include  -fpic -fpic  -g -O2 -c stri_wrap.cpp -o stri_wrap.o
+g++ -std=gnu++11 -shared -L/usr/local/lib -o stringi.so stri_brkiter.o stri_collator.o stri_common.o stri_compare.o stri_container_base.o stri_container_bytesearch.o stri_container_listint.o stri_container_listraw.o stri_container_listutf8.o stri_container_regex.o stri_container_usearch.o stri_container_utf16.o stri_container_utf8.o stri_container_utf8_indexable.o stri_encoding_conversion.o stri_encoding_detection.o stri_encoding_management.o stri_escape.o stri_exception.o stri_ICU_settings.o stri_join.o stri_length.o stri_pad.o stri_prepare_arg.o stri_random.o stri_reverse.o stri_search_class_count.o stri_search_class_detect.o stri_search_class_extract.o stri_search_class_locate.o stri_search_class_replace.o stri_search_class_split.o stri_search_class_startsendswith.o stri_search_class_subset.o stri_search_class_trim.o stri_search_common.o stri_search_coll_count.o stri_search_coll_detect.o stri_search_coll_extract.o stri_search_coll_locate.o stri_search_coll_replace.o stri_search_coll_split.o stri_search_coll_startsendswith.o stri_search_coll_subset.o stri_search_boundaries_count.o stri_search_boundaries_extract.o stri_search_boundaries_locate.o stri_search_boundaries_split.o stri_search_fixed_count.o stri_search_fixed_detect.o stri_search_fixed_extract.o stri_search_fixed_locate.o stri_search_fixed_replace.o stri_search_fixed_split.o stri_search_fixed_subset.o stri_search_fixed_startsendswith.o stri_search_in.o stri_search_other_replace.o stri_search_other_split.o stri_search_regex_count.o stri_search_regex_detect.o stri_search_regex_extract.o stri_search_regex_locate.o stri_search_regex_match.o stri_search_regex_replace.o stri_search_regex_split.o stri_search_regex_subset.o stri_sort.o stri_stats.o stri_stringi.o stri_sub.o stri_test.o stri_time_zone.o stri_time_calendar.o stri_time_symbols.o stri_time_format.o stri_trans_casemap.o stri_trans_other.o stri_trans_normalization.o stri_trans_transliterate.o stri_ucnv.o stri_uloc.o stri_utils.o stri_wrap.o -L/usr/lib/x86_64-linux-gnu -licui18n -licuuc -licudata
+make[1]: Leaving directory '/tmp/RtmpqVJ3if/R.INSTALL3f0a6aa21e5e/stringi/src'
+installing via 'install.libs.R' to /tmp/RtmpXExVI8/file3e793b91d04/stringi
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (stringi)
+* installing *source* package ‘yaml’ ...
+** package ‘yaml’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpsmGjvg/R.INSTALL43c01110101c/yaml/src'
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c implicit.c -o implicit.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c loader.c -o loader.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c parser.c -o parser.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_emit.c -o r_emit.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_ext.c -o r_ext.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_parse.c -o r_parse.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c reader.c -o reader.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
+gcc -I/home/nik/svn/R/r-devel/build/include -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
+gcc -shared -L/usr/local/lib -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
+make[1]: Leaving directory '/tmp/RtmpsmGjvg/R.INSTALL43c01110101c/yaml/src'
+installing to /tmp/RtmpXExVI8/file3e793b91d04/yaml/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (yaml)
+* installing *source* package ‘knitr’ ...
+** package ‘knitr’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (knitr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpXExVI8/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst
@@ -8,4 +294,4 @@
 ** installing vignettes
 ** testing if installed package can be loaded
 * DONE (rasciidoc)
-[1] TRUE
+<error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for hilight_source by 5.>
