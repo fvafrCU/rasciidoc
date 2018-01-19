@@ -1,6 +1,6 @@
 Package: rasciidoc
 Title: Create Reports Using `knitr` and `asciidoc`
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     person(given = "Andreas Dominik",
            family = "Cullmann",

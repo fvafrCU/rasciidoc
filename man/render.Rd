@@ -4,7 +4,7 @@
 \alias{render}
 \title{Knit and Render an `asciidoc` File}
 \usage{
-render(file_name, knit = NA, ...)
+render(file_name, knit = NA, adjust_hooks = TRUE, ...)
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -15,6 +15,9 @@ Set to \code{\link{TRUE}}
 to force knitting or to \code{\link{FALSE}} (anything apart from 
 \code{\link{TRUE}} or \code{\link{NA}}, really), to
 disable knitting.}
+
+\item{adjust_hooks}{Adust knitr's output hooks for `asciidoc` files using the
+defaults of \code{\link{adjust_asciidoc_hooks}}?}
 
 \item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
 }

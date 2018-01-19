@@ -271,15 +271,15 @@ R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 R/render.R:15:75: style: Trailing whitespace is superfluous.
     status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE, 
                                                                           ^
-R/render.R:74:1: style: lines should not be more than 80 characters.
+R/render.R:77:1: style: lines should not be more than 80 characters.
                                                begin_pattern = begin_no_slidy_pattern, 
 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:74:87: style: Trailing whitespace is superfluous.
+R/render.R:77:87: style: Trailing whitespace is superfluous.
                                                begin_pattern = begin_no_slidy_pattern, 
                                                                                       ^
-R/render.R:76:71: style: Trailing whitespace is superfluous.
+R/render.R:79:71: style: Trailing whitespace is superfluous.
                                                from_first_line = TRUE, 
                                                                       ^
-R/render.R:79:48: style: Trailing whitespace is superfluous.
+R/render.R:82:48: style: Trailing whitespace is superfluous.
         sl <- sub("(:numbered:)", "// \\1", sl) 
                                                ^

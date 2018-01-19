@@ -1,3 +1,2 @@
 NULL
-Warning message:
-In readLines(f) : incomplete final line found on './LICENSE'
+There were 50 or more warnings (use warnings() to see the first 50)

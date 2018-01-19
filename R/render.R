@@ -17,7 +17,8 @@ rasciidoc <- function(file_name, ...) {
     return(invisible(status))
 }
 
-run_knitr <- function(file_name, knit = NA) {
+run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
+    if (isTRUE(adjust_hooks)) adjust_asciidoc_hooks()
     if (is.na(knit)) {
         r_code_pattern <- "//begin.rcode"
         if (any(grepl(r_code_pattern, readLines(file_name)))) {
@@ -48,10 +49,12 @@ run_knitr <- function(file_name, knit = NA) {
 #' to force knitting or to \code{\link{FALSE}} (anything apart from 
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
+#' @param adjust_hooks Adust knitr's output hooks for `asciidoc` files using the
+#' defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
-render <- function(file_name, knit = NA, ...) {
-    adoc <- run_knitr(file_name, knit = knit)
+render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
+    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
     status <- rasciidoc(adoc, ...)
     return(status)
 }
@@ -61,9 +64,9 @@ render <- function(file_name, knit = NA, ...) {
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
-render_slides <- function(file_name, knit = NA) {
+render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     out_files <- NULL
-    adoc <- run_knitr(file_name, knit = knit)
+    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     rasciidoc(adoc, paste("-o", out_file))

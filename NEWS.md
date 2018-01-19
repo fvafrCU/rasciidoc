@@ -1,3 +1,7 @@
+# rasciidoc 0.3.0
+
+* Made adjusting knitr's hooks (see rasciidoc 0.2.0) the default behaviour.
+
 # rasciidoc 0.2.0
 
 * Added function to adjust knitr's hooks for asciidoc files, providing a work

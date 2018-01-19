@@ -1,5 +1,5 @@
 <cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cs/fvafrcu/rasciidoc/R/hooks.R: line 4 counts 85 characters.
  /home/nik/git/cs/fvafrcu/rasciidoc/R/hooks.R  set_header  line 1: found width 85 max_line_width was 80
-R/   /home/nik/git/cs/fvafrcu/rasciidoc/R/render.R: line 74 counts 87 characters.
+R/   /home/nik/git/cs/fvafrcu/rasciidoc/R/render.R: line 77 counts 87 characters.
  /home/nik/git/cs/fvafrcu/rasciidoc/R/render.R  render_slides  line 10: found width 87 max_line_width was 80
 R/   /home/nik/git/cs/fvafrcu/rasciidoc/R/throw.R: line 15 counts 81 characters.>
