@@ -79,7 +79,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
                                                from_first_line = TRUE, 
                                                to_last_line = TRUE)
         excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, value = TRUE)
-        # for a reason that fails me, the file has to be _here_!
+        # The asciidoc file has to be _here_ for include::-macros to work!
         excerpt_file <- file.path(dirname(file_name), 
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
@@ -98,7 +98,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
                                                to_last_line = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
         excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
-        # for a reason that fails me, the file has to be _here_!
+        # The asciidoc file has to be _here_ for include::-macros to work!
         excerpt_file <- file.path(dirname(file_name), 
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
