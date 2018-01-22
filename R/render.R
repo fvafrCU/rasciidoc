@@ -69,20 +69,42 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
-    rasciidoc(adoc, paste("-o", out_file))
+    slide_only_pattern = "//slide_only"
+    begin_pattern <- "//end_only_slide"
+    if (any(grepl(begin_pattern, readLines(adoc))) ||  
+        any(grepl(slide_only_pattern, readLines(adoc)))) {
+        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
+                                               begin_pattern = begin_pattern, 
+                                               end_pattern = "//begin_only_slide",
+                                               from_first_line = TRUE, 
+                                               to_last_line = TRUE)
+        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, value = TRUE)
+        # for a reason that fails me, the file has to be _here_!
+        excerpt_file <- file.path(dirname(file_name), 
+                                  basename(tempfile(fileext = ".asciidoc")))
+        writeLines(excerpt, excerpt_file)
+        rasciidoc(excerpt_file, paste("-o", out_file))
+        file.remove(excerpt_file)
+    } else {
+        rasciidoc(adoc, paste("-o", out_file))
+    }
     out_files <- c(out_files, out_file)
-    begin_no_slidy_pattern <- "//end_no_slide"
-    if (any(grepl(begin_no_slidy_pattern, readLines(adoc)))) {
-        sl <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
-                                               begin_pattern = begin_no_slidy_pattern, 
+    begin_pattern <- "//end_no_slide"
+    if (any(grepl(begin_pattern, readLines(adoc)))) {
+        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
+                                               begin_pattern = begin_pattern, 
                                                end_pattern = "//begin_no_slide",
                                                from_first_line = TRUE, 
                                                to_last_line = TRUE)
-        slide_file <- tempfile()
-        sl <- sub("(:numbered:)", "// \\1", sl) 
-        writeLines(sl, slide_file)
+        excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
+        excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
+        # for a reason that fails me, the file has to be _here_!
+        excerpt_file <- file.path(dirname(file_name), 
+                                  basename(tempfile(fileext = ".asciidoc")))
+        writeLines(excerpt, excerpt_file)
         out_file <- paste0(basename, "_slidy.html")
-        rasciidoc(slide_file, "-b slidy", paste("-o", out_file))
+        rasciidoc(excerpt_file, "-b slidy", paste("-o", out_file))
+        file.remove(excerpt_file)
         out_files <- c(out_files, out_file)
     }
     return(out_files)
