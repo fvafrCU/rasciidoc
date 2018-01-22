@@ -1,10 +1,12 @@
 Dear CRAN Team,
 this is a resubmission of package 'rasciidoc'. I have added the following changes:
 
-* Added core functionality.Please upload to CRAN.
+* Made adjusting knitr's hooks (see rasciidoc 0.2.0) the default behaviour.
+
+Please upload to CRAN.
 Best, Andreas Dominik
 
-# Package rasciidoc 0.1.0
+# Package rasciidoc 0.3.0
 ## Test  environments 
 - R Under development (unstable) (2018-01-12 r74112)
   Platform: x86_64-pc-linux-gnu (64-bit)
@@ -15,4 +17,4 @@ Best, Andreas Dominik
 - win-builder (devel)
 
 ## R CMD check results
-0 errors | 2 warnings | 1 note 
+0 errors | 1 warning  | 1 note 
