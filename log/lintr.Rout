@@ -115,100 +115,100 @@ R/highr_internals.R:37:1: style: Trailing blank lines are superfluous.
 R/hooks.R:3:12: style: Use <-, not =, for assignment.
 set_header = function(...) {
            ^
-R/hooks.R:4:1: style: lines should not be more than 80 characters.
-    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), c(...)))
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R/hooks.R:4:67: style: Only use double-quotes.
-    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), c(...)))
+    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), 
                                                                   ^~~~~~~~
-R/hooks.R:11:16: style: Use <-, not =, for assignment.
+R/hooks.R:4:77: style: Trailing whitespace is superfluous.
+    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), 
+                                                                            ^
+R/hooks.R:12:16: style: Use <-, not =, for assignment.
 hilight_source = function(x, format, options) {
                ^
-R/hooks.R:12:7: style: Place a space before left parenthesis, except in a function call.
+R/hooks.R:13:7: style: Place a space before left parenthesis, except in a function call.
   if ((format %in% c('latex', 'html')) && options$highlight) {
       ^
-R/hooks.R:12:22: style: Only use double-quotes.
+R/hooks.R:13:22: style: Only use double-quotes.
   if ((format %in% c('latex', 'html')) && options$highlight) {
                      ^~~~~~~
-R/hooks.R:12:31: style: Only use double-quotes.
+R/hooks.R:13:31: style: Only use double-quotes.
   if ((format %in% c('latex', 'html')) && options$highlight) {
                               ^~~~~~
-R/hooks.R:13:27: style: Only use double-quotes.
+R/hooks.R:14:27: style: Only use double-quotes.
     if (options$engine == 'R') {
                           ^~~
-R/hooks.R:14:12: style: Use <-, not =, for assignment.
+R/hooks.R:15:12: style: Use <-, not =, for assignment.
       opts = knitr::opts_knit$get('highr.opts')
            ^
-R/hooks.R:14:35: style: Only use double-quotes.
+R/hooks.R:15:35: style: Only use double-quotes.
       opts = knitr::opts_knit$get('highr.opts')
                                   ^~~~~~~~~~~~
-R/hooks.R:17:11: style: Use <-, not =, for assignment.
+R/hooks.R:18:11: style: Use <-, not =, for assignment.
       res = try(highr::hi_andre(x, options$engine, format))
           ^
-R/hooks.R:18:25: style: Only use double-quotes.
+R/hooks.R:19:25: style: Only use double-quotes.
       if (inherits(res, 'try-error')) {
                         ^~~~~~~~~~~
-R/hooks.R:19:23: style: Only use double-quotes.
+R/hooks.R:20:23: style: Only use double-quotes.
         if (format == 'html') escape_html(x) else escape_latex(x)
                       ^~~~~~
-R/hooks.R:22:11: style: Use <-, not =, for assignment.
+R/hooks.R:23:11: style: Use <-, not =, for assignment.
         n = length(res)
           ^
-R/hooks.R:24:23: style: Only use double-quotes.
+R/hooks.R:25:23: style: Only use double-quotes.
         if (res[n] == '\\normalsize') res = res[-n]
                       ^~~~~~~~~~~~~~
-R/hooks.R:24:43: style: Use <-, not =, for assignment.
+R/hooks.R:25:43: style: Use <-, not =, for assignment.
         if (res[n] == '\\normalsize') res = res[-n]
                                           ^
-R/hooks.R:31:27: style: Only use double-quotes.
+R/hooks.R:32:27: style: Only use double-quotes.
     if (options$engine == 'R' && !options$tidy && isFALSE(options$eval))
                           ^~~
-R/hooks.R:32:9: style: Use <-, not =, for assignment.
+R/hooks.R:33:9: style: Use <-, not =, for assignment.
       x = vapply(group_src(x), paste, character(1), collapse = '\n')
         ^
-R/hooks.R:32:64: style: Only use double-quotes.
+R/hooks.R:33:64: style: Only use double-quotes.
       x = vapply(group_src(x), paste, character(1), collapse = '\n')
                                                                ^~~~
-R/hooks.R:51:74: style: Trailing whitespace is superfluous.
+R/hooks.R:52:74: style: Trailing whitespace is superfluous.
     # Verbatim copy of a part of knitr::render_asciidoc() version 1.18.7, 
                                                                          ^
-R/hooks.R:53:17: style: Use <-, not =, for assignment.
+R/hooks.R:54:17: style: Use <-, not =, for assignment.
     hook.source = function(x, options) {
                 ^
-R/hooks.R:54:11: style: Use <-, not =, for assignment.
+R/hooks.R:55:11: style: Use <-, not =, for assignment.
         x = paste(c(hilight_source(x, "asciidoc", options), ""), 
           ^
-R/hooks.R:54:65: style: Trailing whitespace is superfluous.
+R/hooks.R:55:65: style: Trailing whitespace is superfluous.
         x = paste(c(hilight_source(x, "asciidoc", options), ""), 
                                                                 ^
-R/hooks.R:56:74: style: Trailing whitespace is superfluous.
+R/hooks.R:57:74: style: Trailing whitespace is superfluous.
         sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
                                                                          ^
-R/hooks.R:59:18: style: Use <-, not =, for assignment.
+R/hooks.R:60:18: style: Use <-, not =, for assignment.
     hook.message = function(x, options) {
                  ^
-R/hooks.R:60:56: style: Trailing whitespace is superfluous.
+R/hooks.R:61:56: style: Trailing whitespace is superfluous.
         sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
                                                        ^
-R/hooks.R:63:18: style: Use <-, not =, for assignment.
+R/hooks.R:64:18: style: Use <-, not =, for assignment.
     hook.warning = function(x, options) {
                  ^
-R/hooks.R:67:16: style: Use <-, not =, for assignment.
+R/hooks.R:68:16: style: Use <-, not =, for assignment.
     hook.error = function(x, options) {
                ^
-R/hooks.R:68:57: style: Trailing whitespace is superfluous.
+R/hooks.R:69:57: style: Trailing whitespace is superfluous.
         sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
                                                         ^
-R/hooks.R:71:17: style: Use <-, not =, for assignment.
+R/hooks.R:72:17: style: Use <-, not =, for assignment.
     hook.output = function(x, options) sprintf("\n----\n%s----\n", x)
                 ^
-R/hooks.R:76:6: style: Trailing whitespace is superfluous.
+R/hooks.R:77:6: style: Trailing whitespace is superfluous.
     } 
      ^
-R/hooks.R:77:77: style: Trailing whitespace is superfluous.
+R/hooks.R:78:77: style: Trailing whitespace is superfluous.
     res <- knitr::knit_hooks$set(source = hook.source, output = hook.output, 
                                                                             ^
-R/hooks.R:79:53: style: Trailing whitespace is superfluous.
+R/hooks.R:80:53: style: Trailing whitespace is superfluous.
                                  error = hook.error, 
                                                     ^
 R/knitr_internals.R:2:12: style: Use <-, not =, for assignment.
@@ -268,45 +268,9 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:15:75: style: Trailing whitespace is superfluous.
-    status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE, 
-                                                                          ^
 R/render.R:72:24: style: Use <-, not =, for assignment.
     slide_only_pattern = "//slide_only"
                        ^
 R/render.R:74:54: style: Trailing whitespace is superfluous.
-    if (any(grepl(begin_pattern, readLines(adoc))) ||  
-                                                     ^~
-R/render.R:76:1: style: lines should not be more than 80 characters.
-        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:77:78: style: Trailing whitespace is superfluous.
-                                               begin_pattern = begin_pattern, 
-                                                                             ^
-R/render.R:78:1: style: lines should not be more than 80 characters.
-                                               end_pattern = "//begin_only_slide",
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:79:71: style: Trailing whitespace is superfluous.
-                                               from_first_line = TRUE, 
-                                                                      ^
-R/render.R:81:1: style: lines should not be more than 80 characters.
-        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, value = TRUE)
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:83:54: style: Trailing whitespace is superfluous.
-        excerpt_file <- file.path(dirname(file_name), 
-                                                     ^
-R/render.R:94:1: style: lines should not be more than 80 characters.
-        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:95:78: style: Trailing whitespace is superfluous.
-                                               begin_pattern = begin_pattern, 
-                                                                             ^
-R/render.R:97:71: style: Trailing whitespace is superfluous.
-                                               from_first_line = TRUE, 
-                                                                      ^
-R/render.R:100:58: style: Trailing whitespace is superfluous.
-        excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
-                                                         ^
-R/render.R:102:54: style: Trailing whitespace is superfluous.
-        excerpt_file <- file.path(dirname(file_name), 
+    if (any(grepl(begin_pattern, readLines(adoc))) || 
                                                      ^

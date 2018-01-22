@@ -12,7 +12,7 @@ rasciidoc <- function(file_name, ...) {
         stop("Can't find program `asciidoc`.")
     if (nchar(Sys.which("source-highlight")) == 0)
         ("Can't find program `source-highlight`.")
-    status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE, 
+    status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE,
                       stdout = TRUE)
     return(invisible(status))
 }
@@ -40,13 +40,13 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
 }
 
 #' Knit and Render an `asciidoc` File
-#' 
-#' Knit (if required) and render an `asciidoc` file. 
+#'
+#' Knit (if required) and render an `asciidoc` file.
 #' @inheritParams rasciidoc
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
 #' Set to \code{\link{TRUE}}
-#' to force knitting or to \code{\link{FALSE}} (anything apart from 
+#' to force knitting or to \code{\link{FALSE}} (anything apart from
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
 #' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using
@@ -60,7 +60,7 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 }
 
 #' Knit and Render an `asciidoc` File to html and slidy
-#' 
+#'
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
@@ -71,17 +71,17 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     out_file <- paste0(basename, ".html")
     slide_only_pattern = "//slide_only"
     begin_pattern <- "//end_only_slide"
-    if (any(grepl(begin_pattern, readLines(adoc))) ||  
+    if (any(grepl(begin_pattern, readLines(adoc))) || 
         any(grepl(slide_only_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
-                        begin_pattern = begin_pattern, 
-                        end_pattern = "//begin_only_slide", 
+                        begin_pattern = begin_pattern,
+                        end_pattern = "//begin_only_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
-        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, 
+        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE,
                         value = TRUE)
         # The asciidoc file has to be _here_ for include::-macros to work!
-        excerpt_file <- file.path(dirname(file_name), 
+        excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
         rasciidoc(excerpt_file, paste("-o", out_file))
@@ -94,13 +94,13 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     if (any(grepl(begin_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
-                        begin_pattern = begin_pattern, 
+                        begin_pattern = begin_pattern,
                         end_pattern = "//begin_no_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
-        excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
+        excerpt <- sub("(:numbered:)", "// \\1", excerpt)
         # The asciidoc file has to be _here_ for include::-macros to work!
-        excerpt_file <- file.path(dirname(file_name), 
+        excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
         out_file <- paste0(basename, "_slidy.html")

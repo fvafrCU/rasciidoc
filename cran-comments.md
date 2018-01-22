@@ -1,7 +1,8 @@
 Dear CRAN Team,
 this is a resubmission of package 'rasciidoc'. I have added the following changes:
 
-* Add //[begin|end]\_only\_slide-blocks to allow for content for slidy only.
+* Add `//[begin|end]\_only\_slide`-blocks and `//slide\_only`-comments to allow 
+  for content for slidy only.
 * Fix broken code inclusions for slidy.
 
 Please upload to CRAN.

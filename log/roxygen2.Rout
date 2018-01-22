@@ -21,5 +21,8 @@ Type 'q()' to quit R.
 Loading required package: document
 Loading required package: knitr
 Loading required package: highr
+Writing render.Rd
+Writing render_slides.Rd
+Writing throw.Rd
 > 
 > 
