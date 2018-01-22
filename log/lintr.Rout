@@ -271,15 +271,42 @@ R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 R/render.R:15:75: style: Trailing whitespace is superfluous.
     status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE, 
                                                                           ^
-R/render.R:77:1: style: lines should not be more than 80 characters.
-                                               begin_pattern = begin_no_slidy_pattern, 
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-R/render.R:77:87: style: Trailing whitespace is superfluous.
-                                               begin_pattern = begin_no_slidy_pattern, 
-                                                                                      ^
+R/render.R:72:24: style: Use <-, not =, for assignment.
+    slide_only_pattern = "//slide_only"
+                       ^
+R/render.R:74:54: style: Trailing whitespace is superfluous.
+    if (any(grepl(begin_pattern, readLines(adoc))) ||  
+                                                     ^~
+R/render.R:76:1: style: lines should not be more than 80 characters.
+        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R/render.R:77:78: style: Trailing whitespace is superfluous.
+                                               begin_pattern = begin_pattern, 
+                                                                             ^
+R/render.R:78:1: style: lines should not be more than 80 characters.
+                                               end_pattern = "//begin_only_slide",
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 R/render.R:79:71: style: Trailing whitespace is superfluous.
                                                from_first_line = TRUE, 
                                                                       ^
-R/render.R:82:48: style: Trailing whitespace is superfluous.
-        sl <- sub("(:numbered:)", "// \\1", sl) 
-                                               ^
+R/render.R:81:1: style: lines should not be more than 80 characters.
+        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, value = TRUE)
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R/render.R:83:54: style: Trailing whitespace is superfluous.
+        excerpt_file <- file.path(dirname(file_name), 
+                                                     ^
+R/render.R:94:1: style: lines should not be more than 80 characters.
+        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+R/render.R:95:78: style: Trailing whitespace is superfluous.
+                                               begin_pattern = begin_pattern, 
+                                                                             ^
+R/render.R:97:71: style: Trailing whitespace is superfluous.
+                                               from_first_line = TRUE, 
+                                                                      ^
+R/render.R:100:58: style: Trailing whitespace is superfluous.
+        excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
+                                                         ^
+R/render.R:102:54: style: Trailing whitespace is superfluous.
+        excerpt_file <- file.path(dirname(file_name), 
+                                                     ^

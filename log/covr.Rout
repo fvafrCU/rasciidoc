@@ -134,7 +134,29 @@
 137          R/render.R         render_slides   86     0
 138          R/render.R         render_slides   87     0
 139          R/render.R         render_slides   88     0
-rasciidoc Coverage: 2.88%
+140          R/render.R         render_slides   89     0
+141          R/render.R         render_slides   90     0
+142          R/render.R         render_slides   91     0
+143          R/render.R         render_slides   92     0
+144          R/render.R         render_slides   93     0
+145          R/render.R         render_slides   94     0
+146          R/render.R         render_slides   95     0
+147          R/render.R         render_slides   96     0
+148          R/render.R         render_slides   97     0
+149          R/render.R         render_slides   98     0
+150          R/render.R         render_slides   99     0
+151          R/render.R         render_slides  100     0
+152          R/render.R         render_slides  101     0
+153          R/render.R         render_slides  102     0
+154          R/render.R         render_slides  103     0
+155          R/render.R         render_slides  104     0
+156          R/render.R         render_slides  105     0
+157          R/render.R         render_slides  106     0
+158          R/render.R         render_slides  107     0
+159          R/render.R         render_slides  108     0
+160          R/render.R         render_slides  109     0
+161          R/render.R         render_slides  110     0
+rasciidoc Coverage: 2.48%
 R/highr_internals.R: 0.00%
 R/hooks.R: 0.00%
 R/knitr_internals.R: 0.00%
