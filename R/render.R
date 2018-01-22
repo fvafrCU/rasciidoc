@@ -49,8 +49,8 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
 #' to force knitting or to \code{\link{FALSE}} (anything apart from 
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
-#' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using the
-#' defaults of \code{\link{adjust_asciidoc_hooks}}?
+#' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using
+#' the defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
 render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
@@ -73,12 +73,13 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     begin_pattern <- "//end_only_slide"
     if (any(grepl(begin_pattern, readLines(adoc))) ||  
         any(grepl(slide_only_pattern, readLines(adoc)))) {
-        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
-                                               begin_pattern = begin_pattern, 
-                                               end_pattern = "//begin_only_slide",
-                                               from_first_line = TRUE, 
-                                               to_last_line = TRUE)
-        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, value = TRUE)
+        glbt <- document::get_lines_between_tags
+        excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
+                        begin_pattern = begin_pattern, 
+                        end_pattern = "//begin_only_slide", 
+                        from_first_line = TRUE, to_last_line = TRUE)
+        excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE, 
+                        value = TRUE)
         # The asciidoc file has to be _here_ for include::-macros to work!
         excerpt_file <- file.path(dirname(file_name), 
                                   basename(tempfile(fileext = ".asciidoc")))
@@ -91,11 +92,11 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     out_files <- c(out_files, out_file)
     begin_pattern <- "//end_no_slide"
     if (any(grepl(begin_pattern, readLines(adoc)))) {
-        excerpt <- document::get_lines_between_tags(adoc, keep_tagged_lines = TRUE,
-                                               begin_pattern = begin_pattern, 
-                                               end_pattern = "//begin_no_slide",
-                                               from_first_line = TRUE, 
-                                               to_last_line = TRUE)
+        glbt <- document::get_lines_between_tags
+        excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
+                        begin_pattern = begin_pattern, 
+                        end_pattern = "//begin_no_slide",
+                        from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
         excerpt <- sub("(:numbered:)", "// \\1", excerpt) 
         # The asciidoc file has to be _here_ for include::-macros to work!

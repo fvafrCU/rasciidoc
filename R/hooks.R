@@ -1,7 +1,8 @@
 # Verbatim copy of internal from package knitr version 1.18.7, 
 # referencing knitr via `::`.
 set_header = function(...) {
-    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), c(...)))
+    knitr::opts_knit$set(header = merge_list(knitr::opts_knit$get('header'), 
+                                             c(...)))
 }
 
 
