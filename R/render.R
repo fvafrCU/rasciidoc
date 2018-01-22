@@ -49,7 +49,7 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
 #' to force knitting or to \code{\link{FALSE}} (anything apart from 
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
-#' @param adjust_hooks Adust knitr's output hooks for `asciidoc` files using the
+#' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using the
 #' defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
