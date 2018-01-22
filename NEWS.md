@@ -1,6 +1,7 @@
 # rasciidoc 0.4.0
 
-* Add //[begin|end]\_only\_slide-blocks to allow for content for slidy only.
+* Add `//[begin|end]\_only\_slide`-blocks and `//slide\_only`-comments to allow 
+  for content for slidy only.
 * Fix broken code inclusions for slidy.
 
 # rasciidoc 0.3.0
