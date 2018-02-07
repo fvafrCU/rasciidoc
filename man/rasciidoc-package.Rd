@@ -3,8 +3,10 @@
 \docType{package}
 \name{rasciidoc-package}
 \alias{rasciidoc-package}
-\title{Create Reports Using `knitr` and `asciidoc`}
+\title{Create Reports Using `R` and `asciidoc`}
 \description{
+Inspired by Karl Broman's reader on using knitr with asciidoc
+\url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}.
 I want to use asciidoc for html and slidy.
 }
 \details{

@@ -20,5 +20,6 @@ The return value of
 \code{\link[base:invisible]{invisibly}} \code{\link{NULL}}, currently.
 }
 \description{
-Adjust \pkg{knitr}'s Hooks for `asciidoc`
+By default, \pkg{knitr} renders messages, warnings and errors to
+[NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
 }

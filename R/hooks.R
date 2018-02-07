@@ -38,6 +38,9 @@ hilight_source = function(x, format, options) {
 
 #' Adjust \pkg{knitr}'s Hooks for `asciidoc`
 #'
+#' By default, \pkg{knitr} renders messages, warnings and errors to
+#' [NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
+#'
 #'
 #' @param which Character vector naming the output hooks to be replaced by
 #' the \code{replacement}'s hooks.
