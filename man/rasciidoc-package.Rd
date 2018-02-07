@@ -7,7 +7,6 @@
 \description{
 Inspired by Karl Broman's reader on using knitr with asciidoc
 \url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}.
-I want to use asciidoc for html and slidy.
 }
 \details{
 You will find the details in\cr

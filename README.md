@@ -22,8 +22,7 @@ help("rasciidoc-package", package = "rasciidoc")
 #> Description:
 #> 
 #>      Inspired by Karl Broman's reader on using knitr with asciidoc
-#>      <URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html>. I
-#>      want to use asciidoc for html and slidy.
+#>      <URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html>.
 #> 
 #> Details:
 #> 
