@@ -1,7 +1,7 @@
 ---
 title: "An Introduction to *rasciidoc*"
 author: 
-date: 2018-02-07, 11:55:33
+date: 2018-02-07, 12:35:57
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{An Introduction to rasciidoc }
@@ -13,7 +13,7 @@ vignette: >
 I want to use asciidoc for html and slidy. 
 
 # Features
-This is inspired by Karl Broman's reader on using knitr with asciidoc
-\url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}.
+This is inspired by 
+[Karl Broman's reader on using knitr with asciidoc](http://kbroman.org/knitr_knutshell/pages/asciidoc.html).
 
 # A Minimal Example
