@@ -61,6 +61,13 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 
 #' Knit and Render an `asciidoc` File to html and slidy
 #'
+#' You can exclude parts of the file from the standard html or slidy output by
+#' using lines starting with '//begin_only_slide' and '//end_only_slide' or
+#' '//begin_no_slide' and '//end_no_slide', respectively. To exclude single
+#' lines from standard html output, append a '//slide_only' comment to it (for
+#' example to add slide titles for slidy to break longer sections of standard
+#' html output.
+#'
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
@@ -70,13 +77,13 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern = "//slide_only"
-    begin_pattern <- "//end_only_slide"
+    begin_pattern <- "^//end_only_slide"
     if (any(grepl(begin_pattern, readLines(adoc))) || 
         any(grepl(slide_only_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
                         begin_pattern = begin_pattern,
-                        end_pattern = "//begin_only_slide",
+                        end_pattern = "^//begin_only_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE,
                         value = TRUE)
@@ -90,12 +97,12 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
         rasciidoc(adoc, paste("-o", out_file))
     }
     out_files <- c(out_files, out_file)
-    begin_pattern <- "//end_no_slide"
+    begin_pattern <- "^//end_no_slide"
     if (any(grepl(begin_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
                         begin_pattern = begin_pattern,
-                        end_pattern = "//begin_no_slide",
+                        end_pattern = "^//begin_no_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
         excerpt <- sub("(:numbered:)", "// \\1", excerpt)
