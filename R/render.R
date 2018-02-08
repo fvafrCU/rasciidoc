@@ -27,7 +27,7 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
         }
     }
     if (is.na(knit)) {
-        if (grepl("\\.R", file_name)) {
+        if (grepl("\\.R.*$", file_name)) {
             knit <- TRUE
             warning("Setting option knit to TRUE based on the file name given!")
         }

@@ -58,16 +58,9 @@
 43  R/knitr_internals.R      highlight_header   21     0
 47  R/knitr_internals.R      highlight_header   22     0
 50  R/knitr_internals.R      highlight_header   23     0
-69           R/render.R             run_knitr   30     0
-72           R/render.R             run_knitr   31     0
-75           R/render.R             run_knitr   32     0
-78           R/render.R             run_knitr   33     0
-89           R/render.R                render   57     0
-90           R/render.R                render   58     0
-91           R/render.R                render   59     0
-rasciidoc Coverage: 59.51%
+rasciidoc Coverage: 63.80%
 R/highr_internals.R: 0.00%
 R/knitr_internals.R: 0.00%
 R/hooks.R: 50.94%
-R/render.R: 90.41%
+R/render.R: 100.00%
 R/throw.R: 100.00%
