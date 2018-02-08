@@ -26,7 +26,7 @@ test_render_simple <- function() {
         RUnit::checkTrue(any(grepl("mtcars", result)))
 
     }
-    #% us4e render slides
+    #% render slides
     withr::with_dir(file.path(tempdir(), "files"), 
                     rasciidoc::render_slides("simple.Rasciidoc"))
     result <- remove_dates(readLines(file.path(tempdir(), "files", 
