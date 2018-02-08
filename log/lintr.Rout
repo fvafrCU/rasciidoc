@@ -1,3 +1,6 @@
+inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: Trailing blank lines are superfluous.
+
+^
 R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
 try_parse = function(code, silent = TRUE) {
           ^
@@ -169,46 +172,46 @@ R/hooks.R:33:9: style: Use <-, not =, for assignment.
 R/hooks.R:33:64: style: Only use double-quotes.
       x = vapply(group_src(x), paste, character(1), collapse = '\n')
                                                                ^~~~
-R/hooks.R:55:74: style: Trailing whitespace is superfluous.
+R/hooks.R:58:74: style: Trailing whitespace is superfluous.
     # Verbatim copy of a part of knitr::render_asciidoc() version 1.18.7, 
                                                                          ^
-R/hooks.R:57:17: style: Use <-, not =, for assignment.
+R/hooks.R:60:17: style: Use <-, not =, for assignment.
     hook.source = function(x, options) {
                 ^
-R/hooks.R:58:11: style: Use <-, not =, for assignment.
+R/hooks.R:61:11: style: Use <-, not =, for assignment.
         x = paste(c(hilight_source(x, "asciidoc", options), ""), 
           ^
-R/hooks.R:58:65: style: Trailing whitespace is superfluous.
+R/hooks.R:61:65: style: Trailing whitespace is superfluous.
         x = paste(c(hilight_source(x, "asciidoc", options), ""), 
                                                                 ^
-R/hooks.R:60:74: style: Trailing whitespace is superfluous.
+R/hooks.R:63:74: style: Trailing whitespace is superfluous.
         sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
                                                                          ^
-R/hooks.R:63:18: style: Use <-, not =, for assignment.
+R/hooks.R:66:18: style: Use <-, not =, for assignment.
     hook.message = function(x, options) {
                  ^
-R/hooks.R:64:56: style: Trailing whitespace is superfluous.
+R/hooks.R:67:56: style: Trailing whitespace is superfluous.
         sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
                                                        ^
-R/hooks.R:67:18: style: Use <-, not =, for assignment.
+R/hooks.R:70:18: style: Use <-, not =, for assignment.
     hook.warning = function(x, options) {
                  ^
-R/hooks.R:71:16: style: Use <-, not =, for assignment.
+R/hooks.R:74:16: style: Use <-, not =, for assignment.
     hook.error = function(x, options) {
                ^
-R/hooks.R:72:57: style: Trailing whitespace is superfluous.
+R/hooks.R:75:57: style: Trailing whitespace is superfluous.
         sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
                                                         ^
-R/hooks.R:75:17: style: Use <-, not =, for assignment.
+R/hooks.R:78:17: style: Use <-, not =, for assignment.
     hook.output = function(x, options) sprintf("\n----\n%s----\n", x)
                 ^
-R/hooks.R:80:6: style: Trailing whitespace is superfluous.
+R/hooks.R:83:6: style: Trailing whitespace is superfluous.
     } 
      ^
-R/hooks.R:81:77: style: Trailing whitespace is superfluous.
+R/hooks.R:84:77: style: Trailing whitespace is superfluous.
     res <- knitr::knit_hooks$set(source = hook.source, output = hook.output, 
                                                                             ^
-R/hooks.R:83:53: style: Trailing whitespace is superfluous.
+R/hooks.R:86:53: style: Trailing whitespace is superfluous.
                                  error = hook.error, 
                                                     ^
 R/knitr_internals.R:2:12: style: Use <-, not =, for assignment.
@@ -268,9 +271,9 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:72:24: style: Use <-, not =, for assignment.
+R/render.R:79:24: style: Use <-, not =, for assignment.
     slide_only_pattern = "//slide_only"
                        ^
-R/render.R:74:54: style: Trailing whitespace is superfluous.
+R/render.R:81:54: style: Trailing whitespace is superfluous.
     if (any(grepl(begin_pattern, readLines(adoc))) || 
                                                      ^

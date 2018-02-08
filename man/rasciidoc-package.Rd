@@ -6,7 +6,8 @@
 \title{Create Reports Using `R` and `asciidoc`}
 \description{
 Inspired by Karl Broman's reader on using knitr with asciidoc
-\url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}.
+\url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}, this is a
+wrapper to and a slight modification of knitr.
 }
 \details{
 You will find the details in\cr

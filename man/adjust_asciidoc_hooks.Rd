@@ -23,3 +23,8 @@ The return value of
 By default, \pkg{knitr} renders messages, warnings and errors to
 [NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
 }
+\details{
+This is a modified version of
+\code{\link[knitr:render_asciidoc]{knitr::render_asciidoc}} of  \pkg{knitr}
+version 1.18.7.
+}

@@ -12,7 +12,8 @@ The Title field should be in title case, current version then in title case:
 SSL error: could not verify peer
 Error in strsplit(travis_session_info, "\n") : non-character argument
 Calls: <Anonymous> -> unlist -> strsplit
-In addition: Warning message:
-In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
+In addition: Warning messages:
+1: 'DESCRIPTION' file has an 'Encoding' field and re-encoding is not possible 
+2: In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
   running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1
 Execution halted

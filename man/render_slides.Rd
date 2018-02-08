@@ -23,5 +23,10 @@ the defaults of \code{\link{adjust_asciidoc_hooks}}?}
 The output's file names.
 }
 \description{
-Knit and Render an `asciidoc` File to html and slidy
+You can exclude parts of the file from the standard html or slidy output by
+using lines starting with '//begin_only_slide' and '//end_only_slide' or
+'//begin_no_slide' and '//end_no_slide', respectively. To exclude single
+lines from standard html output, append a '//slide_only' comment to it (for
+example to add slide titles for slidy to break longer sections of standard
+html output.
 }
