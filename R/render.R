@@ -73,7 +73,7 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
-#' @example 
+#' @examples
 #' folder  <- system.file("runit_tests", "files", package = "rasciidoc")
 #' file.copy(folder, tempdir(), recursive = TRUE)
 #' files <- withr::with_dir(file.path(tempdir(), "files"), 

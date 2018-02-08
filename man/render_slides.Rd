@@ -30,3 +30,16 @@ lines from standard html output, append a '//slide_only' comment to it (for
 example to add slide titles for slidy to break longer sections of standard
 html output.
 }
+\examples{
+folder  <- system.file("runit_tests", "files", package = "rasciidoc")
+file.copy(folder, tempdir(), recursive = TRUE)
+files <- withr::with_dir(file.path(tempdir(), "files"), 
+                         rasciidoc::render_slides("slides.Rasciidoc"))
+# files are in tempdir()/files/:
+files <- file.path(tempdir(), "files", files)
+print(files)
+\dontrun{
+    browseURL(files[1])
+    browseURL(files[2])
+}
+}

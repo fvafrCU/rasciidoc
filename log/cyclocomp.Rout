@@ -13,7 +13,7 @@ downloaded 1.1 MB
 * installing *source* package ‘callr’ ...
 ** package ‘callr’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpU9lcw4/R.INSTALL28f4184d7e5a/callr/src'
+make[1]: Entering directory '/tmp/RtmpR1z09F/R.INSTALL37b0165c19ab/callr/src'
 gcc -g -O2  -Wall tools/px.c -o tools/px
 gcc -g -O2  supervisor/supervisor.c supervisor/utils.c \
       -o supervisor/supervisor
@@ -30,8 +30,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-dev
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-connections.cpp -o test-connections.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-runner.cpp -o test-runner.o
 g++ -shared -L/usr/local/lib -o callr.so init.o poll.o callr-connection.o callr-vector.o unix/childlist.o unix/connection.o unix/callr.o unix/sigchld.o unix/utils.o unix/named_pipe.o test-connections.o test-runner.o
-make[1]: Leaving directory '/tmp/RtmpU9lcw4/R.INSTALL28f4184d7e5a/callr/src'
-installing via 'install.libs.R' to /tmp/RtmpDn2WGC/file28b36de9f43f/callr
+make[1]: Leaving directory '/tmp/RtmpR1z09F/R.INSTALL37b0165c19ab/callr/src'
+installing via 'install.libs.R' to /tmp/RtmpMBYmIi/file377368432931/callr
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -46,7 +46,7 @@ Found pkg-config cflags and libs!
 Using PKG_CFLAGS=
 Using PKG_LIBS=-l:libssl.so.1.1 -l:libcrypto.so.1.1
 ** libs
-make[1]: Entering directory '/tmp/RtmpgjeUSv/R.INSTALL29361fdccf8/openssl/src'
+make[1]: Entering directory '/tmp/RtmpLdUikT/R.INSTALL37f25de52b5d/openssl/src'
 rm -f aes.o base64.o bignum.o cert.o compatibility.o diffie.o envelope.o error.o hash.o info.o keygen.o keys.o onload.o openssh.o password.o pem.o pkcs12.o pkcs7.o rand.o rsa.o signing.o ssl.o stream.o write.o openssl.so
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c aes.c -o aes.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c base64.c -o base64.o
@@ -73,8 +73,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c stream.c -o stream.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c write.c -o write.o
 gcc -shared -L/usr/local/lib -o openssl.so aes.o base64.o bignum.o cert.o compatibility.o diffie.o envelope.o error.o hash.o info.o keygen.o keys.o onload.o openssh.o password.o pem.o pkcs12.o pkcs7.o rand.o rsa.o signing.o ssl.o stream.o write.o -l:libssl.so.1.1 -l:libcrypto.so.1.1
-make[1]: Leaving directory '/tmp/RtmpgjeUSv/R.INSTALL29361fdccf8/openssl/src'
-installing to /tmp/RtmpDn2WGC/file28b36de9f43f/openssl/libs
+make[1]: Leaving directory '/tmp/RtmpLdUikT/R.INSTALL37f25de52b5d/openssl/src'
+installing to /tmp/RtmpMBYmIi/file377368432931/openssl/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -86,7 +86,7 @@ installing to /tmp/RtmpDn2WGC/file28b36de9f43f/openssl/libs
 * DONE (openssl)
 
 The downloaded source packages are in
-	‘/tmp/RtmpDn2WGC/downloaded_packages’
+	‘/tmp/RtmpMBYmIi/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

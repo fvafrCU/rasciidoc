@@ -18,7 +18,8 @@ Suggests: rmarkdown,
     testthat,
     RUnit,
     devtools,
-    rprojroot
+    rprojroot,
+    withr
 Imports: document,
     knitr,
     highr

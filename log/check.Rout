@@ -32,8 +32,6 @@ The Title field should be in title case, current version then in title case:
 Conversion of ‘README.md’ failed:
 pandoc: Could not fetch https://www.r-pkg.org/badges/version/rasciidoc
 TlsExceptionHostPort (HandshakeFailed Error_EOF) "www.r-pkg.org" 443
-Non-standard file/directory found at top level:
-  ‘TODO.md’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK

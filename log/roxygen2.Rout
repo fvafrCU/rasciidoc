@@ -21,7 +21,6 @@ Type 'q()' to quit R.
 Loading required package: document
 Loading required package: knitr
 Loading required package: highr
-Warning: render.R:88: @example spans multiple lines. Do you want @examples?
-Writing rasciidoc.Rd
+Writing render_slides.Rd
 > 
 > 
