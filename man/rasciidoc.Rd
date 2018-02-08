@@ -17,4 +17,6 @@ rasciidoc(file_name, ...)
 \description{
 This is the basic interface to `asciidoc`. Not more than a call to
 \code{\link{system2}} and checks on `asciidoc` and `source-highlight`.
+You should usually not call it directly, see
+\code{\link{render}} and \code{\link{render_slides}} for wrappers.
 }

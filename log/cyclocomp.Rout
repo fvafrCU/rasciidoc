@@ -1,29 +1,19 @@
 Skipping 1 packages ahead of CRAN: document
-Installing 4 packages: callr, knitr, openssl, yaml
+Installing 2 packages: callr, openssl
 trying URL 'http://cloud.r-project.org/src/contrib/callr_2.0.1.tar.gz'
 Content type 'application/x-gzip' length 94884 bytes (92 KB)
 ==================================================
 downloaded 92 KB
-
-trying URL 'http://cloud.r-project.org/src/contrib/knitr_1.19.tar.gz'
-Content type 'application/x-gzip' length 649805 bytes (634 KB)
-==================================================
-downloaded 634 KB
 
 trying URL 'http://cloud.r-project.org/src/contrib/openssl_1.0.tar.gz'
 Content type 'application/x-gzip' length 1195363 bytes (1.1 MB)
 ==================================================
 downloaded 1.1 MB
 
-trying URL 'http://cloud.r-project.org/src/contrib/yaml_2.1.16.tar.gz'
-Content type 'application/x-gzip' length 85275 bytes (83 KB)
-==================================================
-downloaded 83 KB
-
 * installing *source* package ‘callr’ ...
 ** package ‘callr’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpoFx57i/R.INSTALL6d3a72bf13e9/callr/src'
+make[1]: Entering directory '/tmp/RtmpU9lcw4/R.INSTALL28f4184d7e5a/callr/src'
 gcc -g -O2  -Wall tools/px.c -o tools/px
 gcc -g -O2  supervisor/supervisor.c supervisor/utils.c \
       -o supervisor/supervisor
@@ -40,8 +30,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-dev
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-connections.cpp -o test-connections.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-runner.cpp -o test-runner.o
 g++ -shared -L/usr/local/lib -o callr.so init.o poll.o callr-connection.o callr-vector.o unix/childlist.o unix/connection.o unix/callr.o unix/sigchld.o unix/utils.o unix/named_pipe.o test-connections.o test-runner.o
-make[1]: Leaving directory '/tmp/RtmpoFx57i/R.INSTALL6d3a72bf13e9/callr/src'
-installing via 'install.libs.R' to /tmp/Rtmp9XZmKR/file6cfe7e7418ed/callr
+make[1]: Leaving directory '/tmp/RtmpU9lcw4/R.INSTALL28f4184d7e5a/callr/src'
+installing via 'install.libs.R' to /tmp/RtmpDn2WGC/file28b36de9f43f/callr
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -56,7 +46,7 @@ Found pkg-config cflags and libs!
 Using PKG_CFLAGS=
 Using PKG_LIBS=-l:libssl.so.1.1 -l:libcrypto.so.1.1
 ** libs
-make[1]: Entering directory '/tmp/Rtmp6vu2Gk/R.INSTALL6de4361ddf81/openssl/src'
+make[1]: Entering directory '/tmp/RtmpgjeUSv/R.INSTALL29361fdccf8/openssl/src'
 rm -f aes.o base64.o bignum.o cert.o compatibility.o diffie.o envelope.o error.o hash.o info.o keygen.o keys.o onload.o openssh.o password.o pem.o pkcs12.o pkcs7.o rand.o rsa.o signing.o ssl.o stream.o write.o openssl.so
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c aes.c -o aes.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c base64.c -o base64.o
@@ -83,8 +73,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c stream.c -o stream.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c write.c -o write.o
 gcc -shared -L/usr/local/lib -o openssl.so aes.o base64.o bignum.o cert.o compatibility.o diffie.o envelope.o error.o hash.o info.o keygen.o keys.o onload.o openssh.o password.o pem.o pkcs12.o pkcs7.o rand.o rsa.o signing.o ssl.o stream.o write.o -l:libssl.so.1.1 -l:libcrypto.so.1.1
-make[1]: Leaving directory '/tmp/Rtmp6vu2Gk/R.INSTALL6de4361ddf81/openssl/src'
-installing to /tmp/Rtmp9XZmKR/file6cfe7e7418ed/openssl/libs
+make[1]: Leaving directory '/tmp/RtmpgjeUSv/R.INSTALL29361fdccf8/openssl/src'
+installing to /tmp/RtmpDn2WGC/file28b36de9f43f/openssl/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -94,48 +84,9 @@ installing to /tmp/Rtmp9XZmKR/file6cfe7e7418ed/openssl/libs
 ** installing vignettes
 ** testing if installed package can be loaded
 * DONE (openssl)
-* installing *source* package ‘yaml’ ...
-** package ‘yaml’ successfully unpacked and MD5 sums checked
-** libs
-make[1]: Entering directory '/tmp/RtmpebLNCZ/R.INSTALL6e9452697c8/yaml/src'
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c implicit.c -o implicit.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c loader.c -o loader.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c parser.c -o parser.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_emit.c -o r_emit.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_ext.c -o r_ext.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_parse.c -o r_parse.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c reader.c -o reader.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
-gcc -shared -L/usr/local/lib -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
-make[1]: Leaving directory '/tmp/RtmpebLNCZ/R.INSTALL6e9452697c8/yaml/src'
-installing to /tmp/Rtmp9XZmKR/file6cfe7e7418ed/yaml/libs
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded
-* DONE (yaml)
-* installing *source* package ‘knitr’ ...
-** package ‘knitr’ successfully unpacked and MD5 sums checked
-** R
-** demo
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded
-* DONE (knitr)
 
 The downloaded source packages are in
-	‘/tmp/Rtmp9XZmKR/downloaded_packages’
+	‘/tmp/RtmpDn2WGC/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

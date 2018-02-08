@@ -21,8 +21,7 @@ Type 'q()' to quit R.
 Loading required package: document
 Loading required package: knitr
 Loading required package: highr
-Writing adjust_asciidoc_hooks.Rd
-Writing rasciidoc-package.Rd
-Writing render_slides.Rd
+Warning: render.R:88: @example spans multiple lines. Do you want @examples?
+Writing rasciidoc.Rd
 > 
 > 

@@ -2,6 +2,8 @@
 #'
 #' This is the basic interface to `asciidoc`. Not more than a call to
 #' \code{\link{system2}} and checks on `asciidoc` and `source-highlight`.
+#' You should usually not call it directly, see
+#' \code{\link{render}} and \code{\link{render_slides}} for wrappers.
 #'
 #' @param file_name The file to run `asciidoc` on.
 #' @param ... arguments passed to `asciidoc` via \code{\link{system2}}.
@@ -71,6 +73,18 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
+#' @example 
+#' folder  <- system.file("runit_tests", "files", package = "rasciidoc")
+#' file.copy(folder, tempdir(), recursive = TRUE)
+#' files <- withr::with_dir(file.path(tempdir(), "files"), 
+#'                          rasciidoc::render_slides("slides.Rasciidoc"))
+#' # files are in tempdir()/files/:
+#' files <- file.path(tempdir(), "files", files)
+#' print(files)
+#' \dontrun{
+#'     browseURL(files[1])
+#'     browseURL(files[2])
+#' }
 render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     out_files <- NULL
     adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)

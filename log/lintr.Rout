@@ -1,6 +1,36 @@
 inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: Trailing blank lines are superfluous.
 
 ^
+inst/runit_tests/runit-render.R:7:51: style: Trailing whitespace is superfluous.
+    withr::with_dir(file.path(tempdir(), "files"), 
+                                                  ^
+inst/runit_tests/runit-render.R:12:77: style: Trailing whitespace is superfluous.
+                         readLines(file.path(tempdir(), "files", "expected", 
+                                                                            ^
+inst/runit_tests/runit-render.R:16:51: style: Trailing whitespace is superfluous.
+    withr::with_dir(file.path(tempdir(), "files"), 
+                                                  ^
+inst/runit_tests/runit-render.R:21:77: style: Trailing whitespace is superfluous.
+                         readLines(file.path(tempdir(), "files", "expected", 
+                                                                            ^
+inst/runit_tests/runit-render.R:25:51: style: Trailing whitespace is superfluous.
+    withr::with_dir(file.path(tempdir(), "files"), 
+                                                  ^
+inst/runit_tests/runit-render.R:30:77: style: Trailing whitespace is superfluous.
+                         readLines(file.path(tempdir(), "files", "expected", 
+                                                                            ^
+inst/runit_tests/runit-render.R:39:51: style: Trailing whitespace is superfluous.
+    withr::with_dir(file.path(tempdir(), "files"), 
+                                                  ^
+inst/runit_tests/runit-render.R:44:77: style: Trailing whitespace is superfluous.
+                         readLines(file.path(tempdir(), "files", "expected", 
+                                                                            ^
+inst/runit_tests/runit-render.R:48:1: style: lines should not be more than 80 characters.
+                   readLines(file.path(tempdir(), "files", "slides_slidy.html")))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/runit_tests/runit-render.R:50:77: style: Trailing whitespace is superfluous.
+                         readLines(file.path(tempdir(), "files", "expected", 
+                                                                            ^
 R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
 try_parse = function(code, silent = TRUE) {
           ^
@@ -271,9 +301,9 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:79:24: style: Use <-, not =, for assignment.
+R/render.R:93:24: style: Use <-, not =, for assignment.
     slide_only_pattern = "//slide_only"
                        ^
-R/render.R:81:54: style: Trailing whitespace is superfluous.
+R/render.R:95:54: style: Trailing whitespace is superfluous.
     if (any(grepl(begin_pattern, readLines(adoc))) || 
                                                      ^

@@ -11,6 +11,17 @@ label: unnamed-chunk-1
 
 output file: simple.asciidoc
 
+
+
+processing file: simple.Rasciidoc
+  |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-1
+
+output file: simple.asciidoc
+
  done successfully.
 
 
@@ -46,6 +57,10 @@ In addition: Warning messages:
 1: In run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks) :
   Setting option knit to TRUE based on the file contents!
 2: In run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks) :
+  Setting option knit to TRUE based on the file contents!
+3: In run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks) :
+  Setting option knit to TRUE based on the file name given!
+4: In run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks) :
   Setting option knit to TRUE based on the file contents!
  done successfully.
 
