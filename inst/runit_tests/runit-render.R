@@ -11,7 +11,7 @@ test_render_simple <- function() {
     expectation  <- grep(".*CET$", value = TRUE, invert = TRUE,
                          readLines(file.path(tempdir(), "files", "expected", 
                                              "simple.html")))
-    RUnit::checkIdentical(result, expectation)
+    RUnit::checkTrue(identical(result, expectation))
     #% us4e render slides
     withr::with_dir(file.path(tempdir(), "files"), 
                     rasciidoc::render_slides("simple.Rasciidoc"))
