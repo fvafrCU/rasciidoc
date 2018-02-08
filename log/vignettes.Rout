@@ -1,0 +1,12 @@
+Building rasciidoc vignettes
+Moving An_Introduction_to_rasciidoc.html, An_Introduction_to_rasciidoc.R to inst/doc/
+Copying An_Introduction_to_rasciidoc.Rmd to inst/doc/
+
+
+processing file: /home/nik/git/cs/fvafrcu/rasciidoc/vignettes/An_Introduction_to_rasciidoc.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
+output file: ./inst/doc/An_Introduction_to_rasciidoc.R
+
+[[1]]
+[1] "./inst/doc/An_Introduction_to_rasciidoc.R"
+
