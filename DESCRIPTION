@@ -7,7 +7,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "adc-r@arcor.de")
 Description: Inspired by Karl Broman's reader on using knitr with asciidoc 
-    (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>).
+    (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>), this is a
+    wrapper to and a slight modification of knitr.
 Depends: R (>= 3.3.0)
 SystemRequirements: asciidoc (<https://asciidoc.org>)
 License: BSD_2_clause + file LICENSE
