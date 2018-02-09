@@ -13,7 +13,7 @@ rasciidoc <- function(file_name, ...) {
     if (nchar(Sys.which("asciidoc")) == 0)
         stop("Can't find program `asciidoc`.")
     if (nchar(Sys.which("source-highlight")) == 0)
-        ("Can't find program `source-highlight`.")
+        warning("Can't find program `source-highlight`.")
     status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE,
                       stdout = TRUE)
     return(invisible(status))
