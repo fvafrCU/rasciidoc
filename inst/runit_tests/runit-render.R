@@ -5,7 +5,7 @@ remove_dates <- function(x) {
          )
 }
 probably_me <- function() {
-    me <- Sys.info()[["nodename"]] %in% c("h6", "h5", "fvafrdebianCU") && 
+    me <- Sys.info()[["nodename"]] %in% c("h6") && 
         .Platform[["OS.type"]] == "unix"
 
 }
