@@ -23,8 +23,7 @@ test_render_simple <- function() {
     if (probably_me()) {
         RUnit::checkIdentical(result, expectation)
     } else {
-        RUnit::checkTrue(any(grepl("mtcars", result)))
-
+        RUnit::checkTrue(any(grepl("Dominik Cullmann", result)))
     }
     #% render slides
     withr::with_dir(file.path(tempdir(), "files"), 
@@ -36,8 +35,7 @@ test_render_simple <- function() {
     if (probably_me()) {
         RUnit::checkIdentical(result, expectation)
     } else {
-        RUnit::checkTrue(any(grepl("mtcars", result)))
-
+        RUnit::checkTrue(any(grepl("Dominik Cullmann", result)))
     }
     # file contains no R code
     withr::with_dir(file.path(tempdir(), "files"), 
@@ -48,8 +46,7 @@ test_render_simple <- function() {
     if (probably_me()) {
         RUnit::checkIdentical(result, expectation)
     } else {
-        RUnit::checkTrue(any(grepl("mtcars", result)))
-
+        RUnit::checkTrue(any(grepl("Dominik Cullmann", result)))
     }
 
 }
