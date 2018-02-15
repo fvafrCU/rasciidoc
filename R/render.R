@@ -11,11 +11,11 @@
 #' @export
 rasciidoc <- function(file_name, ...) {
     if (nchar(Sys.which("asciidoc")) == 0)
-        stop("Can't find program `asciidoc`.")
+        warning("Can't find program `asciidoc`. ",
+                "Please install first (www.asciidoc.org).")
     if (nchar(Sys.which("source-highlight")) == 0)
         warning("Can't find program `source-highlight`.")
-    status <- system2("asciidoc", args = c(..., file_name), stderr = TRUE,
-                      stdout = TRUE)
+    status <- system2("asciidoc", args = c(..., file_name))
     return(invisible(status))
 }
 
@@ -37,6 +37,7 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     if (isTRUE(knit)) {
         knit_out_file <- sub("\\.R(.*)", ".\\1", file_name)
         file_name <- knitr::knit(file_name, knit_out_file)
+        options(warn = 0) ## knitr changes the options?!
     }
     return(file_name)
 }
@@ -86,6 +87,7 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 #'     browseURL(files[2])
 #' }
 render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
+    status <- NULL
     out_files <- NULL
     adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
     basename <- sub("\\..*", "", adoc)
@@ -105,10 +107,10 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
         excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
-        rasciidoc(excerpt_file, paste("-o", out_file))
+        status <- c(status, rasciidoc(excerpt_file, paste("-o", out_file)))
         file.remove(excerpt_file)
     } else {
-        rasciidoc(adoc, paste("-o", out_file))
+        status <- c(status, rasciidoc(adoc, paste("-o", out_file)))
     }
     out_files <- c(out_files, out_file)
     begin_pattern <- "^//end_no_slide"
@@ -125,9 +127,10 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
         out_file <- paste0(basename, "_slidy.html")
-        rasciidoc(excerpt_file, "-b slidy", paste("-o", out_file))
+        status <- c(status, rasciidoc(excerpt_file, "-b slidy", 
+                                      paste("-o", out_file)))
         file.remove(excerpt_file)
         out_files <- c(out_files, out_file)
     }
-    return(out_files)
+    return(out_files[status == 0])
 }
