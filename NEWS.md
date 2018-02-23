@@ -1,3 +1,7 @@
+# rasciidoc 0.5.0
+
+* Passed the parent.frame() down to knitr to always be in .GlobalEnv.
+
 # rasciidoc 0.4.0
 
 * Add `//[begin|end]\_only\_slide`-blocks and `//slide\_only`-comments to allow 

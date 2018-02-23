@@ -322,9 +322,6 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:93:24: style: Use <-, not =, for assignment.
+R/render.R:101:24: style: Use <-, not =, for assignment.
     slide_only_pattern = "//slide_only"
                        ^
-R/render.R:95:54: style: Trailing whitespace is superfluous.
-    if (any(grepl(begin_pattern, readLines(adoc))) || 
-                                                     ^

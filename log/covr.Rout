@@ -15,14 +15,14 @@
 34  R/highr_internals.R             group_src   19     0
 38  R/highr_internals.R             group_src   20     0
 42  R/highr_internals.R             group_src   21     0
-53  R/highr_internals.R          escape_latex   25     0
-56  R/highr_internals.R          escape_latex   26     0
-59  R/highr_internals.R          escape_latex   27     0
-68  R/highr_internals.R           escape_html   31     0
-71  R/highr_internals.R           escape_html   32     0
-74  R/highr_internals.R           escape_html   33     0
-77  R/highr_internals.R           escape_html   34     0
-80  R/highr_internals.R           escape_html   35     0
+52  R/highr_internals.R          escape_latex   25     0
+55  R/highr_internals.R          escape_latex   26     0
+58  R/highr_internals.R          escape_latex   27     0
+67  R/highr_internals.R           escape_html   31     0
+70  R/highr_internals.R           escape_html   32     0
+73  R/highr_internals.R           escape_html   33     0
+76  R/highr_internals.R           escape_html   34     0
+79  R/highr_internals.R           escape_html   35     0
 4             R/hooks.R            set_header    4     0
 6             R/hooks.R            set_header    5     0
 18            R/hooks.R        hilight_source   14     0
@@ -35,20 +35,20 @@
 44            R/hooks.R        hilight_source   21     0
 47            R/hooks.R        hilight_source   22     0
 49            R/hooks.R        hilight_source   23     0
-51            R/hooks.R        hilight_source   24     0
-54            R/hooks.R        hilight_source   25     0
-57            R/hooks.R        hilight_source   26     0
-60            R/hooks.R        hilight_source   27     0
-62            R/hooks.R        hilight_source   28     0
-72            R/hooks.R        hilight_source   32     0
-75            R/hooks.R        hilight_source   33     0
-78            R/hooks.R        hilight_source   34     0
-99            R/hooks.R adjust_asciidoc_hooks   67     0
-100           R/hooks.R adjust_asciidoc_hooks   68     0
-103           R/hooks.R adjust_asciidoc_hooks   71     0
-104           R/hooks.R adjust_asciidoc_hooks   72     0
-107           R/hooks.R adjust_asciidoc_hooks   75     0
-108           R/hooks.R adjust_asciidoc_hooks   76     0
+50            R/hooks.R        hilight_source   24     0
+53            R/hooks.R        hilight_source   25     0
+56            R/hooks.R        hilight_source   26     0
+59            R/hooks.R        hilight_source   27     0
+61            R/hooks.R        hilight_source   28     0
+71            R/hooks.R        hilight_source   32     0
+74            R/hooks.R        hilight_source   33     0
+77            R/hooks.R        hilight_source   34     0
+101           R/hooks.R adjust_asciidoc_hooks   67     0
+102           R/hooks.R adjust_asciidoc_hooks   68     0
+105           R/hooks.R adjust_asciidoc_hooks   71     0
+106           R/hooks.R adjust_asciidoc_hooks   72     0
+109           R/hooks.R adjust_asciidoc_hooks   75     0
+110           R/hooks.R adjust_asciidoc_hooks   76     0
 1   R/knitr_internals.R            merge_list    3     0
 3   R/knitr_internals.R            merge_list    4     0
 10  R/knitr_internals.R           line_prompt   10     0
@@ -58,7 +58,7 @@
 43  R/knitr_internals.R      highlight_header   21     0
 46  R/knitr_internals.R      highlight_header   22     0
 48  R/knitr_internals.R      highlight_header   23     0
-rasciidoc Coverage: 63.80%
+rasciidoc Coverage: 64.88%
 R/highr_internals.R: 0.00%
 R/knitr_internals.R: 0.00%
 R/hooks.R: 50.94%

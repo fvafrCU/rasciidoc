@@ -67,7 +67,8 @@ cran-comments.md:  $(LOG_DIR)/install.Rout
 .PHONY: install
 install: $(LOG_DIR)/install.Rout
 $(LOG_DIR)/install.Rout: $(LOG_DIR)/check.Rout
-	$(R) --vanilla CMD INSTALL  $(PKGNAME)_$(PKGVERS).tar.gz > $(LOG_DIR)/install.Rout 2>&1 
+	$(R) --vanilla CMD INSTALL  $(PKGNAME)_$(PKGVERS).tar.gz > $(LOG_DIR)/install.Rout 2>&1;\
+		$(R_release) --vanilla CMD INSTALL  $(PKGNAME)_$(PKGVERS).tar.gz > $(LOG_DIR)/install.Rout 2>&1 
 
 .PHONY: check
 check: $(LOG_DIR)/check.Rout

@@ -4,7 +4,8 @@
 \alias{render_slides}
 \title{Knit and Render an `asciidoc` File to html and slidy}
 \usage{
-render_slides(file_name, knit = NA, adjust_hooks = TRUE)
+render_slides(file_name, knit = NA, adjust_hooks = TRUE,
+  envir = parent.frame())
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -18,6 +19,8 @@ disable knitting.}
 
 \item{adjust_hooks}{Adjust knitr's output hooks for `asciidoc` files using
 the defaults of \code{\link{adjust_asciidoc_hooks}}?}
+
+\item{envir}{The frame in which to render.}
 }
 \value{
 The output's file names.
@@ -33,7 +36,7 @@ html output.
 \examples{
 folder  <- system.file("runit_tests", "files", package = "rasciidoc")
 file.copy(folder, tempdir(), recursive = TRUE)
-files <- withr::with_dir(file.path(tempdir(), "files"), 
+files <- withr::with_dir(file.path(tempdir(), "files"),
                          rasciidoc::render_slides("slides.Rasciidoc"))
 # files are in tempdir()/files/:
 files <- file.path(tempdir(), "files", files)

@@ -19,7 +19,8 @@ rasciidoc <- function(file_name, ...) {
     return(invisible(status))
 }
 
-run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
+run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
+                      envir = parent.frame()) {
     if (isTRUE(adjust_hooks)) adjust_asciidoc_hooks()
     if (is.na(knit)) {
         r_code_pattern <- "//begin.rcode"
@@ -36,7 +37,7 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
     }
     if (isTRUE(knit)) {
         knit_out_file <- sub("\\.R(.*)", ".\\1", file_name)
-        file_name <- knitr::knit(file_name, knit_out_file)
+        file_name <- knitr::knit(file_name, knit_out_file, envir = envir)
         options(warn = 0) ## knitr changes the options?!
     }
     return(file_name)
@@ -52,12 +53,15 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE) {
 #' to force knitting or to \code{\link{FALSE}} (anything apart from
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
+#' @param envir The frame in which to render.
 #' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using
 #' the defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
-render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
-    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
+render <- function(file_name, knit = NA, adjust_hooks = TRUE,
+                   envir = parent.frame(), ...) {
+    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
+                      envir = envir)
     status <- rasciidoc(adoc, ...)
     return(status)
 }
@@ -77,7 +81,7 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 #' @examples
 #' folder  <- system.file("runit_tests", "files", package = "rasciidoc")
 #' file.copy(folder, tempdir(), recursive = TRUE)
-#' files <- withr::with_dir(file.path(tempdir(), "files"), 
+#' files <- withr::with_dir(file.path(tempdir(), "files"),
 #'                          rasciidoc::render_slides("slides.Rasciidoc"))
 #' # files are in tempdir()/files/:
 #' files <- file.path(tempdir(), "files", files)
@@ -86,15 +90,17 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE, ...) {
 #'     browseURL(files[1])
 #'     browseURL(files[2])
 #' }
-render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
+render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
+                          envir = parent.frame()) {
     status <- NULL
     out_files <- NULL
-    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks)
+    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
+                      envir = envir)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern = "//slide_only"
     begin_pattern <- "^//end_only_slide"
-    if (any(grepl(begin_pattern, readLines(adoc))) || 
+    if (any(grepl(begin_pattern, readLines(adoc))) ||
         any(grepl(slide_only_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
@@ -127,7 +133,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE) {
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
         out_file <- paste0(basename, "_slidy.html")
-        status <- c(status, rasciidoc(excerpt_file, "-b slidy", 
+        status <- c(status, rasciidoc(excerpt_file, "-b slidy",
                                       paste("-o", out_file)))
         file.remove(excerpt_file)
         out_files <- c(out_files, out_file)

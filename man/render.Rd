@@ -4,7 +4,8 @@
 \alias{render}
 \title{Knit and Render an `asciidoc` File}
 \usage{
-render(file_name, knit = NA, adjust_hooks = TRUE, ...)
+render(file_name, knit = NA, adjust_hooks = TRUE, envir = parent.frame(),
+  ...)
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -18,6 +19,8 @@ disable knitting.}
 
 \item{adjust_hooks}{Adjust knitr's output hooks for `asciidoc` files using
 the defaults of \code{\link{adjust_asciidoc_hooks}}?}
+
+\item{envir}{The frame in which to render.}
 
 \item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
 }
