@@ -1,0 +1,21 @@
+checking top-level files ... WARNING
+Conversion of ‘README.md’ failed:
+pandoc: Failed to retrieve https://www.r-pkg.org/badges/version/rasciidoc
+TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got alert : [(AlertLevel_Fatal,HandshakeFailure)]",True,HandshakeFailure)))
+
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+New submission
+
+The Title field should be in title case, current version then in title case:
+‘Create Reports Using `R` and `asciidoc`’
+‘Create Reports Using `r` and `asciidoc`’
+displaying logs for fvafrCU/rasciidoc#32.1
+undefined method `each_pair' for #<String:0x000000030bb078>
+Error in strsplit(travis_session_info, "\n") : non-character argument
+Calls: <Anonymous> -> unlist -> strsplit
+In addition: Warning message:
+In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
+  running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1
+Execution halted

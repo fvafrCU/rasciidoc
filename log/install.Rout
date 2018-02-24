@@ -1,0 +1,11 @@
+* installing to library ‘/home/qwer/svn/R/R-3.4.3/library’
+* installing *source* package ‘rasciidoc’ ...
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (rasciidoc)

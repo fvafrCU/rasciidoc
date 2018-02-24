@@ -1,10 +1,10 @@
   WORD        FOUND IN
-asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render_slides.Rd:5,11,20, render.Rd:5,11,20,25,31, title:1, description:1,2
+asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render.Rd:5,11,20,25,31, render_slides.Rd:5,11,20, title:1, description:1,2
 Broman's    rasciidoc-package.Rd:8, description:1
 http        description:2
 kbroman     description:2
 knitr       rasciidoc-package.Rd:8,10, description:1,2,3
-knitr's     render_slides.Rd:20, render.Rd:20
+knitr's     render.Rd:20, render_slides.Rd:20
 knutshell   description:2
 slidy       render_slides.Rd:5,29,33
 Warning message:
