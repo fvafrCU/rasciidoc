@@ -1,5 +1,4 @@
 is_installed <- function(program) return(isTRUE(nchar(Sys.which(program)) > 0))
-is_installed_asciidoc <- function() return(is_installed("asciidoc"))
 
 #' Render an `asciidoc` File
 #'
