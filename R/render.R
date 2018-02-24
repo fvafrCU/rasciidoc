@@ -1,3 +1,6 @@
+is_installed <- function(program) return(isTRUE(nchar(Sys.which(program)) > 0))
+is_installed_asciidoc <- function() return(is_installed("asciidoc"))
+
 #' Render an `asciidoc` File
 #'
 #' This is the basic interface to `asciidoc`. Not more than a call to
@@ -10,10 +13,10 @@
 #' @return \code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
 #' @export
 rasciidoc <- function(file_name, ...) {
-    if (nchar(Sys.which("asciidoc")) == 0)
+    if (! is_installed_asciidoc())
         warning("Can't find program `asciidoc`. ",
                 "Please install first (www.asciidoc.org).")
-    if (nchar(Sys.which("source-highlight")) == 0)
+    if (! is_installed("source-highlight"))
         warning("Can't find program `source-highlight`.")
     status <- system2("asciidoc", args = c(..., file_name))
     return(invisible(status))
