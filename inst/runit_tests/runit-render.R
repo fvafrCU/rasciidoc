@@ -20,7 +20,7 @@ test_render_simple <- function() {
                     result <- rasciidoc::render("simple.Rasciidoc"))
     if (! is_installed_asciidoc()) {
         expectation  <- as.integer(127)
-        RUnit::checkIdentical(result, expectation)
+        #RUnit::checkIdentical(result, expectation)
     } else {
         expectation  <- as.integer(0)
         RUnit::checkIdentical(result, expectation)
