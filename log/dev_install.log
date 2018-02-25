@@ -1,0 +1,96 @@
+Installing rasciidoc
+trying URL 'https://cran.rstudio.com/src/contrib/knitr_1.20.tar.gz'
+Content type 'application/x-gzip' length 650082 bytes (634 KB)
+==================================================
+downloaded 634 KB
+
+Installing knitr
+trying URL 'https://cran.rstudio.com/src/contrib/stringr_1.3.0.tar.gz'
+Content type 'application/x-gzip' length 118333 bytes (115 KB)
+==================================================
+downloaded 115 KB
+
+Installing stringr
+trying URL 'https://cran.rstudio.com/src/contrib/glue_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 28193 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+Installing glue
+'/home/qwer/svn/R/R-3.4.3/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL '/tmp/RtmpUAmDAG/devtools1a563d2de92/glue'  \
+  --library='/home/qwer/svn/R/R-3.4.3/library' --install-tests 
+
+* installing *source* package ‘glue’ ...
+** package ‘glue’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpUAmDAG/devtools1a563d2de92/glue/src'
+gcc -std=gnu99 -I/home/qwer/svn/R/R-3.4.3/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c glue.c -o glue.o
+gcc -std=gnu99 -I/home/qwer/svn/R/R-3.4.3/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -std=gnu99 -I/home/qwer/svn/R/R-3.4.3/include -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c trim.c -o trim.o
+gcc -std=gnu99 -shared -L/usr/local/lib -o glue.so glue.o init.o trim.o
+make[1]: Leaving directory '/tmp/RtmpUAmDAG/devtools1a563d2de92/glue/src'
+installing to /home/qwer/svn/R/R-3.4.3/library/glue/libs
+** R
+** inst
+** tests
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (glue)
+'/home/qwer/svn/R/R-3.4.3/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  '/tmp/RtmpUAmDAG/devtools1a5668e61bff/stringr'  \
+  --library='/home/qwer/svn/R/R-3.4.3/library' --install-tests 
+
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** tests
+** preparing package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (stringr)
+'/home/qwer/svn/R/R-3.4.3/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  '/tmp/RtmpUAmDAG/devtools1a563858231c/knitr'  \
+  --library='/home/qwer/svn/R/R-3.4.3/library' --install-tests 
+
+* installing *source* package ‘knitr’ ...
+** package ‘knitr’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** inst
+** tests
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (knitr)
+'/home/qwer/svn/R/R-3.4.3/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL '/home/qwer/git/cyclops/fvafrcu/rasciidoc'  \
+  --library='/home/qwer/svn/R/R-3.4.3/library' --install-tests 
+
+* installing *source* package ‘rasciidoc’ ...
+** R
+** inst
+** tests
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (rasciidoc)

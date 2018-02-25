@@ -1,8 +1,8 @@
-* installing to library ‘/home/qwer/svn/R/R-3.4.3/library’
+* installing to library ‘/home/qwer/svn/R/r-devel/build/library’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst
-** preparing package for lazy loading
+** byte-compile and prepare package for lazy loading
 ** help
 *** installing help indices
 ** building package indices

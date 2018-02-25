@@ -8,14 +8,14 @@ downloaded 316 KB
 * installing *source* package ‘rlang’ ...
 ** package ‘rlang’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/Rtmpxh1OQs/R.INSTALL25dcfd41808/rlang/src'
+make[1]: Entering directory '/tmp/RtmpvzeJps/R.INSTALL1d8a39027a29/rlang/src'
 gcc -std=gnu99 -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c capture.c -o capture.o
 gcc -std=gnu99 -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c export.c -o export.o
 gcc -std=gnu99 -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
 gcc -std=gnu99 -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c lib.c -o lib.o
 gcc -std=gnu99 -shared -L/usr/local/lib -o rlang.so capture.o export.o internal.o lib.o
-make[1]: Leaving directory '/tmp/Rtmpxh1OQs/R.INSTALL25dcfd41808/rlang/src'
-installing to /tmp/RtmpYfKhYu/file258c52bbbe44/rlang/libs
+make[1]: Leaving directory '/tmp/RtmpvzeJps/R.INSTALL1d8a39027a29/rlang/src'
+installing to /tmp/RtmpKAiIRP/file1d34751bd2ec/rlang/libs
 ** R
 ** byte-compile and prepare package for lazy loading
 ** help
@@ -26,7 +26,7 @@ installing to /tmp/RtmpYfKhYu/file258c52bbbe44/rlang/libs
 * DONE (rlang)
 
 The downloaded source packages are in
-	‘/tmp/RtmpYfKhYu/downloaded_packages’
+	‘/tmp/RtmpKAiIRP/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

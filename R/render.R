@@ -12,7 +12,7 @@ is_installed <- function(program) return(isTRUE(nchar(Sys.which(program)) > 0))
 #' @return \code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
 #' @export
 rasciidoc <- function(file_name, ...) {
-    if (! is_installed_asciidoc())
+    if (! is_installed("asciidoc"))
         warning("Can't find program `asciidoc`. ",
                 "Please install first (www.asciidoc.org).")
     if (! is_installed("source-highlight"))

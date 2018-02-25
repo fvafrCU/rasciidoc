@@ -1,55 +1,58 @@
 inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: Trailing blank lines are superfluous.
 
 ^
-inst/runit_tests/runit-render.R:8:51: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:9:51: style: Trailing whitespace is superfluous.
     me <- Sys.info()[["nodename"]] %in% c("h6") && 
                                                   ^
-inst/runit_tests/runit-render.R:17:51: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:19:51: style: Trailing whitespace is superfluous.
     withr::with_dir(file.path(tempdir(), "files"), 
                                                   ^
-inst/runit_tests/runit-render.R:19:67: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:27:71: style: Trailing whitespace is superfluous.
+        result <- remove_dates(readLines(file.path(tempdir(), "files", 
+                                                                      ^
+inst/runit_tests/runit-render.R:29:76: style: Trailing whitespace is superfluous.
+        expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
+                                                                           ^
+inst/runit_tests/runit-render.R:30:1: style: lines should not be more than 80 characters.
+                                                        "expected", "simple.html")))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/runit_tests/runit-render.R:38:51: style: Trailing whitespace is superfluous.
+    withr::with_dir(file.path(tempdir(), "files"), 
+                                                  ^
+inst/runit_tests/runit-render.R:40:67: style: Trailing whitespace is superfluous.
     result <- remove_dates(readLines(file.path(tempdir(), "files", 
                                                                   ^
-inst/runit_tests/runit-render.R:21:72: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:42:72: style: Trailing whitespace is superfluous.
     expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
                                                                        ^
-inst/runit_tests/runit-render.R:29:51: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:50:51: style: Trailing whitespace is superfluous.
     withr::with_dir(file.path(tempdir(), "files"), 
                                                   ^
-inst/runit_tests/runit-render.R:31:67: style: Trailing whitespace is superfluous.
-    result <- remove_dates(readLines(file.path(tempdir(), "files", 
-                                                                  ^
-inst/runit_tests/runit-render.R:33:72: style: Trailing whitespace is superfluous.
-    expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
-                                                                       ^
-inst/runit_tests/runit-render.R:41:51: style: Trailing whitespace is superfluous.
-    withr::with_dir(file.path(tempdir(), "files"), 
-                                                  ^
-inst/runit_tests/runit-render.R:43:1: style: lines should not be more than 80 characters.
+inst/runit_tests/runit-render.R:52:1: style: lines should not be more than 80 characters.
     result <- remove_dates(readLines(file.path(tempdir(), "files", "fake.html")))
 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-inst/runit_tests/runit-render.R:43:15: warning: no visible global function definition for ‘remove_dates’
+inst/runit_tests/runit-render.R:52:15: warning: no visible global function definition for ‘remove_dates’
     result <- remove_dates(readLines(file.path(tempdir(), "files", "fake.html")))
               ^~~~~~~~~~~~
-inst/runit_tests/runit-render.R:44:72: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:53:72: style: Trailing whitespace is superfluous.
     expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
                                                                        ^
-inst/runit_tests/runit-render.R:57:51: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:66:51: style: Trailing whitespace is superfluous.
     withr::with_dir(file.path(tempdir(), "files"), 
                                                   ^
-inst/runit_tests/runit-render.R:59:67: style: Trailing whitespace is superfluous.
-    result <- remove_dates(readLines(file.path(tempdir(), "files", 
-                                                                  ^
-inst/runit_tests/runit-render.R:61:72: style: Trailing whitespace is superfluous.
-    expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
-                                                                       ^
 inst/runit_tests/runit-render.R:68:67: style: Trailing whitespace is superfluous.
     result <- remove_dates(readLines(file.path(tempdir(), "files", 
                                                                   ^
 inst/runit_tests/runit-render.R:70:72: style: Trailing whitespace is superfluous.
     expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
                                                                        ^
-inst/runit_tests/runit-render.R:71:64: style: Trailing whitespace is superfluous.
+inst/runit_tests/runit-render.R:77:67: style: Trailing whitespace is superfluous.
+    result <- remove_dates(readLines(file.path(tempdir(), "files", 
+                                                                  ^
+inst/runit_tests/runit-render.R:79:72: style: Trailing whitespace is superfluous.
+    expectation <- remove_dates(readLines(file.path(tempdir(), "files", 
+                                                                       ^
+inst/runit_tests/runit-render.R:80:64: style: Trailing whitespace is superfluous.
                                                     "expected", 
                                                                ^
 R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
@@ -322,6 +325,6 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:104:24: style: Use <-, not =, for assignment.
+R/render.R:103:24: style: Use <-, not =, for assignment.
     slide_only_pattern = "//slide_only"
                        ^

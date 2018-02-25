@@ -11,8 +11,8 @@ New submission
 The Title field should be in title case, current version then in title case:
 ‘Create Reports Using `R` and `asciidoc`’
 ‘Create Reports Using `r` and `asciidoc`’
-displaying logs for fvafrCU/rasciidoc#32.1
-undefined method `each_pair' for #<String:0x000000030bb078>
+displaying logs for fvafrCU/rasciidoc#35.1
+undefined method `each_pair' for #<String:0x00000001789208>
 Error in strsplit(travis_session_info, "\n") : non-character argument
 Calls: <Anonymous> -> unlist -> strsplit
 In addition: Warning message:
