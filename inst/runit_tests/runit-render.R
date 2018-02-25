@@ -20,6 +20,8 @@ test_render_simple <- function() {
                     result <- rasciidoc::render("simple.Rasciidoc"))
     if (! is_installed_asciidoc()) {
         not_expectation  <- as.integer(0)
+        print(str(result))
+        print(str(not_expectation))
         RUnit::checkTrue(! identical(result, not_expectation))
     } else {
         expectation  <- as.integer(0)
