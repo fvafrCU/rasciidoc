@@ -104,7 +104,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                       envir = envir)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
-    slide_only_pattern = "//slide_only"
+    slide_only_pattern <- "//slide_only"
     begin_pattern <- "^//end_only_slide"
     if (any(grepl(begin_pattern, readLines(adoc))) ||
         any(grepl(slide_only_pattern, readLines(adoc)))) {
