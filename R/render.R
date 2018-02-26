@@ -1,4 +1,8 @@
-is_installed <- function(program) return(isTRUE(nchar(Sys.which(program)) > 0))
+is_installed <- function(program) {
+    is_installed <- nchar(Sys.which(program)) > 0
+    attr(is_installed, "names") <- NULL
+    return(is_installed)
+}
 
 #' Render an `asciidoc` File
 #'
