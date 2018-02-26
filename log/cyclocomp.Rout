@@ -1,0 +1,134 @@
+Installing 5 packages: callr, glue, knitr, rlang, stringr
+trying URL 'http://cloud.r-project.org/src/contrib/callr_2.0.2.tar.gz'
+Content type 'application/x-gzip' length 95272 bytes (93 KB)
+==================================================
+downloaded 93 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/glue_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 28193 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/knitr_1.20.tar.gz'
+Content type 'application/x-gzip' length 650082 bytes (634 KB)
+==================================================
+downloaded 634 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/rlang_0.2.0.tar.gz'
+Content type 'application/x-gzip' length 323899 bytes (316 KB)
+==================================================
+downloaded 316 KB
+
+trying URL 'http://cloud.r-project.org/src/contrib/stringr_1.3.0.tar.gz'
+Content type 'application/x-gzip' length 118333 bytes (115 KB)
+==================================================
+downloaded 115 KB
+
+* installing *source* package ‘callr’ ...
+** package ‘callr’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/Rtmp8O6Jyj/R.INSTALLd1f57a3c512/callr/src'
+gcc -g -O2  -Wall tools/px.c -o tools/px
+gcc -g -O2  supervisor/supervisor.c supervisor/utils.c \
+      -o supervisor/supervisor
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c poll.c -o poll.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c callr-connection.c -o callr-connection.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c callr-vector.c -o callr-vector.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/childlist.c -o unix/childlist.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/connection.c -o unix/connection.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/callr.c -o unix/callr.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/sigchld.c -o unix/sigchld.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/utils.c -o unix/utils.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/named_pipe.c -o unix/named_pipe.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-connections.cpp -o test-connections.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-runner.cpp -o test-runner.o
+g++ -shared -L/usr/local/lib -o callr.so init.o poll.o callr-connection.o callr-vector.o unix/childlist.o unix/connection.o unix/callr.o unix/sigchld.o unix/utils.o unix/named_pipe.o test-connections.o test-runner.o
+make[1]: Leaving directory '/tmp/Rtmp8O6Jyj/R.INSTALLd1f57a3c512/callr/src'
+installing via 'install.libs.R' to /tmp/Rtmpr3oHvY/filece244b3c5b9/callr
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (callr)
+* installing *source* package ‘glue’ ...
+** package ‘glue’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/Rtmpq3yO2y/R.INSTALLd60bff1735/glue/src'
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c glue.c -o glue.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c trim.c -o trim.o
+gcc -shared -L/usr/local/lib -o glue.so glue.o init.o trim.o
+make[1]: Leaving directory '/tmp/Rtmpq3yO2y/R.INSTALLd60bff1735/glue/src'
+installing to /tmp/Rtmpr3oHvY/filece244b3c5b9/glue/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (glue)
+* installing *source* package ‘rlang’ ...
+** package ‘rlang’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpGB74ys/R.INSTALLd7a6c72efd4/rlang/src'
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c capture.c -o capture.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c export.c -o export.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c lib.c -o lib.o
+gcc -shared -L/usr/local/lib -o rlang.so capture.o export.o internal.o lib.o
+make[1]: Leaving directory '/tmp/RtmpGB74ys/R.INSTALLd7a6c72efd4/rlang/src'
+installing to /tmp/Rtmpr3oHvY/filece244b3c5b9/rlang/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded
+* DONE (rlang)
+* installing *source* package ‘stringr’ ...
+** package ‘stringr’ successfully unpacked and MD5 sums checked
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (stringr)
+* installing *source* package ‘knitr’ ...
+** package ‘knitr’ successfully unpacked and MD5 sums checked
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (knitr)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpr3oHvY/downloaded_packages’
+* installing *source* package ‘rasciidoc’ ...
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (rasciidoc)
+<error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for hilight_source by 5.>

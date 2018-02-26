@@ -1,0 +1,66 @@
+               filename             functions line value
+4   R/highr_internals.R             try_parse    3     0
+8   R/highr_internals.R             try_parse    4     0
+10  R/highr_internals.R             try_parse    5     0
+11  R/highr_internals.R             group_src    9     0
+12  R/highr_internals.R             group_src   10     0
+14  R/highr_internals.R             group_src   11     0
+15  R/highr_internals.R             group_src   12     0
+16  R/highr_internals.R             group_src   13     0
+19  R/highr_internals.R             group_src   14     0
+21  R/highr_internals.R             group_src   15     0
+24  R/highr_internals.R             group_src   16     0
+26  R/highr_internals.R             group_src   17     0
+28  R/highr_internals.R             group_src   18     0
+31  R/highr_internals.R             group_src   19     0
+35  R/highr_internals.R             group_src   20     0
+40  R/highr_internals.R             group_src   21     0
+53  R/highr_internals.R          escape_latex   25     0
+56  R/highr_internals.R          escape_latex   26     0
+58  R/highr_internals.R          escape_latex   27     0
+64  R/highr_internals.R           escape_html   31     0
+67  R/highr_internals.R           escape_html   32     0
+70  R/highr_internals.R           escape_html   33     0
+73  R/highr_internals.R           escape_html   34     0
+76  R/highr_internals.R           escape_html   35     0
+7             R/hooks.R            set_header    4     0
+9             R/hooks.R            set_header    5     0
+20            R/hooks.R        hilight_source   14     0
+22            R/hooks.R        hilight_source   15     0
+25            R/hooks.R        hilight_source   16     0
+27            R/hooks.R        hilight_source   17     0
+29            R/hooks.R        hilight_source   18     0
+32            R/hooks.R        hilight_source   19     0
+37            R/hooks.R        hilight_source   20     0
+42            R/hooks.R        hilight_source   21     0
+46            R/hooks.R        hilight_source   22     0
+49            R/hooks.R        hilight_source   23     0
+51            R/hooks.R        hilight_source   24     0
+54            R/hooks.R        hilight_source   25     0
+57            R/hooks.R        hilight_source   26     0
+59            R/hooks.R        hilight_source   27     0
+60            R/hooks.R        hilight_source   28     0
+68            R/hooks.R        hilight_source   32     0
+71            R/hooks.R        hilight_source   33     0
+74            R/hooks.R        hilight_source   34     0
+100           R/hooks.R adjust_asciidoc_hooks   67     0
+101           R/hooks.R adjust_asciidoc_hooks   68     0
+106           R/hooks.R adjust_asciidoc_hooks   71     0
+108           R/hooks.R adjust_asciidoc_hooks   72     0
+112           R/hooks.R adjust_asciidoc_hooks   75     0
+113           R/hooks.R adjust_asciidoc_hooks   76     0
+3   R/knitr_internals.R            merge_list    3     0
+6   R/knitr_internals.R            merge_list    4     0
+13  R/knitr_internals.R           line_prompt   10     0
+18  R/knitr_internals.R               isFALSE   13     0
+23  R/knitr_internals.R        comment_length   16     0
+36  R/knitr_internals.R      highlight_header   20     0
+41  R/knitr_internals.R      highlight_header   21     0
+45  R/knitr_internals.R      highlight_header   22     0
+48  R/knitr_internals.R      highlight_header   23     0
+rasciidoc Coverage: 65.50%
+R/highr_internals.R: 0.00%
+R/knitr_internals.R: 0.00%
+R/hooks.R: 50.94%
+R/render.R: 100.00%
+R/throw.R: 100.00%
