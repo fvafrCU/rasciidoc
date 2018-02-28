@@ -43,8 +43,9 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
     }
     if (isTRUE(knit)) {
         knit_out_file <- sub("\\.R(.*)", ".\\1", file_name)
+        ops <- options() ## TODO: knitr changes the options?! 
         file_name <- knitr::knit(file_name, knit_out_file, envir = envir)
-        options(warn = 0) ## knitr changes the options?!
+        options(ops) ## restore old options
     }
     return(file_name)
 }
