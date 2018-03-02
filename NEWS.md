@@ -1,3 +1,8 @@
+# rasciidoc 0.6.0
+
+* render() now works for R files with markup in roxygen comments that are
+  parsed trough knitr::spin().
+
 # rasciidoc 0.5.0
 
 * Passed the parent.frame() down to knitr to always be in .GlobalEnv.
