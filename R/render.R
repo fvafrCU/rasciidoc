@@ -50,9 +50,9 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
     return(file_name)
 }
 
-#' Knit and Render an `asciidoc` File
+#' Spin or Knit and Render a `Rasciidoc` File
 #'
-#' Knit (if required) and render an `asciidoc` file.
+#' Spin or Knit (if required) and render an `Rasciidoc` file.
 #' @inheritParams rasciidoc
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
@@ -67,13 +67,17 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
 #' @export
 render <- function(file_name, knit = NA, adjust_hooks = TRUE,
                    envir = parent.frame(), ...) {
-    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
+    if (grepl("^.*\\.[rR]$", file_name)) {
+        adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
+    } else {
+        adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
                       envir = envir)
+    }
     status <- rasciidoc(adoc, ...)
     return(status)
 }
 
-#' Knit and Render an `asciidoc` File to html and slidy
+#' Spin Knit or Render a `Rasciidoc` File to html and slidy
 #'
 #' You can exclude parts of the file from the standard html or slidy output by
 #' using lines starting with '//begin_only_slide' and '//end_only_slide' or
@@ -101,8 +105,12 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                           envir = parent.frame()) {
     status <- NULL
     out_files <- NULL
-    adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
-                      envir = envir)
+    if (grepl("^.*\\.[rR]", file_name)) {
+        adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
+    } else {
+        adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
+                          envir = envir)
+    }
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern <- "//slide_only"

@@ -2,7 +2,7 @@
 % Please edit documentation in R/render.R
 \name{render}
 \alias{render}
-\title{Knit and Render an `asciidoc` File}
+\title{Spin or Knit and Render a `Rasciidoc` File}
 \usage{
 render(file_name, knit = NA, adjust_hooks = TRUE, envir = parent.frame(),
   ...)
@@ -28,5 +28,5 @@ the defaults of \code{\link{adjust_asciidoc_hooks}}?}
 The return value of \code{\link{rasciidoc}}.
 }
 \description{
-Knit (if required) and render an `asciidoc` file.
+Spin or Knit (if required) and render an `Rasciidoc` file.
 }

@@ -1,6 +1,33 @@
 inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: Trailing blank lines are superfluous.
 
 ^
+inst/files/simple/src/my_sum.R:4:29: style: Trailing whitespace is superfluous.
+        value <- value + x_i 
+                            ^
+inst/files/simple/src/sum.R:3:16: style: Opening curly braces should never go on their own line and should always be followed by a new line.
+for (a_i in a) { # <3>
+               ^
+inst/files/simple/src/sum.R:7:1: style: Trailing blank lines are superfluous.
+
+^
+inst/runit_tests/runit-render.R:102:76: style: Trailing whitespace is superfluous.
+                        file.copy(list.files(system.file("files", "simple", 
+                                                                           ^
+inst/runit_tests/runit-render.R:108:79: style: Trailing whitespace is superfluous.
+                        # kindes of exlusions...). I therefore moved spin.R to 
+                                                                              ^
+inst/runit_tests/runit-render.R:116:33: warning: no visible global function definition for ‘remove_dates’
+                        spin <- remove_dates(readLines("spin.html"))
+                                ^~~~~~~~~~~~
+inst/runit_tests/runit-render.R:117:37: warning: no visible global function definition for ‘remove_dates’
+                        ascii_md <- remove_dates(readLines("foo.html"))
+                                    ^~~~~~~~~~~~
+inst/runit_tests/runit-render.R:122:33: warning: no visible global function definition for ‘remove_dates’
+                        knit <- remove_dates(readLines("knit.html"))
+                                ^~~~~~~~~~~~
+inst/runit_tests/runit-render.R:123:34: warning: no visible global function definition for ‘remove_dates’
+                        ascii <- remove_dates(readLines("bar.html"))
+                                 ^~~~~~~~~~~~
 R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
 try_parse = function(code, silent = TRUE) {
           ^
@@ -271,3 +298,9 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
+R/render.R:46:62: style: Trailing whitespace is superfluous.
+        ops <- options() ## TODO: knitr changes the options?! 
+                                                             ^
+Warning message:
+In normalizePath(file.path(path, names(settings$exclusions))) :
+  path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

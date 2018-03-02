@@ -2,7 +2,7 @@
 % Please edit documentation in R/render.R
 \name{render_slides}
 \alias{render_slides}
-\title{Knit and Render an `asciidoc` File to html and slidy}
+\title{Spin Knit or Render a `Rasciidoc` File to html and slidy}
 \usage{
 render_slides(file_name, knit = NA, adjust_hooks = TRUE,
   envir = parent.frame())

@@ -95,3 +95,33 @@ test_render_slides <- function() {
         }
     }
 }
+
+test_knit_spin <- function() {
+    if (is_installed_asciidoc()) {
+        withr::with_dir(tempdir(), {
+                        file.copy(list.files(system.file("files", "simple", 
+                                                         package = "rasciidoc"),
+                                             full.names = TRUE
+                                             ),
+                                  ".", recursive = TRUE)
+                        # lintr inevitably reads spin.R and crashes (I tried all
+                        # kindes of exlusions...). I therefore moved spin.R to 
+                        # spin.R_nolint to make lintr not read the file.
+                        # But I need it to end on R or r when deciding whether
+                        # to knit or spin. So I rename here:
+                        file.rename("spin.R_nolint", "spin.R")
+                        rasciidoc::render("spin.R")
+                        file.copy("spin.md", "foo.md")
+                        rasciidoc::render("foo.md")
+                        spin <- remove_dates(readLines("spin.html"))
+                        ascii_md <- remove_dates(readLines("foo.html"))
+                        RUnit::checkIdentical(spin, ascii_md)
+                        rasciidoc::render("knit.Rasciidoc")
+                        file.copy("knit.asciidoc", "bar.asciidoc")
+                        rasciidoc::render("bar.asciidoc")
+                        knit <- remove_dates(readLines("knit.html"))
+                        ascii <- remove_dates(readLines("bar.html"))
+                        RUnit::checkIdentical(knit, ascii)
+                    })
+    }
+}

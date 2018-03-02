@@ -1,130 +1,110 @@
-Installing 5 packages: callr, glue, knitr, rlang, stringr
-trying URL 'http://cloud.r-project.org/src/contrib/callr_2.0.2.tar.gz'
-Content type 'application/x-gzip' length 95272 bytes (93 KB)
+Installing 3 packages: Rcpp, xml2, yaml
+trying URL 'http://cloud.r-project.org/src/contrib/Rcpp_0.12.15.tar.gz'
+Content type 'application/x-gzip' length 3762481 bytes (3.6 MB)
 ==================================================
-downloaded 93 KB
+downloaded 3.6 MB
 
-trying URL 'http://cloud.r-project.org/src/contrib/glue_1.2.0.tar.gz'
-Content type 'application/x-gzip' length 28193 bytes (27 KB)
+trying URL 'http://cloud.r-project.org/src/contrib/xml2_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 251614 bytes (245 KB)
 ==================================================
-downloaded 27 KB
+downloaded 245 KB
 
-trying URL 'http://cloud.r-project.org/src/contrib/knitr_1.20.tar.gz'
-Content type 'application/x-gzip' length 650082 bytes (634 KB)
+trying URL 'http://cloud.r-project.org/src/contrib/yaml_2.1.17.tar.gz'
+Content type 'application/x-gzip' length 84815 bytes (82 KB)
 ==================================================
-downloaded 634 KB
+downloaded 82 KB
 
-trying URL 'http://cloud.r-project.org/src/contrib/rlang_0.2.0.tar.gz'
-Content type 'application/x-gzip' length 323899 bytes (316 KB)
-==================================================
-downloaded 316 KB
-
-trying URL 'http://cloud.r-project.org/src/contrib/stringr_1.3.0.tar.gz'
-Content type 'application/x-gzip' length 118333 bytes (115 KB)
-==================================================
-downloaded 115 KB
-
-* installing *source* package ‘callr’ ...
-** package ‘callr’ successfully unpacked and MD5 sums checked
+* installing *source* package ‘Rcpp’ ...
+** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/Rtmp8O6Jyj/R.INSTALLd1f57a3c512/callr/src'
-gcc -g -O2  -Wall tools/px.c -o tools/px
-gcc -g -O2  supervisor/supervisor.c supervisor/utils.c \
-      -o supervisor/supervisor
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c poll.c -o poll.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c callr-connection.c -o callr-connection.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c callr-vector.c -o callr-vector.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/childlist.c -o unix/childlist.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/connection.c -o unix/connection.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/callr.c -o unix/callr.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/sigchld.c -o unix/sigchld.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/utils.c -o unix/utils.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c unix/named_pipe.c -o unix/named_pipe.o
-g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-connections.cpp -o test-connections.o
-g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG  -I"/home/nik/svn/R/r-devel/build/library/testthat/include" -I/usr/local/include   -fpic  -g -O2  -c test-runner.cpp -o test-runner.o
-g++ -shared -L/usr/local/lib -o callr.so init.o poll.o callr-connection.o callr-vector.o unix/childlist.o unix/connection.o unix/callr.o unix/sigchld.o unix/utils.o unix/named_pipe.o test-connections.o test-runner.o
-make[1]: Leaving directory '/tmp/Rtmp8O6Jyj/R.INSTALLd1f57a3c512/callr/src'
-installing via 'install.libs.R' to /tmp/Rtmpr3oHvY/filece244b3c5b9/callr
+make[1]: Entering directory '/tmp/RtmptQw2jh/R.INSTALL7bab17dbef89/Rcpp/src'
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c api.cpp -o api.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
+g++ -shared -L/usr/local/lib64 -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
+make[1]: Leaving directory '/tmp/RtmptQw2jh/R.INSTALL7bab17dbef89/Rcpp/src'
+installing to /tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs
 ** R
 ** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** testing if installed package can be loaded
-* DONE (callr)
-* installing *source* package ‘glue’ ...
-** package ‘glue’ successfully unpacked and MD5 sums checked
-** libs
-make[1]: Entering directory '/tmp/Rtmpq3yO2y/R.INSTALLd60bff1735/glue/src'
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c glue.c -o glue.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c trim.c -o trim.o
-gcc -shared -L/usr/local/lib -o glue.so glue.o init.o trim.o
-make[1]: Leaving directory '/tmp/Rtmpq3yO2y/R.INSTALLd60bff1735/glue/src'
-installing to /tmp/Rtmpr3oHvY/filece244b3c5b9/glue/libs
-** R
-** inst
-** byte-compile and prepare package for lazy loading
+** preparing package for lazy loading
 ** help
 *** installing help indices
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded
-* DONE (glue)
-* installing *source* package ‘rlang’ ...
-** package ‘rlang’ successfully unpacked and MD5 sums checked
+Error: package or namespace load failed for ‘Rcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs/Rcpp.so':
+  /tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
+Error: loading failed
+Execution halted
+ERROR: loading failed
+* removing ‘/tmp/Rtmpfo8otD/file7ada6f415282/Rcpp’
+* installing *source* package ‘yaml’ ...
+** package ‘yaml’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpGB74ys/R.INSTALLd7a6c72efd4/rlang/src'
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c capture.c -o capture.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c export.c -o export.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c internal.c -o internal.o
-gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I./lib/  -I/usr/local/include   -fpic  -g -O2  -c lib.c -o lib.o
-gcc -shared -L/usr/local/lib -o rlang.so capture.o export.o internal.o lib.o
-make[1]: Leaving directory '/tmp/RtmpGB74ys/R.INSTALLd7a6c72efd4/rlang/src'
-installing to /tmp/Rtmpr3oHvY/filece244b3c5b9/rlang/libs
+make[1]: Entering directory '/tmp/RtmpM9wLly/R.INSTALL7ee62a275bc6/yaml/src'
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c implicit.c -o implicit.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c loader.c -o loader.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c parser.c -o parser.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_emit.c -o r_emit.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_ext.c -o r_ext.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_parse.c -o r_parse.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c reader.c -o reader.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
+gcc -shared -L/usr/local/lib64 -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
+make[1]: Leaving directory '/tmp/RtmpM9wLly/R.INSTALL7ee62a275bc6/yaml/src'
+installing to /tmp/Rtmpfo8otD/file7ada6f415282/yaml/libs
 ** R
-** byte-compile and prepare package for lazy loading
+** inst
+** preparing package for lazy loading
 ** help
 *** installing help indices
-*** copying figures
 ** building package indices
 ** testing if installed package can be loaded
-* DONE (rlang)
-* installing *source* package ‘stringr’ ...
-** package ‘stringr’ successfully unpacked and MD5 sums checked
+* DONE (yaml)
+* installing *source* package ‘xml2’ ...
+** package ‘xml2’ successfully unpacked and MD5 sums checked
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/usr/include/libxml2
+Using PKG_LIBS=-lxml2
+** libs
+make[1]: Entering directory '/tmp/RtmpjGR2Vu/R.INSTALL7f8e47cf7e4c/xml2/src'
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c connection.cpp -o connection.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_doc.cpp -o xml2_doc.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_init.cpp -o xml2_init.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_namespace.cpp -o xml2_namespace.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_node.cpp -o xml2_node.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_output.cpp -o xml2_output.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_schema.cpp -o xml2_schema.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_url.cpp -o xml2_url.o
+g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_xpath.cpp -o xml2_xpath.o
+g++ -shared -L/usr/local/lib64 -o xml2.so RcppExports.o connection.o xml2_doc.o xml2_init.o xml2_namespace.o xml2_node.o xml2_output.o xml2_schema.o xml2_url.o xml2_xpath.o -lxml2
+make[1]: Leaving directory '/tmp/RtmpjGR2Vu/R.INSTALL7f8e47cf7e4c/xml2/src'
+installing to /tmp/Rtmpfo8otD/file7ada6f415282/xml2/libs
 ** R
-** data
-*** moving datasets to lazyload DB
 ** inst
-** byte-compile and prepare package for lazy loading
+** preparing package for lazy loading
 ** help
 *** installing help indices
-*** copying figures
 ** building package indices
 ** installing vignettes
 ** testing if installed package can be loaded
-* DONE (stringr)
-* installing *source* package ‘knitr’ ...
-** package ‘knitr’ successfully unpacked and MD5 sums checked
-** R
-** demo
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded
-* DONE (knitr)
+* DONE (xml2)
 
 The downloaded source packages are in
-	‘/tmp/Rtmpr3oHvY/downloaded_packages’
+	‘/tmp/Rtmpfo8otD/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst
-** byte-compile and prepare package for lazy loading
+** preparing package for lazy loading
 ** help
 *** installing help indices
 ** building package indices
@@ -132,3 +112,6 @@ The downloaded source packages are in
 ** testing if installed package can be loaded
 * DONE (rasciidoc)
 <error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for hilight_source by 5.>
+Warning message:
+In utils::install.packages(...) :
+  installation of package ‘Rcpp’ had non-zero exit status

@@ -9,4 +9,5 @@
 ^\.travis\.yml$
 ^log$
 ^\.log\.Rout$
+^\.lintr$
 ^TODO.md$
