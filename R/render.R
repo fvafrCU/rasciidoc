@@ -67,7 +67,7 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
 #' @export
 render <- function(file_name, knit = NA, adjust_hooks = TRUE,
                    envir = parent.frame(), ...) {
-    if (grepl("^.*\\.[rR]$", file_name)) {
+    if (is_spin_file(file_name)) {
         adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
     } else {
         adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
@@ -77,6 +77,14 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE,
     return(status)
 }
 
+is_spin_file <- function(file_name) {
+    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
+    has_roxygen_comment <- any(grepl("^#'", readLines(file_name)))
+    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
+                                              readLines(file_name)))
+    is_spin <- is_r_file && has_roxygen_comment || has_spin_knitr_chunk_options
+    return(is_spin)
+}
 #' Spin Knit or Render a `Rasciidoc` File to html and slidy
 #'
 #' You can exclude parts of the file from the standard html or slidy output by
@@ -105,7 +113,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                           envir = parent.frame()) {
     status <- NULL
     out_files <- NULL
-    if (grepl("^.*\\.[rR]", file_name)) {
+    if (is_spin_file(file_name)) {
         adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
     } else {
         adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
