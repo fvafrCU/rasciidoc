@@ -99,17 +99,14 @@ output file: simple.asciidoc
 
 
 
-processing file: simple.Rmd
-  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+processing file: simple.Rasciidoc
+  |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
-  |                                                                         |...........................................                      |  67%
-label: unnamed-chunk-1
   |                                                                         |.................................................................| 100%
-  ordinary text without R code
+label: unnamed-chunk-1
 
-
-output file: simple.md
+output file: simple.asciidoc
 
 
 
@@ -126,17 +123,25 @@ output file: fake.adoc
 
 Executing test function test_render_slides  ... 
 
-processing file: slides.Rmd
-  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+processing file: slides.Rasciidoc
+  |                                                                         |                                                                 |   0%  |                                                                         |................                                                 |  25%
   ordinary text without R code
 
-  |                                                                         |...........................................                      |  67%
-label: unnamed-chunk-1
+  |                                                                         |................................                                 |  50%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ eval: logi FALSE
+
+  |                                                                         |.................................................                |  75%
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ include: logi FALSE
+
   |                                                                         |.................................................................| 100%
   ordinary text without R code
 
 
-output file: slides.md
+output file: slides.asciidoc
 
  done successfully.
 
@@ -145,7 +150,7 @@ output file: slides.md
 Executing test function test_exception  ... Error in eval(expr, envir = parent.frame()) : Hello, error!
  done successfully.
 
-RUNIT TEST PROTOCOL -- Fri Mar  2 17:04:26 2018 
+RUNIT TEST PROTOCOL -- Fri Mar  2 17:49:10 2018 
 *********************************************** 
 Number of test functions: 4 
 Number of errors: 0 
@@ -166,9 +171,9 @@ Involved directory:
 inst/runit_tests 
 --------------------------- 
 Test file: inst/runit_tests/runit-render.R 
-test_knit_spin: (2 checks) ... OK (14.48 seconds)
-test_render_simple: (4 checks) ... OK (4.65 seconds)
-test_render_slides: (2 checks) ... OK (3.49 seconds)
+test_knit_spin: (2 checks) ... OK (18.57 seconds)
+test_render_simple: (4 checks) ... OK (4.39 seconds)
+test_render_slides: (2 checks) ... OK (4.26 seconds)
 --------------------------- 
 Test file: inst/runit_tests/runit-throw.R 
-test_exception: (1 checks) ... OK (0 seconds)
+test_exception: (1 checks) ... OK (0.01 seconds)

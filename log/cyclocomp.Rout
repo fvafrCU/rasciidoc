@@ -17,7 +17,7 @@ downloaded 82 KB
 * installing *source* package ‘Rcpp’ ...
 ** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmptQw2jh/R.INSTALL7bab17dbef89/Rcpp/src'
+make[1]: Entering directory '/tmp/Rtmp669FPI/R.INSTALL2bdc4eede4ed/Rcpp/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
@@ -25,8 +25,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/u
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
 g++ -shared -L/usr/local/lib64 -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
-make[1]: Leaving directory '/tmp/RtmptQw2jh/R.INSTALL7bab17dbef89/Rcpp/src'
-installing to /tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs
+make[1]: Leaving directory '/tmp/Rtmp669FPI/R.INSTALL2bdc4eede4ed/Rcpp/src'
+installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -36,16 +36,16 @@ installing to /tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs
 ** installing vignettes
 ** testing if installed package can be loaded
 Error: package or namespace load failed for ‘Rcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs/Rcpp.so':
-  /tmp/Rtmpfo8otD/file7ada6f415282/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
+ unable to load shared object '/tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs/Rcpp.so':
+  /tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
 Error: loading failed
 Execution halted
 ERROR: loading failed
-* removing ‘/tmp/Rtmpfo8otD/file7ada6f415282/Rcpp’
+* removing ‘/tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp’
 * installing *source* package ‘yaml’ ...
 ** package ‘yaml’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpM9wLly/R.INSTALL7ee62a275bc6/yaml/src'
+make[1]: Entering directory '/tmp/RtmpEADpGD/R.INSTALL2efc1fe23117/yaml/src'
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
@@ -59,8 +59,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/loca
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
 gcc -shared -L/usr/local/lib64 -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
-make[1]: Leaving directory '/tmp/RtmpM9wLly/R.INSTALL7ee62a275bc6/yaml/src'
-installing to /tmp/Rtmpfo8otD/file7ada6f415282/yaml/libs
+make[1]: Leaving directory '/tmp/RtmpEADpGD/R.INSTALL2efc1fe23117/yaml/src'
+installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/yaml/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -75,7 +75,7 @@ Found pkg-config cflags and libs!
 Using PKG_CFLAGS=-I/usr/include/libxml2
 Using PKG_LIBS=-lxml2
 ** libs
-make[1]: Entering directory '/tmp/RtmpjGR2Vu/R.INSTALL7f8e47cf7e4c/xml2/src'
+make[1]: Entering directory '/tmp/Rtmp7SzzPv/R.INSTALL2f8f1673c7bd/xml2/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c connection.cpp -o connection.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_doc.cpp -o xml2_doc.o
@@ -87,8 +87,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_url.cpp -o xml2_url.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_xpath.cpp -o xml2_xpath.o
 g++ -shared -L/usr/local/lib64 -o xml2.so RcppExports.o connection.o xml2_doc.o xml2_init.o xml2_namespace.o xml2_node.o xml2_output.o xml2_schema.o xml2_url.o xml2_xpath.o -lxml2
-make[1]: Leaving directory '/tmp/RtmpjGR2Vu/R.INSTALL7f8e47cf7e4c/xml2/src'
-installing to /tmp/Rtmpfo8otD/file7ada6f415282/xml2/libs
+make[1]: Leaving directory '/tmp/Rtmp7SzzPv/R.INSTALL2f8f1673c7bd/xml2/src'
+installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/xml2/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -100,7 +100,7 @@ installing to /tmp/Rtmpfo8otD/file7ada6f415282/xml2/libs
 * DONE (xml2)
 
 The downloaded source packages are in
-	‘/tmp/Rtmpfo8otD/downloaded_packages’
+	‘/tmp/RtmpvLyKAx/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst
@@ -113,5 +113,4 @@ The downloaded source packages are in
 * DONE (rasciidoc)
 <error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for hilight_source by 5.>
 Warning message:
-In utils::install.packages(...) :
-  installation of package ‘Rcpp’ had non-zero exit status
+In i.p(...) : installation of package ‘Rcpp’ had non-zero exit status

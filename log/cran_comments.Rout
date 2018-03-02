@@ -12,18 +12,8 @@ The Title field should be in title case, current version then in title case:
 ‘Create Reports Using `R` and `asciidoc`’
 ‘Create Reports Using `r` and `asciidoc`’
 
-checking for hidden files and directories ... NOTE
-Found the following hidden files and directories:
-  .lintr
-These were most likely included in error. See section ‘Package
-structure’ in the ‘Writing R Extensions’ manual.
-
-CRAN-pack does not know about
-  .lintr
-displaying logs for fvafrCU/rasciidoc#45.1
-undefined method `each_pair' for #<String:0x00000002de4930>
-Error in strsplit(travis_session_info, "\n") : non-character argument
-Calls: <Anonymous> -> unlist -> strsplit
-In addition: Warning message:
-running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1 
-Execution halted
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+               user system elapsed
+render_slides 5.804  0.224   6.863
+displaying logs for fvafrCU/rasciidoc#46.1

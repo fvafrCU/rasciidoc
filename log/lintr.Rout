@@ -301,6 +301,12 @@ R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 R/render.R:46:62: style: Trailing whitespace is superfluous.
         ops <- options() ## TODO: knitr changes the options?! 
                                                              ^
+R/render.R:81:49: style: Trailing whitespace is superfluous.
+    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
+                                                ^
+R/render.R:83:59: style: Trailing whitespace is superfluous.
+    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
+                                                          ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
   path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory
