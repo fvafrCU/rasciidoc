@@ -1,2 +1,12 @@
 devtools::load_all(".")
-# file.copy(system.file("files", "simple", package = "rasciidoc")
+withr::with_dir(file.path("inst", "files", "simple"),
+                render("knit.Rasciidoc"))
+withr::with_dir(file.path("inst", "files", "simple"),
+                {
+                    file.copy("spin.R_nolint", "spin.R")
+                    render("spin.R")
+                    unlink("spin.R")
+                }
+)
+rasciidoc(system.file("files", "simple", "knit.asciidoc", package = "rasciidoc"))
+render(system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc"))
