@@ -9,4 +9,5 @@ withr::with_dir(file.path("inst", "files", "simple"),
                 }
 )
 rasciidoc(system.file("files", "simple", "knit.asciidoc", package = "rasciidoc"))
+rasciidoc(system.file("files", "simple", "spin.md", package = "rasciidoc"))
 render(system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc"))
