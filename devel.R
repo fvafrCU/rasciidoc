@@ -10,4 +10,7 @@ withr::with_dir(file.path("inst", "files", "simple"),
 )
 rasciidoc(system.file("files", "simple", "knit.asciidoc", package = "rasciidoc"))
 rasciidoc(system.file("files", "simple", "spin.md", package = "rasciidoc"))
+
+
+# This changes knit.asciidoc, html is not produced:
 render(system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc"))
