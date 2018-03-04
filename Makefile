@@ -174,4 +174,4 @@ $(LOG_DIR)/spell.Rout: .log.Rout DESCRIPTION $(LOG_DIR)/roxygen2.Rout $(MAN_FILE
 .PHONY: cyclocomp
 cyclocomp: $(LOG_DIR)/cyclocomp.Rout
 $(LOG_DIR)/cyclocomp.Rout: .log.Rout $(LOG_DIR)/dependencies.Rout $(R_FILES)
-	$(Rscript) --vanilla -e 'tryCatch(print(packager::check_cyclomatic_complexity()), error = identity)' > $(LOG_DIR)/cyclocomp.Rout 2>&1 
+	touch $(LOG_DIR)/cyclocomp.Rout #$(Rscript) --vanilla -e 'tryCatch(print(packager::check_cyclomatic_complexity()), error = identity)' > $(LOG_DIR)/cyclocomp.Rout 2>&1 
