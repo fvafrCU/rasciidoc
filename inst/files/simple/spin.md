@@ -25,7 +25,7 @@ This will not show up on slides.
 * Yet another entry in the list.
 
 == Including Code
-Don not use the _include_ macro provided by asciidoc!+ 
+Do not use the _include_ macro provided by asciidoc!+ 
 
 
 [source,r]
