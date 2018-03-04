@@ -1,3 +1,4 @@
 .Rprofile
 *.tar.gz
 rasciidoc.Rcheck
+.*.swp
