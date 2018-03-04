@@ -25,7 +25,7 @@ rasciidoc <- function(file_name, ...) {
     return(invisible(status))
 }
 
-run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
+run_knit <- function(file_name, knit = NA, adjust_hooks = TRUE,
                       envir = parent.frame()) {
     if (isTRUE(adjust_hooks)) adjust_asciidoc_hooks()
     if (is.na(knit)) {
@@ -50,6 +50,31 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
     return(file_name)
 }
 
+run_knitr <- function(file_name, working_directory = dirname(file_name)) {
+    withr::with_dir(working_directory, {
+                    file_name <- normalizePath(file_name)
+                    if (is_spin_file(file_name)) {
+                        out_file <- knitr::spin(file_name, knit = TRUE, 
+                                            report = FALSE)
+                    } else {
+                        out_file <- run_knit(file_name, knit = knit, 
+                                          adjust_hooks = adjust_hooks,
+                                          envir = envir)
+                    }
+                    out_file <- normalizePath(out_file)
+                    })
+    return(out_file)
+}
+
+is_spin_file <- function(file_name) {
+    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
+    has_roxygen_comment <- any(grepl("^#'", readLines(file_name)))
+    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
+                                              readLines(file_name)))
+    is_spin <- is_r_file && has_roxygen_comment || has_spin_knitr_chunk_options
+    return(is_spin)
+}
+
 #' Spin or Knit and Render a `Rasciidoc` File
 #'
 #' Spin or Knit (if required) and render an `Rasciidoc` file.
@@ -61,30 +86,23 @@ run_knitr <- function(file_name, knit = NA, adjust_hooks = TRUE,
 #' \code{\link{TRUE}} or \code{\link{NA}}, really), to
 #' disable knitting.
 #' @param envir The frame in which to render.
+#' @param working_directory Where to run \code{\link[knitr:knit]{knitr::knit}}
+#' or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
+#' directory to ensure that sourcing code into the input file works correctly.
 #' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using
 #' the defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
 render <- function(file_name, knit = NA, adjust_hooks = TRUE,
-                   envir = parent.frame(), ...) {
-    if (is_spin_file(file_name)) {
-        adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
-    } else {
-        adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
-                      envir = envir)
-    }
+                   envir = parent.frame(), 
+                   working_directory = dirname(file_name),
+                   ...) {
+    adoc <- run_knitr(file_name = file_name, 
+                      working_directory = working_directory)
     status <- rasciidoc(adoc, ...)
     return(status)
 }
 
-is_spin_file <- function(file_name) {
-    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
-    has_roxygen_comment <- any(grepl("^#'", readLines(file_name)))
-    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
-                                              readLines(file_name)))
-    is_spin <- is_r_file && has_roxygen_comment || has_spin_knitr_chunk_options
-    return(is_spin)
-}
 #' Spin Knit or Render a `Rasciidoc` File to html and slidy
 #'
 #' You can exclude parts of the file from the standard html or slidy output by
@@ -110,15 +128,12 @@ is_spin_file <- function(file_name) {
 #'     browseURL(files[2])
 #' }
 render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
+                          working_directory = dirname(file_name),
                           envir = parent.frame()) {
     status <- NULL
     out_files <- NULL
-    if (is_spin_file(file_name)) {
-        adoc <- knitr::spin(file_name, knit = TRUE, report = FALSE)
-    } else {
-        adoc <- run_knitr(file_name, knit = knit, adjust_hooks = adjust_hooks,
-                          envir = envir)
-    }
+    adoc <- run_knitr(file_name = file_name, 
+                      working_directory = working_directory)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern <- "//slide_only"
@@ -132,7 +147,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE,
                         value = TRUE)
-        # The asciidoc file has to be _here_ for include::-macros to work!
+        # The asciidoc file has to be _here_ for sourcing to work!
         excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
@@ -151,7 +166,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
         excerpt <- sub("(:numbered:)", "// \\1", excerpt)
-        # The asciidoc file has to be _here_ for include::-macros to work!
+        # The asciidoc file has to be _here_ for sourcing to work!
         excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)

@@ -1,3 +1,7 @@
+# rasciidoc 0.7.0
+
+* render() now uses a working directory that defaults to the input file's
+  directory, allowing for the default file to source code.
 # rasciidoc 0.6.0
 
 * render() now works for R files with markup in roxygen comments that are

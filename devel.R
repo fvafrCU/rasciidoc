@@ -1,20 +1,27 @@
 devtools::load_all(".")
 withr::with_dir(file.path("inst", "files", "simple"),
-                render("knit.Rasciidoc"))
+                rasciidoc::render("knit.Rasciidoc"))
 withr::with_dir(file.path("inst", "files", "simple"),
                 {
                     file.copy("spin.R_nolint", "spin.R")
-                    render("spin.R")
+                    rasciidoc::render("spin.R")
                     unlink("spin.R")
                 }
 )
-rasciidoc(system.file("files", "simple", "knit.asciidoc", package = "rasciidoc"))
-rasciidoc(system.file("files", "simple", "spin.md", package = "rasciidoc"))
+# This will not change the html output!
+rasciidoc::rasciidoc(system.file("files", "simple", "knit.asciidoc", package = "rasciidoc"))
+rasciidoc::rasciidoc(system.file("files", "simple", "spin.md", package = "rasciidoc"))
 
+
+# Knitr does not change to file's path!
 withr::with_dir(file.path("inst", "files", "simple"),
                 knitr::knit(system.file("files", "simple", "knitr.Rmd", package = "rasciidoc"))
                 )
 
+# Nor does spin!
+withr::with_dir(file.path("inst", "files", "simple"),
+                knitr::spin(system.file("files", "simple", "spin.R_nolint", package = "rasciidoc"), knit = TRUE, report = FALSE)
+                )
 
-# This changes knit.asciidoc, html is not produced:
-render(system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc"))
+file_name <- system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc")
+rasciidoc::render(file_name)
