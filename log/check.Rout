@@ -4,7 +4,7 @@
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘rasciidoc/DESCRIPTION’ ... OK
-* this is package ‘rasciidoc’ version ‘0.6.0’
+* this is package ‘rasciidoc’ version ‘0.7.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
@@ -61,10 +61,10 @@ TlsExceptionHostPort (HandshakeFailed Error_EOF) "www.r-pkg.org" 443
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
                user system elapsed
-render_slides 5.804  0.224   6.863
+render_slides 5.696  0.204   6.086
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’ [21s/23s]
+  Running ‘runit.R’ [21s/22s]
   Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK

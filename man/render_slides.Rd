@@ -5,7 +5,7 @@
 \title{Spin Knit or Render a `Rasciidoc` File to html and slidy}
 \usage{
 render_slides(file_name, knit = NA, adjust_hooks = TRUE,
-  envir = parent.frame())
+  working_directory = dirname(file_name), envir = parent.frame())
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -19,6 +19,10 @@ disable knitting.}
 
 \item{adjust_hooks}{Adjust knitr's output hooks for `asciidoc` files using
 the defaults of \code{\link{adjust_asciidoc_hooks}}?}
+
+\item{working_directory}{Where to run \code{\link[knitr:knit]{knitr::knit}}
+or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
+directory to ensure that sourcing code into the input file works correctly.}
 
 \item{envir}{The frame in which to render.}
 }

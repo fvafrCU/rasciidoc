@@ -50,7 +50,9 @@ run_knit <- function(file_name, knit = NA, adjust_hooks = TRUE,
     return(file_name)
 }
 
-run_knitr <- function(file_name, working_directory = dirname(file_name)) {
+run_knitr <- function(file_name, working_directory = dirname(file_name), 
+                      knit = NA, adjust_hooks = TRUE,
+                      envir = parent.frame()) {
     withr::with_dir(working_directory, {
                     file_name <- normalizePath(file_name)
                     if (is_spin_file(file_name)) {
@@ -98,7 +100,8 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE,
                    working_directory = dirname(file_name),
                    ...) {
     adoc <- run_knitr(file_name = file_name, 
-                      working_directory = working_directory)
+                      working_directory = working_directory, 
+                      adjust_hooks = adjust_hooks, knit = knit, envir = envir)
     status <- rasciidoc(adoc, ...)
     return(status)
 }
@@ -132,7 +135,7 @@ render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
                           envir = parent.frame()) {
     status <- NULL
     out_files <- NULL
-    adoc <- run_knitr(file_name = file_name, 
+    adoc <- run_knitr(file_name = file_name, adjust_hooks = adjust_hooks,
                       working_directory = working_directory)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")

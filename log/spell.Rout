@@ -1,11 +1,11 @@
   WORD        FOUND IN
-asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render.Rd:11,20,25, render_slides.Rd:11,20, title:1, description:1,2
+asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render.Rd:11,20,29, render_slides.Rd:11,20, title:1, description:1,2
 Broman      rasciidoc-package.Rd:8, description:1
 http        description:2
 kbroman     description:2
 knitr       rasciidoc-package.Rd:8,10, render.Rd:20, render_slides.Rd:20, description:1,2,3
 knutshell   description:2
 org         description:2
-slidy       render_slides.Rd:5,29,33
+slidy       render_slides.Rd:5,33,37
 Warning message:
 spell check failed 

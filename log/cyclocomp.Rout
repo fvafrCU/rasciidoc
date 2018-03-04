@@ -17,7 +17,7 @@ downloaded 82 KB
 * installing *source* package ‘Rcpp’ ...
 ** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/Rtmp669FPI/R.INSTALL2bdc4eede4ed/Rcpp/src'
+make[1]: Entering directory '/tmp/RtmpOcsXeR/R.INSTALL7d8f58e0d9f0/Rcpp/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
@@ -25,8 +25,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/u
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
 g++ -shared -L/usr/local/lib64 -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
-make[1]: Leaving directory '/tmp/Rtmp669FPI/R.INSTALL2bdc4eede4ed/Rcpp/src'
-installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs
+make[1]: Leaving directory '/tmp/RtmpOcsXeR/R.INSTALL7d8f58e0d9f0/Rcpp/src'
+installing to /tmp/RtmpK3ZBNc/file7ce256524b80/Rcpp/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -36,16 +36,16 @@ installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs
 ** installing vignettes
 ** testing if installed package can be loaded
 Error: package or namespace load failed for ‘Rcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs/Rcpp.so':
-  /tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
+ unable to load shared object '/tmp/RtmpK3ZBNc/file7ce256524b80/Rcpp/libs/Rcpp.so':
+  /tmp/RtmpK3ZBNc/file7ce256524b80/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
 Error: loading failed
 Execution halted
 ERROR: loading failed
-* removing ‘/tmp/RtmpvLyKAx/file2aa8a39aca3/Rcpp’
+* removing ‘/tmp/RtmpK3ZBNc/file7ce256524b80/Rcpp’
 * installing *source* package ‘yaml’ ...
 ** package ‘yaml’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpEADpGD/R.INSTALL2efc1fe23117/yaml/src'
+make[1]: Entering directory '/tmp/RtmpwJ71Hw/R.INSTALL1383c83380d/yaml/src'
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
@@ -59,8 +59,8 @@ gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/loca
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
 gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
 gcc -shared -L/usr/local/lib64 -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
-make[1]: Leaving directory '/tmp/RtmpEADpGD/R.INSTALL2efc1fe23117/yaml/src'
-installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/yaml/libs
+make[1]: Leaving directory '/tmp/RtmpwJ71Hw/R.INSTALL1383c83380d/yaml/src'
+installing to /tmp/RtmpK3ZBNc/file7ce256524b80/yaml/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -75,7 +75,7 @@ Found pkg-config cflags and libs!
 Using PKG_CFLAGS=-I/usr/include/libxml2
 Using PKG_LIBS=-lxml2
 ** libs
-make[1]: Entering directory '/tmp/Rtmp7SzzPv/R.INSTALL2f8f1673c7bd/xml2/src'
+make[1]: Entering directory '/tmp/RtmpM1w7ad/R.INSTALL1bf96118b3/xml2/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c connection.cpp -o connection.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_doc.cpp -o xml2_doc.o
@@ -87,8 +87,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_url.cpp -o xml2_url.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/home/nik/svn/R/r-devel/build/library/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_xpath.cpp -o xml2_xpath.o
 g++ -shared -L/usr/local/lib64 -o xml2.so RcppExports.o connection.o xml2_doc.o xml2_init.o xml2_namespace.o xml2_node.o xml2_output.o xml2_schema.o xml2_url.o xml2_xpath.o -lxml2
-make[1]: Leaving directory '/tmp/Rtmp7SzzPv/R.INSTALL2f8f1673c7bd/xml2/src'
-installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/xml2/libs
+make[1]: Leaving directory '/tmp/RtmpM1w7ad/R.INSTALL1bf96118b3/xml2/src'
+installing to /tmp/RtmpK3ZBNc/file7ce256524b80/xml2/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -100,7 +100,7 @@ installing to /tmp/RtmpvLyKAx/file2aa8a39aca3/xml2/libs
 * DONE (xml2)
 
 The downloaded source packages are in
-	‘/tmp/RtmpvLyKAx/downloaded_packages’
+	‘/tmp/RtmpK3ZBNc/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

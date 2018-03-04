@@ -5,7 +5,7 @@
 \title{Spin or Knit and Render a `Rasciidoc` File}
 \usage{
 render(file_name, knit = NA, adjust_hooks = TRUE, envir = parent.frame(),
-  ...)
+  working_directory = dirname(file_name), ...)
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -21,6 +21,10 @@ disable knitting.}
 the defaults of \code{\link{adjust_asciidoc_hooks}}?}
 
 \item{envir}{The frame in which to render.}
+
+\item{working_directory}{Where to run \code{\link[knitr:knit]{knitr::knit}}
+or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
+directory to ensure that sourcing code into the input file works correctly.}
 
 \item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
 }

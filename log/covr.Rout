@@ -43,12 +43,12 @@
 68  R/knitr_internals_mod.R        hilight_source   32     0
 71  R/knitr_internals_mod.R        hilight_source   33     0
 74  R/knitr_internals_mod.R        hilight_source   34     0
-101 R/knitr_internals_mod.R adjust_asciidoc_hooks   67     0
-102 R/knitr_internals_mod.R adjust_asciidoc_hooks   68     0
-106 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
-108 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
-114 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
-116 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
+112 R/knitr_internals_mod.R adjust_asciidoc_hooks   67     0
+114 R/knitr_internals_mod.R adjust_asciidoc_hooks   68     0
+118 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
+119 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
+125 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
+127 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
 3       R/knitr_internals.R            merge_list    3     0
 6       R/knitr_internals.R            merge_list    4     0
 13      R/knitr_internals.R           line_prompt   10     0
@@ -58,10 +58,9 @@
 41      R/knitr_internals.R      highlight_header   21     0
 45      R/knitr_internals.R      highlight_header   22     0
 48      R/knitr_internals.R      highlight_header   23     0
-139              R/render.R         render_slides  117     0
-rasciidoc Coverage: 67.74%
+rasciidoc Coverage: 69.27%
 R/highr_internals.R: 0.00%
 R/knitr_internals.R: 0.00%
 R/knitr_internals_mod.R: 50.94%
-R/render.R: 98.96%
+R/render.R: 100.00%
 R/throw.R: 100.00%

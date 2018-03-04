@@ -1,0 +1,1 @@
+<cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cyclops/fvafrcu/rasciidoc/R/render.R  render  found 6 arguments, max_num_arguments was 5>
