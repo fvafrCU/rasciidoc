@@ -4,15 +4,15 @@
 \alias{adjust_asciidoc_hooks}
 \title{Adjust \pkg{knitr}'s Hooks for `asciidoc`}
 \usage{
-adjust_asciidoc_hooks(which = c("message", "error", "warning"),
+adjust_asciidoc_hooks(hooks = c("message", "error", "warning"),
   replacement = "source")
 }
 \arguments{
-\item{which}{Character vector naming the output hooks to be replaced by
+\item{hooks}{Character vector naming the output hooks to be replaced by
 the \code{replacement}'s hooks.}
 
 \item{replacement}{The hook with which to replace the hooks given by
-\code{which}.}
+\code{hooks}.}
 }
 \value{
 The return value of

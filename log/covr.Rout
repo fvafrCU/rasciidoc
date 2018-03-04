@@ -18,11 +18,11 @@
 53      R/highr_internals.R          escape_latex   25     0
 56      R/highr_internals.R          escape_latex   26     0
 58      R/highr_internals.R          escape_latex   27     0
-64      R/highr_internals.R           escape_html   31     0
-67      R/highr_internals.R           escape_html   32     0
-70      R/highr_internals.R           escape_html   33     0
-73      R/highr_internals.R           escape_html   34     0
-76      R/highr_internals.R           escape_html   35     0
+63      R/highr_internals.R           escape_html   31     0
+65      R/highr_internals.R           escape_html   32     0
+68      R/highr_internals.R           escape_html   33     0
+71      R/highr_internals.R           escape_html   34     0
+74      R/highr_internals.R           escape_html   35     0
 7   R/knitr_internals_mod.R            set_header    4     0
 9   R/knitr_internals_mod.R            set_header    5     0
 20  R/knitr_internals_mod.R        hilight_source   14     0
@@ -40,15 +40,15 @@
 57  R/knitr_internals_mod.R        hilight_source   26     0
 59  R/knitr_internals_mod.R        hilight_source   27     0
 60  R/knitr_internals_mod.R        hilight_source   28     0
-68  R/knitr_internals_mod.R        hilight_source   32     0
-71  R/knitr_internals_mod.R        hilight_source   33     0
-74  R/knitr_internals_mod.R        hilight_source   34     0
-112 R/knitr_internals_mod.R adjust_asciidoc_hooks   67     0
-114 R/knitr_internals_mod.R adjust_asciidoc_hooks   68     0
-118 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
-119 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
-125 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
-127 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
+66  R/knitr_internals_mod.R        hilight_source   32     0
+69  R/knitr_internals_mod.R        hilight_source   33     0
+72  R/knitr_internals_mod.R        hilight_source   34     0
+108 R/knitr_internals_mod.R adjust_asciidoc_hooks   67     0
+110 R/knitr_internals_mod.R adjust_asciidoc_hooks   68     0
+116 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
+118 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
+124 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
+125 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
 3       R/knitr_internals.R            merge_list    3     0
 6       R/knitr_internals.R            merge_list    4     0
 13      R/knitr_internals.R           line_prompt   10     0
@@ -58,9 +58,9 @@
 41      R/knitr_internals.R      highlight_header   21     0
 45      R/knitr_internals.R      highlight_header   22     0
 48      R/knitr_internals.R      highlight_header   23     0
-rasciidoc Coverage: 69.27%
+rasciidoc Coverage: 70.35%
 R/highr_internals.R: 0.00%
 R/knitr_internals.R: 0.00%
-R/knitr_internals_mod.R: 50.94%
+R/knitr_internals_mod.R: 52.73%
 R/render.R: 100.00%
 R/throw.R: 100.00%

@@ -8,16 +8,18 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
+Version contains large components (0.7.0.9000)
+
 The Title field should be in title case, current version then in title case:
 ‘Create Reports Using `R` and `asciidoc`’
 ‘Create Reports Using `r` and `asciidoc`’
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-               user system elapsed
-render_slides 5.696  0.204   6.086
-displaying logs for fvafrCU/rasciidoc#50.1
-undefined method `each_pair' for #<String:0x000000020eab08>
+              user system elapsed
+render_slides 5.66   0.22   5.976
+displaying logs for fvafrCU/rasciidoc#52.1
+undefined method `each_pair' for #<String:0x00000002332d20>
 Error in strsplit(travis_session_info, "\n") : non-character argument
 Calls: <Anonymous> -> unlist -> strsplit
 In addition: Warning message:

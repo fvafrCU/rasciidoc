@@ -25,9 +25,12 @@ rasciidoc <- function(file_name, ...) {
     return(invisible(status))
 }
 
-run_knit <- function(file_name, knit = NA, adjust_hooks = TRUE,
-                      envir = parent.frame()) {
-    if (isTRUE(adjust_hooks)) adjust_asciidoc_hooks()
+run_knit <- function(file_name, knit = NA,
+                     hooks = NULL,
+                     replacement = NULL,
+                     envir = parent.frame()) {
+    if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks,
+                                               replacement = replacement)
     if (is.na(knit)) {
         r_code_pattern <- "//begin.rcode"
         if (any(grepl(r_code_pattern, readLines(file_name)))) {
@@ -43,24 +46,27 @@ run_knit <- function(file_name, knit = NA, adjust_hooks = TRUE,
     }
     if (isTRUE(knit)) {
         knit_out_file <- sub("\\.[Rr](.*)", ".\\1", file_name)
-        ops <- options() ## TODO: knitr changes the options?! 
+        ops <- options() ## TODO: knitr changes the options?!
         file_name <- knitr::knit(file_name, knit_out_file, envir = envir)
         options(ops) ## restore old options
     }
     return(file_name)
 }
 
-run_knitr <- function(file_name, working_directory = dirname(file_name), 
-                      knit = NA, adjust_hooks = TRUE,
+run_knitr <- function(file_name, working_directory = dirname(file_name),
+                      knit = NA,
+                      hooks = NULL,
+                      replacement = NULL,
                       envir = parent.frame()) {
     withr::with_dir(working_directory, {
                     file_name <- normalizePath(file_name)
                     if (is_spin_file(file_name)) {
-                        out_file <- knitr::spin(file_name, knit = TRUE, 
+                        out_file <- knitr::spin(file_name, knit = TRUE,
                                             report = FALSE)
                     } else {
-                        out_file <- run_knit(file_name, knit = knit, 
-                                          adjust_hooks = adjust_hooks,
+                        out_file <- run_knit(file_name, knit = knit,
+                                          hooks = hooks,
+                                          replacement = replacement,
                                           envir = envir)
                     }
                     out_file <- normalizePath(out_file)
@@ -69,9 +75,9 @@ run_knitr <- function(file_name, working_directory = dirname(file_name),
 }
 
 is_spin_file <- function(file_name) {
-    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
+    is_r_file <- grepl("^.*\\.[rR]$", file_name)
     has_roxygen_comment <- any(grepl("^#'", readLines(file_name)))
-    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
+    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+",
                                               readLines(file_name)))
     is_spin <- is_r_file && has_roxygen_comment || has_spin_knitr_chunk_options
     return(is_spin)
@@ -81,6 +87,7 @@ is_spin_file <- function(file_name) {
 #'
 #' Spin or Knit (if required) and render an `Rasciidoc` file.
 #' @inheritParams rasciidoc
+#' @inheritParams adjust_asciidoc_hooks
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
 #' Set to \code{\link{TRUE}}
@@ -91,17 +98,17 @@ is_spin_file <- function(file_name) {
 #' @param working_directory Where to run \code{\link[knitr:knit]{knitr::knit}}
 #' or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 #' directory to ensure that sourcing code into the input file works correctly.
-#' @param adjust_hooks Adjust knitr's output hooks for `asciidoc` files using
-#' the defaults of \code{\link{adjust_asciidoc_hooks}}?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
-render <- function(file_name, knit = NA, adjust_hooks = TRUE,
-                   envir = parent.frame(), 
+render <- function(file_name, knit = NA,
+                   envir = parent.frame(),
                    working_directory = dirname(file_name),
-                   ...) {
-    adoc <- run_knitr(file_name = file_name, 
-                      working_directory = working_directory, 
-                      adjust_hooks = adjust_hooks, knit = knit, envir = envir)
+                   hooks = c("message", "error", "warning"),
+                   replacement = "source", ...) {
+    adoc <- run_knitr(file_name = file_name,
+                      working_directory = working_directory,
+                      knit = knit, envir = envir,
+                      hooks = hooks, replacement = replacement)
     status <- rasciidoc(adoc, ...)
     return(status)
 }
@@ -130,13 +137,17 @@ render <- function(file_name, knit = NA, adjust_hooks = TRUE,
 #'     browseURL(files[1])
 #'     browseURL(files[2])
 #' }
-render_slides <- function(file_name, knit = NA, adjust_hooks = TRUE,
+render_slides <- function(file_name, knit = NA,
                           working_directory = dirname(file_name),
-                          envir = parent.frame()) {
+                          envir = parent.frame(),
+                          hooks = c("message", "error", "warning"),
+                          replacement = "source") {
     status <- NULL
     out_files <- NULL
-    adoc <- run_knitr(file_name = file_name, adjust_hooks = adjust_hooks,
-                      working_directory = working_directory)
+    adoc <- run_knitr(file_name = file_name,
+                      working_directory = working_directory,
+                      knit = knit, envir = envir,
+                      hooks = hooks, replacement = replacement)
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern <- "//slide_only"

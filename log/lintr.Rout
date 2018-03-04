@@ -232,13 +232,13 @@ R/knitr_internals_mod.R:75:57: style: Trailing whitespace is superfluous.
 R/knitr_internals_mod.R:78:17: style: Use <-, not =, for assignment.
     hook.output = function(x, options) sprintf("\n----\n%s----\n", x)
                 ^
-R/knitr_internals_mod.R:83:6: style: Trailing whitespace is superfluous.
-    } 
-     ^
-R/knitr_internals_mod.R:84:77: style: Trailing whitespace is superfluous.
+R/knitr_internals_mod.R:84:10: style: Trailing whitespace is superfluous.
+        } 
+         ^
+R/knitr_internals_mod.R:86:77: style: Trailing whitespace is superfluous.
     res <- knitr::knit_hooks$set(source = hook.source, output = hook.output, 
                                                                             ^
-R/knitr_internals_mod.R:86:53: style: Trailing whitespace is superfluous.
+R/knitr_internals_mod.R:88:53: style: Trailing whitespace is superfluous.
                                  error = hook.error, 
                                                     ^
 R/knitr_internals.R:2:12: style: Use <-, not =, for assignment.
@@ -298,33 +298,12 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:46:62: style: Trailing whitespace is superfluous.
-        ops <- options() ## TODO: knitr changes the options?! 
+R/render.R:32:62: style: Trailing whitespace is superfluous.
+    if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks, 
                                                              ^
-R/render.R:53:73: style: Trailing whitespace is superfluous.
-run_knitr <- function(file_name, working_directory = dirname(file_name), 
-                                                                        ^
-R/render.R:59:72: style: Trailing whitespace is superfluous.
-                        out_file <- knitr::spin(file_name, knit = TRUE, 
-                                                                       ^
-R/render.R:62:69: style: Trailing whitespace is superfluous.
-                        out_file <- run_knit(file_name, knit = knit, 
-                                                                    ^
-R/render.R:72:49: style: Trailing whitespace is superfluous.
-    is_r_file <- grepl("^.*\\.[rR]$", file_name) 
-                                                ^
-R/render.R:74:59: style: Trailing whitespace is superfluous.
-    has_spin_knitr_chunk_options <- any(grepl("^#-|^#\\+", 
-                                                          ^
-R/render.R:99:43: style: Trailing whitespace is superfluous.
-                   envir = parent.frame(), 
-                                          ^
-R/render.R:102:45: style: Trailing whitespace is superfluous.
-    adoc <- run_knitr(file_name = file_name, 
-                                            ^
-R/render.R:103:61: style: Trailing whitespace is superfluous.
-                      working_directory = working_directory, 
-                                                            ^
+R/render.R:68:57: style: Trailing whitespace is superfluous.
+                                          hooks = hooks, 
+                                                        ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
   path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

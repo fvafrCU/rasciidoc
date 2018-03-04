@@ -1,3 +1,7 @@
+# rasciidoc 0.8.0
+
+* render() now passed arguments to adjust knitr's asciidoc hooks.
+
 # rasciidoc 0.7.0
 
 * render() now uses a working directory that defaults to the input file's

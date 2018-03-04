@@ -4,8 +4,9 @@
 \alias{render_slides}
 \title{Spin Knit or Render a `Rasciidoc` File to html and slidy}
 \usage{
-render_slides(file_name, knit = NA, adjust_hooks = TRUE,
-  working_directory = dirname(file_name), envir = parent.frame())
+render_slides(file_name, knit = NA, working_directory = dirname(file_name),
+  envir = parent.frame(), hooks = c("message", "error", "warning"),
+  replacement = "source")
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -17,14 +18,17 @@ to force knitting or to \code{\link{FALSE}} (anything apart from
 \code{\link{TRUE}} or \code{\link{NA}}, really), to
 disable knitting.}
 
-\item{adjust_hooks}{Adjust knitr's output hooks for `asciidoc` files using
-the defaults of \code{\link{adjust_asciidoc_hooks}}?}
-
 \item{working_directory}{Where to run \code{\link[knitr:knit]{knitr::knit}}
 or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 directory to ensure that sourcing code into the input file works correctly.}
 
 \item{envir}{The frame in which to render.}
+
+\item{hooks}{Character vector naming the output hooks to be replaced by
+the \code{replacement}'s hooks.}
+
+\item{replacement}{The hook with which to replace the hooks given by
+\code{hooks}.}
 }
 \value{
 The output's file names.

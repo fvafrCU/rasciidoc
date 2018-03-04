@@ -4,8 +4,9 @@
 \alias{render}
 \title{Spin or Knit and Render a `Rasciidoc` File}
 \usage{
-render(file_name, knit = NA, adjust_hooks = TRUE, envir = parent.frame(),
-  working_directory = dirname(file_name), ...)
+render(file_name, knit = NA, envir = parent.frame(),
+  working_directory = dirname(file_name), hooks = c("message", "error",
+  "warning"), replacement = "source", ...)
 }
 \arguments{
 \item{file_name}{The file to run `asciidoc` on.}
@@ -17,14 +18,17 @@ to force knitting or to \code{\link{FALSE}} (anything apart from
 \code{\link{TRUE}} or \code{\link{NA}}, really), to
 disable knitting.}
 
-\item{adjust_hooks}{Adjust knitr's output hooks for `asciidoc` files using
-the defaults of \code{\link{adjust_asciidoc_hooks}}?}
-
 \item{envir}{The frame in which to render.}
 
 \item{working_directory}{Where to run \code{\link[knitr:knit]{knitr::knit}}
 or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 directory to ensure that sourcing code into the input file works correctly.}
+
+\item{hooks}{Character vector naming the output hooks to be replaced by
+the \code{replacement}'s hooks.}
+
+\item{replacement}{The hook with which to replace the hooks given by
+\code{hooks}.}
 
 \item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
 }

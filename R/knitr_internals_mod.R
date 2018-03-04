@@ -45,15 +45,15 @@ hilight_source = function(x, format, options) {
 #' \code{\link[knitr:render_asciidoc]{knitr::render_asciidoc}} of  \pkg{knitr}
 #' version 1.18.7.
 #'
-#' @param which Character vector naming the output hooks to be replaced by
+#' @param hooks Character vector naming the output hooks to be replaced by
 #' the \code{replacement}'s hooks.
 #' @param replacement The hook with which to replace the hooks given by
-#' \code{which}.
+#' \code{hooks}.
 #' @return The return value of
 #' \code{\link[knitr:knit_hooks]{knitr::knit_hooks$set}},
 #' \code{\link[base:invisible]{invisibly}} \code{\link{NULL}}, currently.
 #' @export 
-adjust_asciidoc_hooks <- function(which = c("message", "error", "warning"),
+adjust_asciidoc_hooks <- function(hooks = c("message", "error", "warning"),
                                   replacement = "source") {
     # Verbatim copy of a part of knitr::render_asciidoc() version 1.18.7, 
     # formatted to fit lines of length 80.
@@ -77,10 +77,12 @@ adjust_asciidoc_hooks <- function(which = c("message", "error", "warning"),
     }
     hook.output = function(x, options) sprintf("\n----\n%s----\n", x)
     # Modification starts here.
-    replacement_hook <- get(paste0("hook.", replacement))
-    for (i in which) {
-        assign(paste0("hook.", i), replacement_hook)
-    } 
+    if (! is.null(replacement)) {
+        replacement_hook <- get(paste0("hook.", replacement))
+        for (i in hooks) {
+            assign(paste0("hook.", i), replacement_hook)
+        } 
+    }
     res <- knitr::knit_hooks$set(source = hook.source, output = hook.output, 
                                  message = hook.message, warning = hook.warning,
                                  error = hook.error, 
