@@ -1,7 +1,7 @@
 Package: rasciidoc
 Title: Create Reports Using `R` and `asciidoc`
-Version: 0.7.0
-Authors@R: 
+Version: 0.7.0.9000
+Authors@R:
     person(given = "Andreas Dominik",
            family = "Cullmann",
            role = c("aut", "cre"),
