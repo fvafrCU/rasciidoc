@@ -298,12 +298,6 @@ R/knitr_internals.R:23:17: style: Only use double-quotes.
 R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 
 ^
-R/render.R:32:62: style: Trailing whitespace is superfluous.
-    if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks, 
-                                                             ^
-R/render.R:68:57: style: Trailing whitespace is superfluous.
-                                          hooks = hooks, 
-                                                        ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
   path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

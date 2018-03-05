@@ -8,8 +8,6 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-Version contains large components (0.7.0.9000)
-
 The Title field should be in title case, current version then in title case:
 ‘Create Reports Using `R` and `asciidoc`’
 ‘Create Reports Using `r` and `asciidoc`’
@@ -17,11 +15,4 @@ The Title field should be in title case, current version then in title case:
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
               user system elapsed
-render_slides 5.66   0.22   5.976
-displaying logs for fvafrCU/rasciidoc#52.1
-undefined method `each_pair' for #<String:0x00000002332d20>
-Error in strsplit(travis_session_info, "\n") : non-character argument
-Calls: <Anonymous> -> unlist -> strsplit
-In addition: Warning message:
-running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1 
-Execution halted
+render_slides 5.62  0.188   5.861
