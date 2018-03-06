@@ -17,6 +17,44 @@
 
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 
 
@@ -30,19 +68,210 @@
 
 
 <h1 class="title toc-ignore">An Introduction to <em>rasciidoc</em></h1>
-<h4 class="date"><em>2018-02-08, 07:42:55</em></h4>
+<h4 class="date"><em>2018-03-06, 17:10:19</em></h4>
 
 
 
-<div id="teaser" class="section level1">
-<h1>Teaser</h1>
-<p>I want to use asciidoc for html and slidy.</p>
+<div id="what-is-rasciidoc" class="section level1">
+<h1>What is <em>rasciidoc</em>?</h1>
+<p>Inspired by Karl Broman`s reader on using knitr with asciidoc (<a href="http://kbroman.org/knitr_knutshell/pages/asciidoc.html" class="uri">http://kbroman.org/knitr_knutshell/pages/asciidoc.html</a>), this is a wrapper to and a slight modification of knitr.</p>
 </div>
-<div id="features" class="section level1">
-<h1>Features</h1>
+<div id="knitting" class="section level1">
+<h1>Knitting</h1>
+<div id="a-minimal-example" class="section level2">
+<h2>A Minimal Example</h2>
+<p>Suppose, you have a file that reads</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">file_name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal&quot;</span>, <span class="st">&quot;knit.Rasciidoc&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;rasciidoc&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(file_name), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>## = Some Title
+## Your Name
+## :toc2:
+## :numbered:
+## :data-uri:
+## :duration: 120
+## 
+## == What is this About?
+## 
+## //begin_no_slide
+## This will not show up on slides.
+## //end_no_slide
+## 
+## === Some simple asciidoc
+## 
+## * A list with a https://en.wikipedia.org/wiki/Hyperlink[link].
+## * Yet another entry in the list.
+## 
+## == Including Code
+## Do not use the _include_ macro provided by asciidoc! 
+## //begin.rcode
+## a  &lt;- c(2, 3, 4, 10) # &lt;1&gt;
+## value &lt;- 0 # &lt;2&gt;
+## for (a_i in a) { # &lt;3&gt;
+##     value &lt;- value + a_i  # &lt;4&gt;
+## }
+## print(value) # &lt;5&gt;
+## 
+## //end.rcode
+## 
+## 
+## == A new section
+## 
+## //begin.rcode
+## my_sum &lt;- function(x) {
+##     value &lt;- 0
+##     for (x_i in x) {
+##         value &lt;- value + x_i 
+##     }
+##     return(value)
+## }
+## //end.rcode
+## == Only sections give new slides //slide_only
+## === A subsection
+## //begin.rcode
+## print(value)
+## //end.rcode
+## 
+## //begin.rcode
+## print(my_sum(1:3))
+## //end.rcode
+## 
+## Some inline code: Object +value+ has value +r value+.
+## 
+## == Next slide //slide_only
+## 
+## === Second subsection</code></pre>
+<p>If you run <code>render</code> on this file (we use a temporary directory here)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">withr::<span class="kw">with_dir</span>(<span class="kw">tempdir</span>(), {
+                    <span class="kw">file.copy</span>(file_name, <span class="st">&quot;.&quot;</span>)
+                    rasciidoc::<span class="kw">render</span>(<span class="kw">basename</span>(file_name))
+})</code></pre></div>
+<pre><code>## Warning in run_knit(file_name, knit = knit, hooks = hooks, replacement =
+## replacement, : Setting option knit to TRUE based on the file contents!</code></pre>
+<pre><code>## processing file: /tmp/RtmpVRUfeS/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpVRUfeS/knit.asciidoc</code></pre>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">render_markdown</span>()
+if (<span class="kw">interactive</span>()) <span class="kw">browseURL</span>(<span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="kw">paste0</span>(<span class="kw">basename</span>(file_name), <span class="st">&quot;.html&quot;</span>)))</code></pre></div>
+<p>you will create an HTML file that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html">this file</a>. Just ignore the <code>knitr::render_markdown()</code> directive, I need it to reset knitr’s options that were overwritten by asciidoc.</p>
 </div>
-<div id="a-minimal-example" class="section level1">
-<h1>A Minimal Example</h1>
+<div id="a-simple-example" class="section level2">
+<h2>A Simple Example</h2>
+<p>Suppose, you have a file that reads</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">file_name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;files&quot;</span>, <span class="st">&quot;simple&quot;</span>, <span class="st">&quot;knit.Rasciidoc&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;rasciidoc&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(file_name), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>## = Some Title
+## Your Name
+## :toc2:
+## :numbered:
+## :data-uri:
+## :duration: 120
+## 
+## == What is this About?
+## 
+## //begin_no_slide
+## This will not show up on slides.
+## //end_no_slide
+## 
+## === Some simple asciidoc
+## 
+## * A list with a https://en.wikipedia.org/wiki/Hyperlink[link].
+## * Yet another entry in the list.
+## 
+## == Including Code
+## Do not use the _include_ macro provided by asciidoc! 
+## //begin.rcode, code = readLines(&quot;src/sum.R&quot;)
+## //end.rcode
+## 
+## 
+## == A new section
+## 
+## //begin.rcode, code = readLines(&quot;src/my_sum.R&quot;)
+## //end.rcode
+## == Only sections give new slides //slide_only
+## === A subsection
+## //begin.rcode
+## print(value)
+## //end.rcode
+## 
+## //begin.rcode
+## print(my_sum(1:3))
+## //end.rcode
+## 
+## Some inline code: Object +value+ has value +r value+.
+## 
+## == Next slide //slide_only
+## 
+## === Second subsection</code></pre>
+<p>This file obviously reads code from files in a directory called “src/”, so we need this directory, too:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">withr::<span class="kw">with_dir</span>(<span class="kw">tempdir</span>(), {
+                    <span class="kw">file.copy</span>(file_name, <span class="st">&quot;.&quot;</span>)
+                    <span class="kw">file.copy</span>(<span class="kw">file.path</span>(<span class="kw">dirname</span>(file_name), <span class="st">&quot;src&quot;</span>), <span class="st">&quot;.&quot;</span>, 
+                              <span class="dt">recursive =</span> <span class="ot">TRUE</span>)
+                    rasciidoc::<span class="kw">render</span>(<span class="kw">basename</span>(file_name))
+})</code></pre></div>
+<pre><code>## Warning in run_knit(file_name, knit = knit, hooks = hooks, replacement =
+## replacement, : Setting option knit to TRUE based on the file contents!</code></pre>
+<pre><code>## processing file: /tmp/RtmpVRUfeS/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpVRUfeS/knit.asciidoc</code></pre>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">render_markdown</span>()
+if (<span class="kw">interactive</span>()) <span class="kw">browseURL</span>(<span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="kw">paste0</span>(<span class="kw">basename</span>(file_name), <span class="st">&quot;.html&quot;</span>)))</code></pre></div>
+<p>This will create an HTML that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/simple/knit.html">this file</a>.</p>
+</div>
+</div>
+<div id="spinnig" class="section level1">
+<h1>Spinnig</h1>
+<p>You can also use a spinnig file for input:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">file_name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;files&quot;</span>, <span class="st">&quot;simple&quot;</span>, <span class="st">&quot;spin.R_nolint&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;rasciidoc&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(file_name), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>## #' = Some Title
+## #' Your Name
+## #' :toc2:
+## #' :numbered:
+## #' :data-uri:
+## #' :duration: 120
+## #' 
+## #' == What is this About?
+## #' 
+## #' //begin_no_slide
+## #' This will not show up on slides.
+## #' //end_no_slide
+## #' 
+## #' === Some simple asciidoc
+## #' 
+## #' * A list with a https://en.wikipedia.org/wiki/Hyperlink[link].
+## #' * Yet another entry in the list.
+## #' 
+## #' == Including Code
+## #' Do not use the _include_ macro provided by asciidoc!+ 
+## #+ code = readLines(&quot;src/sum.R&quot;)
+## #' 
+## #' 
+## #' == A new section
+## #' 
+## #+ code = readLines(&quot;src/my_sum.R&quot;)
+## #' == Only sections give new slides //slide_only
+## #' === A subsection
+## print(value)
+## #' 
+## print(my_sum(1:3))
+## #' 
+## #' Some inline code: Object +value+ has value +r value+.
+## #' 
+## #' == Next slide //slide_only
+## #' 
+## #' === Second subsection</code></pre>
+<p>You run <code>render</code> on it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">withr::<span class="kw">with_dir</span>(<span class="kw">tempdir</span>(), {
+                    <span class="kw">file.copy</span>(file_name, <span class="st">&quot;.&quot;</span>, <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)
+                    rasciidoc::<span class="kw">render</span>(<span class="kw">basename</span>(file_name))
+})</code></pre></div>
+<pre><code>## processing file: /tmp/RtmpVRUfeS/spin.R_nolint.Rmd</code></pre>
+<pre><code>## output file: spin.R_nolint.md</code></pre>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">render_markdown</span>()
+if (<span class="kw">interactive</span>()) <span class="kw">browseURL</span>(<span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="kw">paste0</span>(<span class="kw">basename</span>(file_name), <span class="st">&quot;.html&quot;</span>)))</code></pre></div>
+<p>and you will create an output html that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html">this file</a></p>
 </div>
 
 

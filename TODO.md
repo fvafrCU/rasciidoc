@@ -1,2 +1,2 @@
-- write a vignette!
+- improve vignette
 - improve test coverage
