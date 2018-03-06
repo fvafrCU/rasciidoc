@@ -1,8 +1,12 @@
 
 
+Executing test function test_adjusting_hooks  ...  done successfully.
+
+
+
 Executing test function test_knit_spin  ... 
 
-processing file: /tmp/RtmprgZi6A/spin.Rmd
+processing file: /tmp/Rtmp65IB8O/spin.Rmd
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
   ordinary text without R code
 
@@ -49,7 +53,7 @@ asciidoc: ERROR: spin.md: line 7: only book doctypes can contain level 0 section
 asciidoc: ERROR: foo.md: line 7: only book doctypes can contain level 0 sections
 
 
-processing file: /tmp/RtmprgZi6A/knit.Rasciidoc
+processing file: /tmp/Rtmp65IB8O/knit.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
   ordinary text without R code
 
@@ -80,7 +84,7 @@ label: unnamed-chunk-4
    inline R code fragments
 
 
-output file: /tmp/RtmprgZi6A/knit.asciidoc
+output file: /tmp/Rtmp65IB8O/knit.asciidoc
 
  done successfully.
 
@@ -88,34 +92,25 @@ output file: /tmp/RtmprgZi6A/knit.asciidoc
 
 Executing test function test_render_simple  ... 
 
-processing file: /tmp/RtmprgZi6A/files/simple.Rasciidoc
+processing file: /tmp/Rtmp65IB8O/files/simple.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-1
 
-output file: /tmp/RtmprgZi6A/files/simple.asciidoc
+output file: /tmp/Rtmp65IB8O/files/simple.asciidoc
 
 
 
-processing file: /tmp/RtmprgZi6A/files/simple.Rasciidoc
+processing file: /tmp/Rtmp65IB8O/files/simple.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-1
 
-output file: /tmp/RtmprgZi6A/files/simple.asciidoc
-
-
-
-processing file: /tmp/RtmprgZi6A/files/fake.Radoc
-  |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
-  ordinary text without R code
-
-
-output file: /tmp/RtmprgZi6A/files/fake.adoc
+output file: /tmp/Rtmp65IB8O/files/simple.asciidoc
 
  done successfully.
 
@@ -123,7 +118,7 @@ output file: /tmp/RtmprgZi6A/files/fake.adoc
 
 Executing test function test_render_slides  ... 
 
-processing file: /tmp/RtmprgZi6A/files/slides.Rasciidoc
+processing file: /tmp/Rtmp65IB8O/files/slides.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................                                                 |  25%
   ordinary text without R code
 
@@ -141,7 +136,7 @@ List of 1
   ordinary text without R code
 
 
-output file: /tmp/RtmprgZi6A/files/slides.asciidoc
+output file: /tmp/Rtmp65IB8O/files/slides.asciidoc
 
  done successfully.
 
@@ -150,15 +145,15 @@ output file: /tmp/RtmprgZi6A/files/slides.asciidoc
 Executing test function test_exception  ... Error in eval(expr, envir = parent.frame()) : Hello, error!
  done successfully.
 
-RUNIT TEST PROTOCOL -- Mon Mar  5 11:19:29 2018 
+RUNIT TEST PROTOCOL -- Tue Mar  6 13:58:25 2018 
 *********************************************** 
-Number of test functions: 4 
+Number of test functions: 5 
 Number of errors: 0 
 Number of failures: 0 
 
  
 1 Test Suite : 
-rasciidoc_unit_test - 4 test functions, 0 errors, 0 failures
+rasciidoc_unit_test - 5 test functions, 0 errors, 0 failures
 
 
 
@@ -171,9 +166,10 @@ Involved directory:
 inst/runit_tests 
 --------------------------- 
 Test file: inst/runit_tests/runit-render.R 
-test_knit_spin: (2 checks) ... OK (11.53 seconds)
-test_render_simple: (4 checks) ... OK (3.79 seconds)
-test_render_slides: (2 checks) ... OK (3.29 seconds)
+test_adjusting_hooks: (11 checks) ... OK (0.02 seconds)
+test_knit_spin: (2 checks) ... OK (1.16 seconds)
+test_render_simple: (4 checks) ... OK (0.55 seconds)
+test_render_slides: (2 checks) ... OK (0.44 seconds)
 --------------------------- 
 Test file: inst/runit_tests/runit-throw.R 
 test_exception: (1 checks) ... OK (0 seconds)

@@ -1,5 +1,5 @@
   WORD        FOUND IN
-asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render.Rd:12,33, render_slides.Rd:12, title:1, description:1,2
+asciidoc    adjust_asciidoc_hooks.Rd:5,24, rasciidoc-package.Rd:6,8, rasciidoc.Rd:5,10,12,15,18,19, render_slides.Rd:12, render.Rd:12,33, title:1, description:1,2
 Broman's    rasciidoc-package.Rd:8, description:1
 http        description:2
 kbroman     description:2

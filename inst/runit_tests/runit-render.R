@@ -125,3 +125,88 @@ test_knit_spin <- function() {
                     })
     }
 }
+
+test_adjusting_hooks <- function() {
+    on.exit( knitr::knit_hooks$restore())
+    # covr infects functions, so we deparse an grep them first
+    hs <- gsub(" ", "", 
+               deparse(function(x, options) {
+                           x = paste(c(hilight_source(x, "asciidoc", options), ""), 
+                                     collapse = "\n")
+                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
+                                   x) }))
+    hm <- gsub(" ", "", 
+               deparse(function(x, options) {
+                           sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
+                                   substring(x, comment_length(options$comment)))}))
+    hw <- gsub(" ", "", 
+               deparse(function(x, options) {
+                           sprintf("\n[WARNING]\n====\n.Warning\n%s\n====\n",
+                                   gsub("^.*Warning: ", "", x))}))
+    he <- gsub(" ", "", 
+               deparse(function(x, options) {
+                           sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
+                                   gsub("^.*Error: ", "", x))}))
+    ho <- gsub(" ", "", 
+               deparse(function(x, options) sprintf("\n----\n%s----\n", x)))
+    knitr::knit_hooks$restore()
+    rasciidoc::adjust_asciidoc_hooks(replacement = NULL)
+    cs <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("source")))
+               )
+    co <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("output")))
+               )
+    cm <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("message")))
+               )
+    cw <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("warning")))
+               )
+    ce <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("error")))
+               )
+    RUnit::checkEquals(hs, cs)
+    RUnit::checkEquals(ho, co)
+    RUnit::checkEquals(hm, cm)
+    RUnit::checkEquals(hw, cw)
+    RUnit::checkEquals(he, ce)
+    rasciidoc::adjust_asciidoc_hooks(hooks = c("message", "warning", "error"), 
+                                     replacement = "source")
+    cs <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("source")))
+               )
+    co <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("output")))
+               )
+    cm <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("message")))
+               )
+    cw <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("warning")))
+               )
+    ce <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("error")))
+               )
+    RUnit::checkEquals(hs, cs)
+    RUnit::checkEquals(ho, co)
+    RUnit::checkEquals(hs, cm)
+    RUnit::checkEquals(hs, cw)
+    RUnit::checkEquals(hs, ce)
+    rasciidoc::adjust_asciidoc_hooks(hooks = c("source"), replacement = "error")
+    cs <- gsub(" ", "", 
+               grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
+                    deparse(knitr::knit_hooks$get("source")))
+               )
+    RUnit::checkEquals(he, cs)
+}

@@ -29,8 +29,6 @@ run_knit <- function(file_name, knit = NA,
                      hooks = NULL,
                      replacement = NULL,
                      envir = parent.frame()) {
-    if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks,
-                                               replacement = replacement)
     if (is.na(knit)) {
         r_code_pattern <- "//begin.rcode"
         if (any(grepl(r_code_pattern, readLines(file_name)))) {
@@ -45,6 +43,8 @@ run_knit <- function(file_name, knit = NA,
         }
     }
     if (isTRUE(knit)) {
+        if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks,
+                                                   replacement = replacement)
         knit_out_file <- sub("\\.[Rr](.*)", ".\\1", file_name)
         ops <- options() ## TODO: knitr changes the options?!
         file_name <- knitr::knit(file_name, knit_out_file, envir = envir)

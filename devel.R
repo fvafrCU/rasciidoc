@@ -25,3 +25,7 @@ withr::with_dir(file.path("inst", "files", "simple"),
 
 file_name <- system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc")
 rasciidoc::render(file_name)
+
+
+
+
