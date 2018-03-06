@@ -10,12 +10,6 @@ for (a_i in a) { # <3>
 inst/files/simple/src/sum.R:7:1: style: Trailing blank lines are superfluous.
 
 ^
-inst/runit_tests/runit-render.R:102:76: style: Trailing whitespace is superfluous.
-                        file.copy(list.files(system.file("files", "simple", 
-                                                                           ^
-inst/runit_tests/runit-render.R:108:79: style: Trailing whitespace is superfluous.
-                        # kindes of exlusions...). I therefore moved spin.R to 
-                                                                              ^
 inst/runit_tests/runit-render.R:116:33: warning: no visible global function definition for ‘remove_dates’
                         spin <- remove_dates(readLines("spin.html"))
                                 ^~~~~~~~~~~~
@@ -28,93 +22,30 @@ inst/runit_tests/runit-render.R:122:33: warning: no visible global function defi
 inst/runit_tests/runit-render.R:123:34: warning: no visible global function definition for ‘remove_dates’
                         ascii <- remove_dates(readLines("bar.html"))
                                  ^~~~~~~~~~~~
-inst/runit_tests/runit-render.R:132:24: style: Trailing whitespace is superfluous.
-    hs <- gsub(" ", "", 
-                       ^
 inst/runit_tests/runit-render.R:134:1: style: lines should not be more than 80 characters.
-                           x = paste(c(hilight_source(x, "asciidoc", options), ""), 
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           x = paste(c(hilight_source(x, "asciidoc", options), ""),
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 inst/runit_tests/runit-render.R:134:30: style: Use <-, not =, for assignment.
-                           x = paste(c(hilight_source(x, "asciidoc", options), ""), 
+                           x = paste(c(hilight_source(x, "asciidoc", options), ""),
                              ^
-inst/runit_tests/runit-render.R:134:84: style: Trailing whitespace is superfluous.
-                           x = paste(c(hilight_source(x, "asciidoc", options), ""), 
-                                                                                   ^
 inst/runit_tests/runit-render.R:136:1: style: lines should not be more than 80 characters.
-                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
-^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-inst/runit_tests/runit-render.R:136:93: style: Trailing whitespace is superfluous.
-                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
-                                                                                            ^
+                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine),
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 inst/runit_tests/runit-render.R:137:39: style: Closing curly-braces should always be on their own line, unless it's followed by an else.
                                    x) }))
                                       ^
-inst/runit_tests/runit-render.R:138:24: style: Trailing whitespace is superfluous.
-    hm <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:140:75: style: Trailing whitespace is superfluous.
-                           sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
-                                                                          ^
 inst/runit_tests/runit-render.R:141:1: style: lines should not be more than 80 characters.
                                    substring(x, comment_length(options$comment)))}))
 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 inst/runit_tests/runit-render.R:141:82: style: Closing curly-braces should always be on their own line, unless it's followed by an else.
                                    substring(x, comment_length(options$comment)))}))
                                                                                  ^
-inst/runit_tests/runit-render.R:142:24: style: Trailing whitespace is superfluous.
-    hw <- gsub(" ", "", 
-                       ^
 inst/runit_tests/runit-render.R:145:64: style: Closing curly-braces should always be on their own line, unless it's followed by an else.
                                    gsub("^.*Warning: ", "", x))}))
                                                                ^
-inst/runit_tests/runit-render.R:146:24: style: Trailing whitespace is superfluous.
-    he <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:148:76: style: Trailing whitespace is superfluous.
-                           sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
-                                                                           ^
 inst/runit_tests/runit-render.R:149:62: style: Closing curly-braces should always be on their own line, unless it's followed by an else.
                                    gsub("^.*Error: ", "", x))}))
                                                              ^
-inst/runit_tests/runit-render.R:150:24: style: Trailing whitespace is superfluous.
-    ho <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:154:24: style: Trailing whitespace is superfluous.
-    cs <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:158:24: style: Trailing whitespace is superfluous.
-    co <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:162:24: style: Trailing whitespace is superfluous.
-    cm <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:166:24: style: Trailing whitespace is superfluous.
-    cw <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:170:24: style: Trailing whitespace is superfluous.
-    ce <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:179:79: style: Trailing whitespace is superfluous.
-    rasciidoc::adjust_asciidoc_hooks(hooks = c("message", "warning", "error"), 
-                                                                              ^
-inst/runit_tests/runit-render.R:181:24: style: Trailing whitespace is superfluous.
-    cs <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:185:24: style: Trailing whitespace is superfluous.
-    co <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:189:24: style: Trailing whitespace is superfluous.
-    cm <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:193:24: style: Trailing whitespace is superfluous.
-    cw <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:197:24: style: Trailing whitespace is superfluous.
-    ce <- gsub(" ", "", 
-                       ^
-inst/runit_tests/runit-render.R:207:24: style: Trailing whitespace is superfluous.
-    cs <- gsub(" ", "", 
-                       ^
 R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
 try_parse = function(code, silent = TRUE) {
           ^

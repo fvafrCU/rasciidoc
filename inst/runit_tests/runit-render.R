@@ -99,13 +99,13 @@ test_render_slides <- function() {
 test_knit_spin <- function() {
     if (is_installed_asciidoc()) {
         withr::with_dir(tempdir(), {
-                        file.copy(list.files(system.file("files", "simple", 
+                        file.copy(list.files(system.file("files", "simple",
                                                          package = "rasciidoc"),
                                              full.names = TRUE
                                              ),
                                   ".", recursive = TRUE)
                         # lintr inevitably reads spin.R and crashes (I tried all
-                        # kindes of exlusions...). I therefore moved spin.R to 
+                        # kindes of exlusions...). I therefore moved spin.R to
                         # spin.R_nolint to make lintr not read the file.
                         # But I need it to end on R or r when deciding whether
                         # to knit or spin. So I rename here:
@@ -129,45 +129,45 @@ test_knit_spin <- function() {
 test_adjusting_hooks <- function() {
     on.exit( knitr::knit_hooks$restore())
     # covr infects functions, so we deparse an grep them first
-    hs <- gsub(" ", "", 
+    hs <- gsub(" ", "",
                deparse(function(x, options) {
-                           x = paste(c(hilight_source(x, "asciidoc", options), ""), 
+                           x = paste(c(hilight_source(x, "asciidoc", options), ""),
                                      collapse = "\n")
-                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
+                           sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine),
                                    x) }))
-    hm <- gsub(" ", "", 
+    hm <- gsub(" ", "",
                deparse(function(x, options) {
-                           sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
+                           sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n",
                                    substring(x, comment_length(options$comment)))}))
-    hw <- gsub(" ", "", 
+    hw <- gsub(" ", "",
                deparse(function(x, options) {
                            sprintf("\n[WARNING]\n====\n.Warning\n%s\n====\n",
                                    gsub("^.*Warning: ", "", x))}))
-    he <- gsub(" ", "", 
+    he <- gsub(" ", "",
                deparse(function(x, options) {
-                           sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
+                           sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n",
                                    gsub("^.*Error: ", "", x))}))
-    ho <- gsub(" ", "", 
+    ho <- gsub(" ", "",
                deparse(function(x, options) sprintf("\n----\n%s----\n", x)))
     knitr::knit_hooks$restore()
     rasciidoc::adjust_asciidoc_hooks(replacement = NULL)
-    cs <- gsub(" ", "", 
+    cs <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("source")))
                )
-    co <- gsub(" ", "", 
+    co <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("output")))
                )
-    cm <- gsub(" ", "", 
+    cm <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("message")))
                )
-    cw <- gsub(" ", "", 
+    cw <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("warning")))
                )
-    ce <- gsub(" ", "", 
+    ce <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("error")))
                )
@@ -176,25 +176,25 @@ test_adjusting_hooks <- function() {
     RUnit::checkEquals(hm, cm)
     RUnit::checkEquals(hw, cw)
     RUnit::checkEquals(he, ce)
-    rasciidoc::adjust_asciidoc_hooks(hooks = c("message", "warning", "error"), 
+    rasciidoc::adjust_asciidoc_hooks(hooks = c("message", "warning", "error"),
                                      replacement = "source")
-    cs <- gsub(" ", "", 
+    cs <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("source")))
                )
-    co <- gsub(" ", "", 
+    co <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("output")))
                )
-    cm <- gsub(" ", "", 
+    cm <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("message")))
                )
-    cw <- gsub(" ", "", 
+    cw <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("warning")))
                )
-    ce <- gsub(" ", "", 
+    ce <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("error")))
                )
@@ -204,7 +204,7 @@ test_adjusting_hooks <- function() {
     RUnit::checkEquals(hs, cw)
     RUnit::checkEquals(hs, ce)
     rasciidoc::adjust_asciidoc_hooks(hooks = c("source"), replacement = "error")
-    cs <- gsub(" ", "", 
+    cs <- gsub(" ", "",
                grep("covr:::count|   \\{|   \\}", invert = TRUE, value = TRUE,
                     deparse(knitr::knit_hooks$get("source")))
                )
