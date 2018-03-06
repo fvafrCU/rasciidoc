@@ -2,7 +2,7 @@ a  <- utils::person(given = "Andreas Dominik",
            family = "Cullmann",
            role = c("aut", "cre"),
            email = "adc-r@arcor.de")
-packager::set_package_info(force = TRUE, path = ".", author_at_r = a, 
+packager::set_package_info(force = FALSE, path = ".", author_at_r = a, 
                  title = "Create Reports Using R and `asciidoc`",
                  description = "Inspired by Karl Broman's reader on using knitr with asciidoc (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>), this is a wrapper to and a slight modification of knitr.",
                  details = 'You will find the details in\\cr\\code{vignette("An_Introduction_to_asciidoc", package = "rasciidoc")}')
