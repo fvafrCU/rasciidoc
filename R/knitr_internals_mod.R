@@ -40,6 +40,8 @@ hilight_source = function(x, format, options) {
 #'
 #' By default, \pkg{knitr} renders messages, warnings and errors to
 #' [NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
+#' To restore \pkg{knitr}'s behaviour, set \code{hooks} or \code{replacement} to
+#' \code{\link{NULL}}.
 #'
 #' This is a modified version of
 #' \code{\link[knitr:render_asciidoc]{knitr::render_asciidoc}} of  \pkg{knitr}
