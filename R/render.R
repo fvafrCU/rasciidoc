@@ -62,8 +62,8 @@ run_knitr <- function(file_name, working_directory = dirname(file_name),
                       hooks = NULL,
                       replacement = NULL,
                       envir = parent.frame()) {
+    file_name <- normalizePath(file_name)
     withr::with_dir(working_directory, {
-                    file_name <- normalizePath(file_name)
                     if (is_spin_file(file_name)) {
                         out_file <- knitr::spin(file_name, knit = TRUE,
                                             report = FALSE)
