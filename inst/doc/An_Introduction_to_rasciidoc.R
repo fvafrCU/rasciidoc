@@ -32,13 +32,7 @@ withr::with_dir(tempdir(), {
 if (interactive()) browseURL(file.path(tempdir(), 
                                        paste0(basename(file_name), 
                                               ".html")))
-withr::with_dir(tempdir(), {
-                    file.copy(file_name, ".", overwrite = TRUE)
-                    file.copy(file.path(dirname(file_name), "src"), ".", 
-                              recursive = TRUE)
-                    rasciidoc::render(basename(file_name))
-})
+rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)
 if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub("\\..*$", "", 
-                                                  basename(file_name)), 
+                                       paste0(basename(file_name), 
                                               ".html")))

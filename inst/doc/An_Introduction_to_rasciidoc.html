@@ -130,7 +130,7 @@ $(document).ready(function () {
 <td>author:</td>
 </tr>
 <tr class="odd">
-<td>date: 2018-03-07, 22:17:36</td>
+<td>date: 2018-03-07, 22:33:19</td>
 </tr>
 <tr class="even">
 <td>output: rmarkdown::html_vignette</td>
@@ -204,8 +204,8 @@ my_sum &lt;- function(x) {
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpIv7fSH/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpIv7fSH/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/RtmpqSqfz9/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpqSqfz9/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
                                        paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
@@ -270,8 +270,8 @@ Some inline code: Object +value+ has value +r value+.
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpIv7fSH/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpIv7fSH/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/RtmpqSqfz9/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpqSqfz9/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
                                        paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
@@ -322,6 +322,7 @@ cat(readLines(file_name), sep = &quot;\n&quot;)</code></pre>
 source(&quot;src/sum.R&quot;)
 #' 
 #' 
+message(&quot;A message, probably different output hooks.&quot;)
 #' == A new section
 #' 
 #+ code = readLines(&quot;src/my_sum.R&quot;)
@@ -339,30 +340,23 @@ print(my_sum(1:3))
                               recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })</code></pre>
-<pre><code>## processing file: /tmp/RtmpIv7fSH/spin.R_nolint.Rmd</code></pre>
+<pre><code>## processing file: /tmp/RtmpqSqfz9/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
-                                                  basename(file_name)), 
+                                       paste0(basename(file_name), 
                                               &quot;.html&quot;)))</code></pre>
 <p>and you will create an output html that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html">this file</a></p>
 </div>
 <div id="knitr-hooks" class="section level1">
 <h1>Knitr Hooks</h1>
 <p>I change the way knitr translates (see <a href="https://yihui.name/knitr/objects/">here</a>), as it renders messages, warnings and errors to [NOTE|WARNING|ERROR]-blocks in <code>asciidoc</code>, which is … not my choice. To restore knitr`s behaviour, set hooks or replacement to NULL.</p>
-<pre class="r"><code>withr::with_dir(tempdir(), {
-                    file.copy(file_name, &quot;.&quot;, overwrite = TRUE)
-                    file.copy(file.path(dirname(file_name), &quot;src&quot;), &quot;.&quot;, 
-                              recursive = TRUE)
-                    rasciidoc::render(basename(file_name))
-})</code></pre>
-<pre><code>## processing file: /tmp/RtmpIv7fSH/spin.R_nolint.Rmd</code></pre>
+<pre class="r"><code>rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)</code></pre>
+<pre><code>## processing file: /tmp/RtmpqSqfz9/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
-                                                  basename(file_name)), 
+                                       paste0(basename(file_name), 
                                               &quot;.html&quot;)))</code></pre>
 </div>
 

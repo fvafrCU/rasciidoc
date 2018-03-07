@@ -1,0 +1,15 @@
+checking top-level files ... WARNING
+Conversion of ‘README.md’ failed:
+pandoc: Could not fetch https://www.r-pkg.org/badges/version/rasciidoc
+TlsExceptionHostPort (HandshakeFailed Error_EOF) "www.r-pkg.org" 443
+
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+New submission
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+               user system elapsed
+render        5.420  0.164   9.693
+render_slides 4.372  0.216   7.125

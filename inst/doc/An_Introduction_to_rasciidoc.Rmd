@@ -1,7 +1,7 @@
 --
 title: "An Introduction to *rasciidoc*"
 author: 
-date: 2018-03-07, 22:17:36
+date: 2018-03-07, 22:33:19
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{An Introduction to rasciidoc }
@@ -76,8 +76,7 @@ withr::with_dir(tempdir(), {
                     rasciidoc::render(basename(file_name))
 })
 if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub("\\..*$", "", 
-                                                  basename(file_name)), 
+                                       paste0(basename(file_name), 
                                               ".html")))
 ```
 and you will create an output html that is identical to [this file](http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html)
@@ -90,14 +89,8 @@ renders messages, warnings and errors to
 To restore knitr`s behaviour, set hooks or replacement to
 NULL.
 ``` {r hooks}
-withr::with_dir(tempdir(), {
-                    file.copy(file_name, ".", overwrite = TRUE)
-                    file.copy(file.path(dirname(file_name), "src"), ".", 
-                              recursive = TRUE)
-                    rasciidoc::render(basename(file_name))
-})
+rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)
 if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub("\\..*$", "", 
-                                                  basename(file_name)), 
+                                       paste0(basename(file_name), 
                                               ".html")))
 ``` 

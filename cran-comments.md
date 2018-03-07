@@ -2,6 +2,7 @@ Dear CRAN Team,
 this is a resubmission of package 'rasciidoc'. I have added the following changes:
 
 * render() now passed arguments to adjust knitr's asciidoc hooks.
+* knitr's output hooks are now reset to their former values after knitting.
 
 Please upload to CRAN.
 Best, Andreas Dominik
