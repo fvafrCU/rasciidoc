@@ -15,6 +15,14 @@ is_installed <- function(program) {
 #' @param ... arguments passed to `asciidoc` via \code{\link{system2}}.
 #' @return \code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
 #' @export
+#' @examples 
+#' wd <- file.path(tempdir(), "rasciidoc")
+#' dir.create(wd)
+#' file  <- system.file("files", "minimal", "knit.asciidoc", package = "rasciidoc")
+#' file.copy(file, wd)
+#' rasciidoc::rasciidoc(file.path(wd, basename(file)), "-b docbook")
+#' dir(wd, full.names = TRUE)
+#' unlink(wd, recursive = TRUE)
 rasciidoc <- function(file_name, ...) {
     if (! is_installed("asciidoc"))
         warning("Can't find program `asciidoc`. ",
@@ -90,8 +98,8 @@ is_spin_file <- function(file_name) {
 #' Spin or Knit and Render a `Rasciidoc` File
 #'
 #' Spin or Knit (if required) and render an `Rasciidoc` file.
-#' @inheritParams rasciidoc
 #' @inheritParams adjust_asciidoc_hooks
+#' @param file_name The file to render.
 #' @param knit Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 #' If set to \code{\link{NA}}, knitting is based on the file's contents or name.
 #' Set to \code{\link{TRUE}}
@@ -102,45 +110,59 @@ is_spin_file <- function(file_name) {
 #' @param working_directory Where to run \code{\link[knitr:knit]{knitr::knit}}
 #' or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 #' directory to ensure that sourcing code into the input file works correctly.
+#' @param asciidoc_args arguments passed to `asciidoc` via \code{\link{system2}}.
+#' @param clean Remove temporary file(s)?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
+#' @examples 
+#' wd <- file.path(tempdir(), "rasciidoc")
+#' dir.create(wd)
+#' file  <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+#' file.copy(file, wd)
+#' rasciidoc::render(file.path(wd, basename(file)), asciidoc_args = "-b slidy")
+#' dir(wd, full.names = TRUE)
+#' unlink(wd, recursive = TRUE)
 render <- function(file_name, knit = NA,
                    envir = parent.frame(),
                    working_directory = dirname(file_name),
                    hooks = c("message", "error", "warning"),
-                   replacement = "source", ...) {
+                   replacement = "source", asciidoc_args, clean = TRUE) {
     adoc <- run_knitr(file_name = file_name,
                       working_directory = working_directory,
                       knit = knit, envir = envir,
                       hooks = hooks, replacement = replacement)
-    status <- rasciidoc(adoc, ...)
+    on.exit(if (isTRUE(clean)) file.remove(adoc))
+    status <- rasciidoc(adoc, asciidoc_args)
     return(status)
 }
 
-#' Spin Knit or Render a `Rasciidoc` File to html and slidy
+#' Spin or Knit and Render a `Rasciidoc` File to html and slidy
+#'
+#' When creating slides, I usually want a standard HTML output, too. But I do
+#' not want to call \code{\link{render}} twice, knitting or spinning twice.
 #'
 #' You can exclude parts of the file from the standard html or slidy output by
 #' using lines starting with '//begin_only_slide' and '//end_only_slide' or
 #' '//begin_no_slide' and '//end_no_slide', respectively. To exclude single
 #' lines from standard html output, append a '//slide_only' comment to it (for
 #' example to add slide titles for slidy to break longer sections of standard
-#' html output.
+#' html output).
 #'
 #' @inheritParams render
 #' @return The output's file names.
 #' @export
 #' @examples
-#' folder  <- system.file("runit_tests", "files", package = "rasciidoc")
-#' file.copy(folder, tempdir(), recursive = TRUE)
-#' files <- withr::with_dir(file.path(tempdir(), "files"),
-#'                          rasciidoc::render_slides("slides.Rasciidoc"))
-#' # files are in tempdir()/files/:
-#' files <- file.path(tempdir(), "files", files)
-#' print(files)
+#' wd <- file.path(tempdir(), "rasciidoc")
+#' dir.create(wd)
+#' file  <- system.file("files", "minimal", "slides.Rasciidoc", package = "rasciidoc")
+#' file.copy(file, wd)
+#' files <- rasciidoc::render_slides(file.path(wd, basename(file)))
+#' dir(wd, full.names = TRUE)
 #' \dontrun{
 #'     browseURL(files[1])
 #'     browseURL(files[2])
 #' }
+#' unlink(wd, recursive = TRUE)
 render_slides <- function(file_name, knit = NA,
                           working_directory = dirname(file_name),
                           envir = parent.frame(),
@@ -152,6 +174,7 @@ render_slides <- function(file_name, knit = NA,
                       working_directory = working_directory,
                       knit = knit, envir = envir,
                       hooks = hooks, replacement = replacement)
+    on.exit(if (isTRUE(clean)) file.remove(adoc))
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
     slide_only_pattern <- "//slide_only"
