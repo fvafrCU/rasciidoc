@@ -1,6 +1,24 @@
-inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: Trailing blank lines are superfluous.
-
-^
+inst/doc/An_Introduction_to_rasciidoc.R:1:1: style: lines should not be more than 80 characters.
+file_name <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/doc/An_Introduction_to_rasciidoc.R:7:1: style: lines should not be more than 80 characters.
+if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/doc/An_Introduction_to_rasciidoc.R:8:1: style: lines should not be more than 80 characters.
+file_name <- system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc")
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/doc/An_Introduction_to_rasciidoc.R:12:73: style: Trailing whitespace is superfluous.
+                    file.copy(file.path(dirname(file_name), "src"), ".", 
+                                                                        ^
+inst/doc/An_Introduction_to_rasciidoc.R:16:1: style: lines should not be more than 80 characters.
+if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/doc/An_Introduction_to_rasciidoc.R:17:1: style: lines should not be more than 80 characters.
+file_name <- system.file("files", "simple", "spin.R_nolint", package = "rasciidoc")
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/doc/An_Introduction_to_rasciidoc.R:23:1: style: lines should not be more than 80 characters.
+if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 inst/files/simple/src/my_sum.R:4:29: style: Trailing whitespace is superfluous.
         value <- value + x_i 
                             ^
@@ -318,4 +336,4 @@ R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
-  path[1]="/home/nik/git/cs/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory
+  path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

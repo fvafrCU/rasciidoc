@@ -43,8 +43,12 @@ run_knit <- function(file_name, knit = NA,
         }
     }
     if (isTRUE(knit)) {
-        if (!is.null(hooks)) adjust_asciidoc_hooks(hooks = hooks,
-                                                   replacement = replacement)
+        if (!is.null(hooks)) {
+            current_hooks <- knitr::knit_hooks$get()
+            adjust_asciidoc_hooks(hooks = hooks, replacement = replacement)
+            knitr::knit_hooks$set(current_hooks)
+
+        }
         knit_out_file <- sub("\\.[Rr](.*)", ".\\1", file_name)
         ops <- options() ## TODO: knitr changes the options?!
         file_name <- knitr::knit(file_name, knit_out_file, envir = envir)

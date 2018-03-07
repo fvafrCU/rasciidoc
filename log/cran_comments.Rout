@@ -1,11 +1,14 @@
 checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://travis-ci.org/fvafrCU/rasciidoc.svg?branch=master
-InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
+pandoc: Could not fetch https://www.r-pkg.org/badges/version/rasciidoc
+TlsExceptionHostPort (HandshakeFailed Error_EOF) "www.r-pkg.org" 443
 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-The Title field should be in title case, current version then in title case:
-‘Create Reports Using `R` and `asciidoc`’
-‘Create Reports Using `r` and `asciidoc`’
+New submission
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+               user system elapsed
+render_slides 5.624  0.224   5.922

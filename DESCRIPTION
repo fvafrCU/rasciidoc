@@ -23,8 +23,7 @@ Suggests:
     RUnit,
     devtools,
     rprojroot,
-    withr,
-    knitr
+    withr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

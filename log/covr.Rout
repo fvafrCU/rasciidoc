@@ -25,6 +25,7 @@
 74      R/highr_internals.R           escape_html   35     0
 7   R/knitr_internals_mod.R            set_header    4     0
 9   R/knitr_internals_mod.R            set_header    5     0
+17  R/knitr_internals_mod.R        hilight_source   13     0
 20  R/knitr_internals_mod.R        hilight_source   14     0
 22  R/knitr_internals_mod.R        hilight_source   15     0
 25  R/knitr_internals_mod.R        hilight_source   16     0
@@ -40,15 +41,23 @@
 57  R/knitr_internals_mod.R        hilight_source   26     0
 59  R/knitr_internals_mod.R        hilight_source   27     0
 60  R/knitr_internals_mod.R        hilight_source   28     0
+61  R/knitr_internals_mod.R        hilight_source   29     0
+62  R/knitr_internals_mod.R        hilight_source   30     0
+64  R/knitr_internals_mod.R        hilight_source   31     0
 66  R/knitr_internals_mod.R        hilight_source   32     0
 69  R/knitr_internals_mod.R        hilight_source   33     0
 72  R/knitr_internals_mod.R        hilight_source   34     0
+75  R/knitr_internals_mod.R        hilight_source   35     0
+100 R/knitr_internals_mod.R adjust_asciidoc_hooks   61     0
+101 R/knitr_internals_mod.R adjust_asciidoc_hooks   62     0
+102 R/knitr_internals_mod.R adjust_asciidoc_hooks   63     0
+103 R/knitr_internals_mod.R adjust_asciidoc_hooks   64     0
 108 R/knitr_internals_mod.R adjust_asciidoc_hooks   67     0
 110 R/knitr_internals_mod.R adjust_asciidoc_hooks   68     0
 116 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
 118 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
 124 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
-125 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
+126 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
 3       R/knitr_internals.R            merge_list    3     0
 6       R/knitr_internals.R            merge_list    4     0
 13      R/knitr_internals.R           line_prompt   10     0
@@ -58,9 +67,9 @@
 41      R/knitr_internals.R      highlight_header   21     0
 45      R/knitr_internals.R      highlight_header   22     0
 48      R/knitr_internals.R      highlight_header   23     0
-rasciidoc Coverage: 70.35%
+rasciidoc Coverage: 66.50%
 R/highr_internals.R: 0.00%
 R/knitr_internals.R: 0.00%
-R/knitr_internals_mod.R: 52.73%
+R/knitr_internals_mod.R: 36.36%
 R/render.R: 100.00%
 R/throw.R: 100.00%
