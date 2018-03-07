@@ -1,6 +1,6 @@
 Package: rasciidoc
 Title: Create Reports Using R and `asciidoc`
-Version: 0.9.0
+Version: 0.9.0.9000
 Authors@R:
     person(given = "Andreas Dominik",
            family = "Cullmann",
@@ -11,13 +11,13 @@ Description: Inspired by Karl Broman's reader on using knitr
     (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>), this is a
     wrapper to and a slight modification of knitr.
 License: BSD_2_clause + file LICENSE
-Depends: 
+Depends:
     R (>= 3.3.0)
-Imports: 
+Imports:
     document,
     knitr,
     highr
-Suggests: 
+Suggests:
     rmarkdown,
     testthat,
     RUnit,
