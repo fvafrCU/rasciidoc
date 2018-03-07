@@ -1,2 +1,3 @@
+- add examples (from tests)
 - improve vignette
 - improve test coverage
