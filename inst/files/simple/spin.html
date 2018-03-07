@@ -799,7 +799,21 @@ Yet another entry in the list.
 <div class="sect1">
 <h2 id="_including_code">2. Including Code</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Do not use the <em>include</em> macro provided by asciidoc!+</p></div>
+<div class="paragraph"><p>Do not use the <em>include</em> macro provided by asciidoc!
+Instead prefix all source statements with</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>#+ code = readLines("file_to_be_sourced")
+#+ include = FALSE</code></pre>
+</div></div>
+<div class="paragraph"><p>It est use</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>#+ code = readLines("src/sum.R")
+#+ include = FALSE
+source("src/sum.R")</code></pre>
+</div></div>
+<div class="paragraph"><p>to produce</p></div>
 <div class="listingblock">
 <div class="content"><!-- Generator: GNU source-highlight 3.1.8
 by Lorenzo Bettini
@@ -832,13 +846,8 @@ http://www.gnu.org/software/src-highlite -->
     }
     return(value)
 }</tt></pre></div></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_only_sections_give_new_slides_slide_only">4. Only sections give new slides //slide_only</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_a_subsection">4.1. A subsection</h3>
+<h3 id="_a_subsection">3.1. A subsection</h3>
 <div class="listingblock">
 <div class="content"><!-- Generator: GNU source-highlight 3.1.8
 by Lorenzo Bettini
@@ -859,15 +868,7 @@ http://www.gnu.org/software/src-highlite -->
 <div class="content">
 <pre><code>## [1] 6</code></pre>
 </div></div>
-<div class="paragraph"><p>Some inline code: Object <code>value</code> has value <code>r value</code>.</p></div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_next_slide_slide_only">5. Next slide //slide_only</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_second_subsection">5.1. Second subsection</h3>
+<div class="paragraph"><p>Inline code does not work: Object <code>value</code> has value <code>r value</code>.</p></div>
 </div>
 </div>
 </div>
@@ -876,7 +877,7 @@ http://www.gnu.org/software/src-highlite -->
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2018-03-07 21:28:57 CET
+ 2018-03-07 21:57:55 CET
 </div>
 </div>
 </body>

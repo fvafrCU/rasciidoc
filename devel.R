@@ -11,7 +11,7 @@ withr::with_dir(file.path("inst", "files", "simple"),
                 rasciidoc::render("knit.Rasciidoc"))
 withr::with_dir(file.path("inst", "files", "simple"),
                 {
-                    file.copy("spin.R_nolint", "spin.R")
+                    file.copy("spin.R_nolint", "spin.R",  overwrite = TRUE)
                     rasciidoc::render("spin.R", clean = FALSE)
                     unlink("spin.R")
                 }

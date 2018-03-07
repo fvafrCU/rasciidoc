@@ -17,7 +17,19 @@ This will not show up on slides.
 * Yet another entry in the list.
 
 == Including Code
-Do not use the _include_ macro provided by asciidoc!+ 
+Do not use the _include_ macro provided by asciidoc!
+Instead prefix all source statements with 
+----
+#+ code = readLines("file_to_be_sourced")
+#+ include = FALSE
+----
+It est use
+----
+#+ code = readLines("src/sum.R")
+#+ include = FALSE
+source("src/sum.R")
+----
+to produce
 
 
 [source,r]
@@ -33,6 +45,7 @@ print(value) # <5>
 ----
 ## [1] 19
 ----
+
 
 
 
@@ -53,7 +66,6 @@ my_sum <- function(x) {
 ----
 
 
-== Only sections give new slides //slide_only
 === A subsection
 
 
@@ -81,8 +93,5 @@ print(my_sum(1:3))
 
 
 
-Some inline code: Object +value+ has value +r value+.
+Inline code does not work: Object +value+ has value +r value+.
 
-== Next slide //slide_only
-
-=== Second subsection
