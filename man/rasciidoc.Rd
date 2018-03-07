@@ -20,3 +20,12 @@ This is the basic interface to `asciidoc`. Not more than a call to
 You should usually not call it directly, see
 \code{\link{render}} and \code{\link{render_slides}} for wrappers.
 }
+\examples{
+wd <- file.path(tempdir(), "rasciidoc")
+dir.create(wd)
+file  <- system.file("files", "minimal", "knit.asciidoc", package = "rasciidoc")
+file.copy(file, wd)
+rasciidoc::rasciidoc(file.path(wd, basename(file)), "-b docbook")
+dir(wd, full.names = TRUE)
+unlink(wd, recursive = TRUE)
+}

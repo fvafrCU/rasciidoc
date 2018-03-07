@@ -2,14 +2,14 @@
 % Please edit documentation in R/render.R
 \name{render_slides}
 \alias{render_slides}
-\title{Spin Knit or Render a `Rasciidoc` File to html and slidy}
+\title{Spin or Knit and Render a `Rasciidoc` File to html and slidy}
 \usage{
 render_slides(file_name, knit = NA, working_directory = dirname(file_name),
   envir = parent.frame(), hooks = c("message", "error", "warning"),
-  replacement = "source")
+  replacement = "source", clean = FALSE)
 }
 \arguments{
-\item{file_name}{The file to run `asciidoc` on.}
+\item{file_name}{The file to render.}
 
 \item{knit}{Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 If set to \code{\link{NA}}, knitting is based on the file's contents or name.
@@ -29,28 +29,34 @@ the \code{replacement}'s hooks.}
 
 \item{replacement}{The hook with which to replace the hooks given by
 \code{hooks}.}
+
+\item{clean}{Remove temporary file(s)?}
 }
 \value{
 The output's file names.
 }
 \description{
+When creating slides, I usually want a standard HTML output, too. But I do
+not want to call \code{\link{render}} twice, knitting or spinning twice.
+}
+\details{
 You can exclude parts of the file from the standard html or slidy output by
 using lines starting with '//begin_only_slide' and '//end_only_slide' or
 '//begin_no_slide' and '//end_no_slide', respectively. To exclude single
 lines from standard html output, append a '//slide_only' comment to it (for
 example to add slide titles for slidy to break longer sections of standard
-html output.
+html output).
 }
 \examples{
-folder  <- system.file("runit_tests", "files", package = "rasciidoc")
-file.copy(folder, tempdir(), recursive = TRUE)
-files <- withr::with_dir(file.path(tempdir(), "files"),
-                         rasciidoc::render_slides("slides.Rasciidoc"))
-# files are in tempdir()/files/:
-files <- file.path(tempdir(), "files", files)
-print(files)
+wd <- file.path(tempdir(), "rasciidoc")
+dir.create(wd)
+file  <- system.file("files", "minimal", "slides.Rasciidoc", package = "rasciidoc")
+file.copy(file, wd)
+files <- rasciidoc::render_slides(file.path(wd, basename(file)))
+dir(wd, full.names = TRUE)
 \dontrun{
     browseURL(files[1])
     browseURL(files[2])
 }
+unlink(wd, recursive = TRUE)
 }

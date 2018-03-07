@@ -119,7 +119,7 @@ render <- function(file_name, knit = NA,
                    envir = parent.frame(),
                    working_directory = dirname(file_name),
                    hooks = c("message", "error", "warning"),
-                   replacement = "source", asciidoc_args = NULL, clean = TRUE) {
+                   replacement = "source", asciidoc_args = NULL, clean = FALSE) {
     adoc <- run_knitr(file_name = file_name,
                       working_directory = working_directory,
                       knit = knit, envir = envir,
@@ -160,7 +160,7 @@ render_slides <- function(file_name, knit = NA,
                           working_directory = dirname(file_name),
                           envir = parent.frame(),
                           hooks = c("message", "error", "warning"),
-                          replacement = "source") {
+                          replacement = "source", clean = FALSE) {
     status <- NULL
     out_files <- NULL
     adoc <- run_knitr(file_name = file_name,

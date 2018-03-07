@@ -6,10 +6,10 @@
 \usage{
 render(file_name, knit = NA, envir = parent.frame(),
   working_directory = dirname(file_name), hooks = c("message", "error",
-  "warning"), replacement = "source", ...)
+  "warning"), replacement = "source", asciidoc_args = NULL, clean = FALSE)
 }
 \arguments{
-\item{file_name}{The file to run `asciidoc` on.}
+\item{file_name}{The file to render.}
 
 \item{knit}{Knit the file first using \code{\link[knitr:knit]{knitr::knit}}?
 If set to \code{\link{NA}}, knitting is based on the file's contents or name.
@@ -30,11 +30,22 @@ the \code{replacement}'s hooks.}
 \item{replacement}{The hook with which to replace the hooks given by
 \code{hooks}.}
 
-\item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
+\item{asciidoc_args}{arguments passed to `asciidoc` via \code{\link{system2}}.}
+
+\item{clean}{Remove temporary file(s)?}
 }
 \value{
 The return value of \code{\link{rasciidoc}}.
 }
 \description{
 Spin or Knit (if required) and render an `Rasciidoc` file.
+}
+\examples{
+wd <- file.path(tempdir(), "rasciidoc")
+dir.create(wd)
+file  <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+file.copy(file, wd)
+rasciidoc::render(file.path(wd, basename(file)), asciidoc_args = "-b slidy")
+dir(wd, full.names = TRUE)
+unlink(wd, recursive = TRUE)
 }
