@@ -34,8 +34,6 @@ rasciidoc <- function(file_name, ...) {
 }
 
 run_knit <- function(file_name, knit = NA,
-                     hooks = NULL,
-                     replacement = NULL,
                      envir = parent.frame()) {
     if (is.na(knit)) {
         r_code_pattern <- "//begin.rcode"
@@ -51,12 +49,6 @@ run_knit <- function(file_name, knit = NA,
         }
     }
     if (isTRUE(knit)) {
-        if (!is.null(hooks)) {
-            current_hooks <- knitr::knit_hooks$get()
-            adjust_asciidoc_hooks(hooks = hooks, replacement = replacement)
-            knitr::knit_hooks$set(current_hooks)
-
-        }
         knit_out_file <- sub("\\.[Rr](.*)", ".\\1", file_name)
         ops <- options() ## TODO: knitr changes the options?!
         file_name <- knitr::knit(file_name, knit_out_file, envir = envir)
@@ -70,6 +62,9 @@ run_knitr <- function(file_name, working_directory = dirname(file_name),
                       hooks = NULL,
                       replacement = NULL,
                       envir = parent.frame()) {
+    current_hooks <- knitr::knit_hooks$get()
+    adjust_asciidoc_hooks(hooks = hooks, replacement = replacement)
+    on.exit(knitr::knit_hooks$set(current_hooks))
     file_name <- normalizePath(file_name)
     withr::with_dir(working_directory, {
                     if (is_spin_file(file_name)) {
@@ -77,8 +72,6 @@ run_knitr <- function(file_name, working_directory = dirname(file_name),
                                             report = FALSE)
                     } else {
                         out_file <- run_knit(file_name, knit = knit,
-                                          hooks = hooks,
-                                          replacement = replacement,
                                           envir = envir)
                     }
                     out_file <- normalizePath(out_file)
@@ -126,7 +119,7 @@ render <- function(file_name, knit = NA,
                    envir = parent.frame(),
                    working_directory = dirname(file_name),
                    hooks = c("message", "error", "warning"),
-                   replacement = "source", asciidoc_args, clean = TRUE) {
+                   replacement = "source", asciidoc_args = NULL, clean = TRUE) {
     adoc <- run_knitr(file_name = file_name,
                       working_directory = working_directory,
                       knit = knit, envir = envir,

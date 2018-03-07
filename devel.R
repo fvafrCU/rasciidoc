@@ -12,7 +12,7 @@ withr::with_dir(file.path("inst", "files", "simple"),
 withr::with_dir(file.path("inst", "files", "simple"),
                 {
                     file.copy("spin.R_nolint", "spin.R")
-                    rasciidoc::render("spin.R")
+                    rasciidoc::render("spin.R", clean = FALSE)
                     unlink("spin.R")
                 }
 )
@@ -34,6 +34,8 @@ withr::with_dir(file.path("inst", "files", "simple"),
 file_name <- system.file("files", "simple", "knit.Rasciidoc", package = "rasciidoc")
 rasciidoc::render(file_name)
 
+file_name <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+rasciidoc::render(file_name)
 
 
 
