@@ -35,6 +35,7 @@
 source("src/sum.R")
 #' 
 #' 
+message("A message, probably different output hooks.")
 #' == A new section
 #' 
 #+ code = readLines("src/my_sum.R")

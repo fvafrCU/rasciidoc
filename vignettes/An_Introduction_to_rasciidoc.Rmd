@@ -1,7 +1,7 @@
----
+--
 title: "An Introduction to *rasciidoc*"
 author: 
-date: 2018-03-07, 12:44:07
+date: 2018-03-07, 22:33:19
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{An Introduction to rasciidoc }
@@ -19,7 +19,8 @@ wrapper to and a slight modification of knitr.
 ## A Minimal Example
 Suppose, you have a file that reads
 ``` {r minimal_knitting_file, comment = ""}
-file_name <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+file_name <- system.file("files", "minimal", "knit.Rasciidoc", 
+                         package = "rasciidoc")
 cat(readLines(file_name), sep = "\n")
 ```
 If you run `render` on this file (we use a temporary directory here)
@@ -28,7 +29,10 @@ withr::with_dir(tempdir(), {
                     file.copy(file_name, ".")
                     rasciidoc::render(basename(file_name))
 })
-if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+if (interactive()) browseURL(file.path(tempdir(), 
+                                       paste0(sub("\\..*$", "", 
+                                                  basename(file_name)), 
+                                              ".html")))
 ```
 you will create an HTML file that is identical to [this file](http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html). 
 
@@ -48,7 +52,10 @@ withr::with_dir(tempdir(), {
                               recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })
-if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+if (interactive()) browseURL(file.path(tempdir(), 
+                                       paste0(sub("\\..*$", "", 
+                                                  basename(file_name)), 
+                                              ".html")))
 ```
 
 This will create an HTML that is identical to [this file](http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/simple/knit.html).
@@ -64,8 +71,26 @@ You run `render` on it:
 ``` {r simple_spinnig_run}
 withr::with_dir(tempdir(), {
                     file.copy(file_name, ".", overwrite = TRUE)
+                    file.copy(file.path(dirname(file_name), "src"), ".", 
+                              recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })
-if (interactive()) browseURL(file.path(tempdir(), paste0(basename(file_name), ".html")))
+if (interactive()) browseURL(file.path(tempdir(), 
+                                       paste0(basename(file_name), 
+                                              ".html")))
 ```
 and you will create an output html that is identical to [this file](http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html)
+
+# Knitr Hooks
+
+I change the way knitr translates (see [here](https://yihui.name/knitr/objects/)), as it 
+renders messages, warnings and errors to
+[NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
+To restore knitr`s behaviour, set hooks or replacement to
+NULL.
+``` {r hooks}
+rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)
+if (interactive()) browseURL(file.path(tempdir(), 
+                                       paste0(basename(file_name), 
+                                              ".html")))
+``` 
