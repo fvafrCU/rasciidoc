@@ -1,4 +1,4 @@
-RUNIT TEST PROTOCOL -- Wed Mar  7 23:00:22 2018 
+RUNIT TEST PROTOCOL -- Thu Mar  8 16:36:19 2018 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 0 
@@ -19,10 +19,10 @@ Involved directory:
 /home/nik/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests 
 --------------------------- 
 Test file: /home/nik/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests/runit-render.R 
-test_adjusting_hooks: (11 checks) ... OK (0.79 seconds)
-test_knit_spin: (2 checks) ... OK (22.36 seconds)
-test_render_simple: (4 checks) ... OK (9.13 seconds)
-test_render_slides: (2 checks) ... OK (7.52 seconds)
+test_adjusting_hooks: (11 checks) ... OK (0.22 seconds)
+test_knit_spin: (2 checks) ... OK (11.64 seconds)
+test_render_simple: (4 checks) ... OK (3.83 seconds)
+test_render_slides: (2 checks) ... OK (3.32 seconds)
 --------------------------- 
 Test file: /home/nik/git/cyclops/fvafrcu/rasciidoc/rasciidoc.Rcheck/rasciidoc/runit_tests/runit-throw.R 
 test_exception: (1 checks) ... OK (0 seconds)

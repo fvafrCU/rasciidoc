@@ -119,7 +119,8 @@ render <- function(file_name, knit = NA,
                    envir = parent.frame(),
                    working_directory = dirname(file_name),
                    hooks = c("message", "error", "warning"),
-                   replacement = "source", asciidoc_args = NULL, clean = FALSE) {
+                   replacement = "source", asciidoc_args = NULL,
+                   clean = FALSE) {
     adoc <- run_knitr(file_name = file_name,
                       working_directory = working_directory,
                       knit = knit, envir = envir,

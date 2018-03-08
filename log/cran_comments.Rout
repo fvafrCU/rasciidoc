@@ -8,8 +8,18 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
+Version contains large components (0.9.0.9000)
+
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-               user system elapsed
-render        5.420  0.164   9.693
-render_slides 4.372  0.216   7.125
+        user system elapsed
+render 4.984   0.14   5.158
+displaying logs for fvafrCU/rasciidoc#63.1
+undefined method `each_pair' for #<String:0x0055a322129fd8>
+Did you mean?  each_char
+Error in if (file.exists(file.path(path, travis_session_info))) { : 
+  argument is of length zero
+Calls: <Anonymous>
+In addition: Warning message:
+running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1 
+Execution halted

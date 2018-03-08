@@ -1,7 +1,12 @@
+# rasciidoc 0.9.0.9000
+
+* devel
+
 # rascidoc 0.9.0
 
 * knitr's output hooks are now reset to their former values after knitting.
 * Added an argument 'clean' to render() to clean intermediate files.
+
 # rasciidoc 0.8.0
 
 * render() now passed arguments to adjust knitr's asciidoc hooks.

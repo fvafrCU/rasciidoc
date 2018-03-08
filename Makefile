@@ -62,7 +62,7 @@ use_dev_version:
 
 # install
 cran-comments.md:  $(LOG_DIR)/install.Rout
-	$(Rscript) --vanilla -e 'packager::provide_cran_comments(check_log = "log/check.Rout")' > $(LOG_DIR)/cran_comments.Rout 2>&1 
+	$(Rscript) --vanilla -e 'packager::provide_cran_comments(check_log = "log/check.Rout", travis_session_info = "travis-cli")' > $(LOG_DIR)/cran_comments.Rout 2>&1 
 
 .PHONY: install
 install: $(LOG_DIR)/install.Rout
@@ -139,7 +139,7 @@ $(LOG_DIR)/cleanr.Rout: .log.Rout $(R_FILES) $(LOG_DIR)/dependencies.Rout
 .PHONY: lintr
 lintr: $(LOG_DIR)/lintr.Rout 
 $(LOG_DIR)/lintr.Rout: .log.Rout $(R_FILES) $(VIGNETTES_FILES) $(LOG_DIR)/dependencies.Rout
-	$(Rscript) --vanilla -e 'lintr::lint_package(path = ".")' > $(LOG_DIR)/lintr.Rout 2>&1 
+	$(Rscript) --vanilla -e 'packager::print_lints(lintr::lint_package(path = "."))' > $(LOG_DIR)/lintr.Rout 2>&1 
 
 .PHONY: coverage
 coverage: $(LOG_DIR)/covr.Rout 
@@ -174,4 +174,4 @@ $(LOG_DIR)/spell.Rout: .log.Rout DESCRIPTION $(LOG_DIR)/roxygen2.Rout $(MAN_FILE
 .PHONY: cyclocomp
 cyclocomp: $(LOG_DIR)/cyclocomp.Rout
 $(LOG_DIR)/cyclocomp.Rout: .log.Rout $(LOG_DIR)/dependencies.Rout $(R_FILES)
-	touch $(LOG_DIR)/cyclocomp.Rout #$(Rscript) --vanilla -e 'tryCatch(print(packager::check_cyclomatic_complexity()), error = identity)' > $(LOG_DIR)/cyclocomp.Rout 2>&1 
+	$(Rscript) --vanilla -e 'tryCatch(print(packager::check_cyclomatic_complexity()), error = identity)' > $(LOG_DIR)/cyclocomp.Rout 2>&1 

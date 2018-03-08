@@ -130,7 +130,7 @@ $(document).ready(function () {
 <td>author:</td>
 </tr>
 <tr class="odd">
-<td>date: 2018-03-07, 22:33:19</td>
+<td>date: 2018-03-08, 14:24:59</td>
 </tr>
 <tr class="even">
 <td>output: rmarkdown::html_vignette</td>
@@ -158,7 +158,7 @@ $(document).ready(function () {
 <div id="a-minimal-example" class="section level2">
 <h2>A Minimal Example</h2>
 <p>Suppose, you have a file that reads</p>
-<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;minimal&quot;, &quot;knit.Rasciidoc&quot;, 
+<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;minimal&quot;, &quot;knit.Rasciidoc&quot;,
                          package = &quot;rasciidoc&quot;)
 cat(readLines(file_name), sep = &quot;\n&quot;)</code></pre>
 <pre><code>= Some Title
@@ -204,19 +204,20 @@ my_sum &lt;- function(x) {
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpqSqfz9/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpqSqfz9/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/Rtmpi05Kdv/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/Rtmpi05Kdv/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
-<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
-                                                  basename(file_name)), 
+<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
+                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;,
+                                                  basename(file_name)),
                                               &quot;.html&quot;)))</code></pre>
 <p>you will create an HTML file that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html">this file</a>.</p>
 </div>
 <div id="a-simple-example" class="section level2">
 <h2>A Simple Example</h2>
 <p>Suppose, you have a file that reads</p>
-<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;simple&quot;, &quot;knit.Rasciidoc&quot;, package = &quot;rasciidoc&quot;)
+<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;simple&quot;, &quot;knit.Rasciidoc&quot;,
+                         package = &quot;rasciidoc&quot;)
 cat(readLines(file_name), sep = &quot;\n&quot;)</code></pre>
 <pre><code>= Some Title
 Your Name
@@ -264,18 +265,18 @@ Some inline code: Object +value+ has value +r value+.
 <p>This file obviously reads code from files in a directory called “src/”, so we need this directory, too:</p>
 <pre class="r"><code>withr::with_dir(tempdir(), {
                     file.copy(file_name, &quot;.&quot;)
-                    file.copy(file.path(dirname(file_name), &quot;src&quot;), &quot;.&quot;, 
+                    file.copy(file.path(dirname(file_name), &quot;src&quot;), &quot;.&quot;,
                               recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpqSqfz9/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpqSqfz9/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/Rtmpi05Kdv/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/Rtmpi05Kdv/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
-<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;, 
-                                                  basename(file_name)), 
+<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
+                                       paste0(sub(&quot;\\..*$&quot;, &quot;&quot;,
+                                                  basename(file_name)),
                                               &quot;.html&quot;)))</code></pre>
 <p>This will create an HTML that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/simple/knit.html">this file</a>.</p>
 </div>
@@ -283,7 +284,8 @@ Some inline code: Object +value+ has value +r value+.
 <div id="spinnig" class="section level1">
 <h1>Spinnig</h1>
 <p>You can also use a spinnig file for input:</p>
-<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;simple&quot;, &quot;spin.R_nolint&quot;, package = &quot;rasciidoc&quot;)
+<pre class="r"><code>file_name &lt;- system.file(&quot;files&quot;, &quot;simple&quot;, &quot;spin.R_nolint&quot;,
+                         package = &quot;rasciidoc&quot;)
 cat(readLines(file_name), sep = &quot;\n&quot;)</code></pre>
 <pre><code>#' = Some Title
 #' Your Name
@@ -336,15 +338,15 @@ print(my_sum(1:3))
 <p>You run <code>render</code> on it:</p>
 <pre class="r"><code>withr::with_dir(tempdir(), {
                     file.copy(file_name, &quot;.&quot;, overwrite = TRUE)
-                    file.copy(file.path(dirname(file_name), &quot;src&quot;), &quot;.&quot;, 
+                    file.copy(file.path(dirname(file_name), &quot;src&quot;), &quot;.&quot;,
                               recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })</code></pre>
-<pre><code>## processing file: /tmp/RtmpqSqfz9/spin.R_nolint.Rmd</code></pre>
+<pre><code>## processing file: /tmp/Rtmpi05Kdv/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
-<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(basename(file_name), 
+<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
+                                       paste0(basename(file_name),
                                               &quot;.html&quot;)))</code></pre>
 <p>and you will create an output html that is identical to <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/rasciidoc/blob/master/inst/files/minimal/knit.html">this file</a></p>
 </div>
@@ -352,11 +354,11 @@ print(my_sum(1:3))
 <h1>Knitr Hooks</h1>
 <p>I change the way knitr translates (see <a href="https://yihui.name/knitr/objects/">here</a>), as it renders messages, warnings and errors to [NOTE|WARNING|ERROR]-blocks in <code>asciidoc</code>, which is … not my choice. To restore knitr`s behaviour, set hooks or replacement to NULL.</p>
 <pre class="r"><code>rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)</code></pre>
-<pre><code>## processing file: /tmp/RtmpqSqfz9/spin.R_nolint.Rmd</code></pre>
+<pre><code>## processing file: /tmp/Rtmpi05Kdv/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
-<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(), 
-                                       paste0(basename(file_name), 
+<pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
+                                       paste0(basename(file_name),
                                               &quot;.html&quot;)))</code></pre>
 </div>
 

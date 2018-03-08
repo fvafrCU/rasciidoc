@@ -2,10 +2,10 @@ Loading rasciidoc
 Loading required package: testthat
 Testing rasciidoc
 ✔ | OK F W S | Context
-⠏ |  0       | Testing rasciidoc:::throw()⠋ |  1       | Testing rasciidoc:::throw()✔ |  1       | Testing rasciidoc:::throw() [0.5 s]
+⠏ |  0       | Testing rasciidoc:::throw()⠋ |  1       | Testing rasciidoc:::throw()✔ |  1       | Testing rasciidoc:::throw() [0.7 s]
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 1.4 s
+Duration: 1.5 s
 
 OK:       1
 Failed:   0

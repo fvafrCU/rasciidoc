@@ -58,26 +58,27 @@ hilight_source = function(x, format, options) {
 adjust_asciidoc_hooks <- function(hooks = c("message", "error", "warning"),
                                   replacement = "source") {
     # Verbatim copy of a part of knitr::render_asciidoc() version 1.18.7, 
-    # formatted to fit lines of length 80.
-    hook.source = function(x, options) {
-        x = paste(c(hilight_source(x, "asciidoc", options), ""), 
-                  collapse = "\n")
+    # formatted to fit lines of length 80 and replace assignment by "=" with
+    # assignment by "<-" to soothe lintr.
+    hook.source <- function(x, options) {
+        x <- paste(c(hilight_source(x, "asciidoc", options), ""), 
+                   collapse = "\n")
         sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
                 x)
     }
-    hook.message = function(x, options) {
+    hook.message <- function(x, options) {
         sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
                 substring(x, comment_length(options$comment)))
     }
-    hook.warning = function(x, options) {
+    hook.warning <- function(x, options) {
         sprintf("\n[WARNING]\n====\n.Warning\n%s\n====\n",
                 gsub("^.*Warning: ", "", x))
     }
-    hook.error = function(x, options) {
+    hook.error <- function(x, options) {
         sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
                 gsub("^.*Error: ", "", x))
     }
-    hook.output = function(x, options) sprintf("\n----\n%s----\n", x)
+    hook.output <- function(x, options) sprintf("\n----\n%s----\n", x)
     # Modification starts here.
     if (! is.null(replacement)) {
         replacement_hook <- get(paste0("hook.", replacement))

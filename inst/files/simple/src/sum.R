@@ -4,4 +4,3 @@ for (a_i in a) { # <3>
     value <- value + a_i  # <4>
 }
 print(value) # <5>
-
