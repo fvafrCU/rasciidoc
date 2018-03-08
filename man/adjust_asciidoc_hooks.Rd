@@ -2,7 +2,7 @@
 % Please edit documentation in R/knitr_internals_mod.R
 \name{adjust_asciidoc_hooks}
 \alias{adjust_asciidoc_hooks}
-\title{Adjust \pkg{knitr}'s Hooks for `asciidoc`}
+\title{Adjust \pkg{knitr}'s Hooks for \command{asciidoc}}
 \usage{
 adjust_asciidoc_hooks(hooks = c("message", "error", "warning"),
   replacement = "source")
@@ -21,7 +21,7 @@ The return value of
 }
 \description{
 By default, \pkg{knitr} renders messages, warnings and errors to
-[NOTE|WARNING|ERROR]-blocks in `asciidoc`, which is ... not my choice.
+[NOTE|WARNING|ERROR]-blocks in \command{asciidoc}, which is ... not my choice.
 To restore \pkg{knitr}'s behaviour, set \code{hooks} or \code{replacement} to
 \code{\link{NULL}}.
 }

@@ -17,18 +17,22 @@ help("rasciidoc-package", package = "rasciidoc")
 ```
 
 ```
-#> Create Reports Using 'R' and 'asciidoc'
+#> Warning in parse_Rd("man/rasciidoc-package.Rd", encoding = "unknown",
+#> fragment = FALSE, : man/rasciidoc-package.Rd:6: unknown macro '\cmd'
+#> Warning in parse_Rd("man/rasciidoc-package.Rd", encoding = "unknown",
+#> fragment = FALSE, : man/rasciidoc-package.Rd:8: unknown macro '\cmd'
+#> Create Reports Using R and \cmdasciidoc
 #> 
 #> Description:
 #> 
-#>      Inspired by Karl Broman's reader on using knitr with asciidoc
-#>      <URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html>,
-#>      this is a wrapper to and a slight modification of knitr.
+#>      Inspired by Karl Broman's reader on using knitr with \cmdasciidoc
+#>      (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>), this
+#>      is a wrapper to and a slight modification of knitr.
 #> 
 #> Details:
 #> 
 #>      You will find the details in
-#>      'vignette("An_Introduction_to_asciidoc", package = "rasciidoc")'.
+#>      'vignette("An_Introduction_to_rasciidoc", package = "rasciidoc")'.
 ```
 ## Installation
 

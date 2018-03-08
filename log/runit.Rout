@@ -6,7 +6,7 @@ Executing test function test_adjusting_hooks  ...  done successfully.
 
 Executing test function test_knit_spin  ... 
 
-processing file: /tmp/RtmpDdF2s0/spin.Rmd
+processing file: /tmp/Rtmptb1hO3/spin.Rmd
   |                                                                         |                                                                 |   0%  |                                                                         |.....                                                            |   8%
   ordinary text without R code
 
@@ -51,7 +51,7 @@ output file: spin.md
 
 
 
-processing file: /tmp/RtmpDdF2s0/knit.Rasciidoc
+processing file: /tmp/Rtmptb1hO3/knit.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |.......                                                          |  11%
   ordinary text without R code
 
@@ -82,7 +82,7 @@ label: unnamed-chunk-4
    inline R code fragments
 
 
-output file: /tmp/RtmpDdF2s0/knit.asciidoc
+output file: /tmp/Rtmptb1hO3/knit.asciidoc
 
  done successfully.
 
@@ -90,34 +90,34 @@ output file: /tmp/RtmpDdF2s0/knit.asciidoc
 
 Executing test function test_render_simple  ... 
 
-processing file: /tmp/RtmpDdF2s0/files/simple.Rasciidoc
+processing file: /tmp/Rtmptb1hO3/files/simple.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-1
 
-output file: /tmp/RtmpDdF2s0/files/simple.asciidoc
+output file: /tmp/Rtmptb1hO3/files/simple.asciidoc
 
 
 
-processing file: /tmp/RtmpDdF2s0/files/simple.Rasciidoc
+processing file: /tmp/Rtmptb1hO3/files/simple.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
   ordinary text without R code
 
   |                                                                         |.................................................................| 100%
 label: unnamed-chunk-1
 
-output file: /tmp/RtmpDdF2s0/files/simple.asciidoc
+output file: /tmp/Rtmptb1hO3/files/simple.asciidoc
 
 
 
-processing file: /tmp/RtmpDdF2s0/files/fake.Radoc
+processing file: /tmp/Rtmptb1hO3/files/fake.Radoc
   |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
   ordinary text without R code
 
 
-output file: /tmp/RtmpDdF2s0/files/fake.adoc
+output file: /tmp/Rtmptb1hO3/files/fake.adoc
 
  done successfully.
 
@@ -125,7 +125,7 @@ output file: /tmp/RtmpDdF2s0/files/fake.adoc
 
 Executing test function test_render_slides  ... 
 
-processing file: /tmp/RtmpDdF2s0/files/slides.Rasciidoc
+processing file: /tmp/Rtmptb1hO3/files/slides.Rasciidoc
   |                                                                         |                                                                 |   0%  |                                                                         |................                                                 |  25%
   ordinary text without R code
 
@@ -143,7 +143,7 @@ List of 1
   ordinary text without R code
 
 
-output file: /tmp/RtmpDdF2s0/files/slides.asciidoc
+output file: /tmp/Rtmptb1hO3/files/slides.asciidoc
 
  done successfully.
 
@@ -152,7 +152,7 @@ output file: /tmp/RtmpDdF2s0/files/slides.asciidoc
 Executing test function test_exception  ... Error in eval(expr, envir = parent.frame()) : Hello, error!
  done successfully.
 
-RUNIT TEST PROTOCOL -- Thu Mar  8 16:27:15 2018 
+RUNIT TEST PROTOCOL -- Thu Mar  8 16:57:25 2018 
 *********************************************** 
 Number of test functions: 5 
 Number of errors: 0 
@@ -173,10 +173,10 @@ Involved directory:
 inst/runit_tests 
 --------------------------- 
 Test file: inst/runit_tests/runit-render.R 
-test_adjusting_hooks: (11 checks) ... OK (0.38 seconds)
-test_knit_spin: (2 checks) ... OK (29.74 seconds)
-test_render_simple: (4 checks) ... OK (10.37 seconds)
-test_render_slides: (2 checks) ... OK (5.12 seconds)
+test_adjusting_hooks: (11 checks) ... OK (0.22 seconds)
+test_knit_spin: (2 checks) ... OK (11.7 seconds)
+test_render_simple: (4 checks) ... OK (3.83 seconds)
+test_render_slides: (2 checks) ... OK (3.31 seconds)
 --------------------------- 
 Test file: inst/runit_tests/runit-throw.R 
 test_exception: (1 checks) ... OK (0 seconds)

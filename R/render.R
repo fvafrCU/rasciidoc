@@ -4,16 +4,17 @@ is_installed <- function(program) {
     return(is_installed)
 }
 
-#' Render an `asciidoc` File
+#' Render an \command{asciidoc} File
 #'
-#' This is the basic interface to `asciidoc`. Not more than a call to
-#' \code{\link{system2}} and checks on `asciidoc` and `source-highlight`.
+#' This is the basic interface to \command{asciidoc}. Not more than a call to
+#' \code{\link{system2}} and checks on \command{asciidoc} and
+#' \command{source-highlight}.
 #' You should usually not call it directly, see
 #' \code{\link{render}} and \code{\link{render_slides}} for wrappers.
 #'
-#' @param file_name The file to run `asciidoc` on.
-#' @param ... arguments passed to `asciidoc` via \code{\link{system2}}.
-#' @return \code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
+#' @param file_name The file to run \command{asciidoc} on.
+#' @param ... arguments passed to \command{asciidoc} via \code{\link{system2}}.
+#' @return \code{\link[base:invisible]{Invisibly}} \command{asciidoc} return value.
 #' @export
 #' @examples 
 #' wd <- file.path(tempdir(), "rasciidoc")
@@ -103,7 +104,7 @@ is_spin_file <- function(file_name) {
 #' @param working_directory Where to run \code{\link[knitr:knit]{knitr::knit}}
 #' or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 #' directory to ensure that sourcing code into the input file works correctly.
-#' @param asciidoc_args arguments passed to `asciidoc` via \code{\link{system2}}.
+#' @param asciidoc_args arguments passed to \command{asciidoc} via \code{\link{system2}}.
 #' @param clean Remove temporary file(s)?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export

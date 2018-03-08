@@ -7,7 +7,7 @@ downloaded 3.6 MB
 * installing *source* package ‘Rcpp’ ...
 ** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/Rtmpj7Nh4A/R.INSTALL5b077c9834d3/Rcpp/src'
+make[1]: Entering directory '/tmp/RtmpPQOlbU/R.INSTALL3f94743f735/Rcpp/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
@@ -15,8 +15,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/u
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
 g++ -shared -L/usr/local/lib64 -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
-make[1]: Leaving directory '/tmp/Rtmpj7Nh4A/R.INSTALL5b077c9834d3/Rcpp/src'
-installing to /tmp/Rtmpp7cbA6/file5a096bba98ef/Rcpp/libs
+make[1]: Leaving directory '/tmp/RtmpPQOlbU/R.INSTALL3f94743f735/Rcpp/src'
+installing to /tmp/RtmptXEzke/file3157d998302/Rcpp/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -26,15 +26,15 @@ installing to /tmp/Rtmpp7cbA6/file5a096bba98ef/Rcpp/libs
 ** installing vignettes
 ** testing if installed package can be loaded
 Error: package or namespace load failed for ‘Rcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/tmp/Rtmpp7cbA6/file5a096bba98ef/Rcpp/libs/Rcpp.so':
-  /tmp/Rtmpp7cbA6/file5a096bba98ef/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
+ unable to load shared object '/tmp/RtmptXEzke/file3157d998302/Rcpp/libs/Rcpp.so':
+  /tmp/RtmptXEzke/file3157d998302/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
 Error: loading failed
 Execution halted
 ERROR: loading failed
-* removing ‘/tmp/Rtmpp7cbA6/file5a096bba98ef/Rcpp’
+* removing ‘/tmp/RtmptXEzke/file3157d998302/Rcpp’
 
 The downloaded source packages are in
-	‘/tmp/Rtmpp7cbA6/downloaded_packages’
+	‘/tmp/RtmptXEzke/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

@@ -30,7 +30,7 @@ the \code{replacement}'s hooks.}
 \item{replacement}{The hook with which to replace the hooks given by
 \code{hooks}.}
 
-\item{asciidoc_args}{arguments passed to `asciidoc` via \code{\link{system2}}.}
+\item{asciidoc_args}{arguments passed to \command{asciidoc} via \code{\link{system2}}.}
 
 \item{clean}{Remove temporary file(s)?}
 }

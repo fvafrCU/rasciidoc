@@ -2,21 +2,22 @@
 % Please edit documentation in R/render.R
 \name{rasciidoc}
 \alias{rasciidoc}
-\title{Render an `asciidoc` File}
+\title{Render an \command{asciidoc} File}
 \usage{
 rasciidoc(file_name, ...)
 }
 \arguments{
-\item{file_name}{The file to run `asciidoc` on.}
+\item{file_name}{The file to run \command{asciidoc} on.}
 
-\item{...}{arguments passed to `asciidoc` via \code{\link{system2}}.}
+\item{...}{arguments passed to \command{asciidoc} via \code{\link{system2}}.}
 }
 \value{
-\code{\link[base:invisible]{Invisibly}} `asciidoc`'s return value.
+\code{\link[base:invisible]{Invisibly}} \command{asciidoc} return value.
 }
 \description{
-This is the basic interface to `asciidoc`. Not more than a call to
-\code{\link{system2}} and checks on `asciidoc` and `source-highlight`.
+This is the basic interface to \command{asciidoc}. Not more than a call to
+\code{\link{system2}} and checks on \command{asciidoc} and
+\command{source-highlight}.
 You should usually not call it directly, see
 \code{\link{render}} and \code{\link{render_slides}} for wrappers.
 }
