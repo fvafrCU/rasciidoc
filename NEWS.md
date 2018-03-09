@@ -1,6 +1,7 @@
-# rasciidoc 0.9.0.9000
+# rasciidoc 1.0.0
 
-* devel
+* Improve testing.
+* Checked for spelling, lints and cleanr.
 
 # rascidoc 0.9.0
 
