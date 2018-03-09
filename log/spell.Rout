@@ -1,6 +1,6 @@
   WORD        FOUND IN
 asciidoc    title:1, description:2,3
-behaviour   adjust_asciidoc_hooks.Rd:25
+behaviour   adjust_asciidoc_hooks.Rd:26
 Broman      rasciidoc-package.Rd:8
 Broman's    description:1
 http        description:3

@@ -184,28 +184,28 @@ COPY: R/knitr_internals_mod.R:33:9: style: Use <-, not =, for assignment.
 COPY: R/knitr_internals_mod.R:33:64: style: Only use double-quotes.
       x = vapply(group_src(x), paste, character(1), collapse = '\n')
                                                                ^~~~
-COPY: R/knitr_internals_mod.R:60:74: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:61:74: style: Trailing whitespace is superfluous.
     # Verbatim copy of a part of knitr::render_asciidoc() version 1.18.7, 
                                                                          ^
-COPY: R/knitr_internals_mod.R:64:66: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:65:66: style: Trailing whitespace is superfluous.
         x <- paste(c(hilight_source(x, "asciidoc", options), ""), 
                                                                  ^
-COPY: R/knitr_internals_mod.R:66:74: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:67:74: style: Trailing whitespace is superfluous.
         sprintf("\n[source,%s]\n----\n%s----\n", tolower(options$engine), 
                                                                          ^
-COPY: R/knitr_internals_mod.R:70:56: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:71:56: style: Trailing whitespace is superfluous.
         sprintf("\n[NOTE]\n====\n.Message\n%s\n====\n", 
                                                        ^
-COPY: R/knitr_internals_mod.R:78:57: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:79:57: style: Trailing whitespace is superfluous.
         sprintf("\n[CAUTION]\n====\n.Error\n%s\n====\n", 
                                                         ^
-COPY: R/knitr_internals_mod.R:87:10: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:88:10: style: Trailing whitespace is superfluous.
         } 
          ^
-COPY: R/knitr_internals_mod.R:89:77: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:90:77: style: Trailing whitespace is superfluous.
     res <- knitr::knit_hooks$set(source = hook.source, output = hook.output, 
                                                                             ^
-COPY: R/knitr_internals_mod.R:91:53: style: Trailing whitespace is superfluous.
+COPY: R/knitr_internals_mod.R:92:53: style: Trailing whitespace is superfluous.
                                  error = hook.error, 
                                                     ^
 COPY: R/knitr_internals.R:2:12: style: Use <-, not =, for assignment.

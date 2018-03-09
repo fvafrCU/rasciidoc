@@ -204,8 +204,8 @@ my_sum &lt;- function(x) {
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpmkC91H/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpmkC91H/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/RtmpcVaSc0/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpcVaSc0/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
                                        paste0(sub(&quot;\\..*$&quot;, &quot;&quot;,
@@ -271,8 +271,8 @@ Some inline code: Object +value+ has value +r value+.
 })</code></pre>
 <pre><code>## Warning in run_knit(file_name, knit = knit, envir = envir): Setting option
 ## knit to TRUE based on the file contents!</code></pre>
-<pre><code>## processing file: /tmp/RtmpmkC91H/knit.Rasciidoc</code></pre>
-<pre><code>## output file: /tmp/RtmpmkC91H/knit.asciidoc</code></pre>
+<pre><code>## processing file: /tmp/RtmpcVaSc0/knit.Rasciidoc</code></pre>
+<pre><code>## output file: /tmp/RtmpcVaSc0/knit.asciidoc</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
                                        paste0(sub(&quot;\\..*$&quot;, &quot;&quot;,
@@ -342,7 +342,7 @@ print(my_sum(1:3))
                               recursive = TRUE)
                     rasciidoc::render(basename(file_name))
 })</code></pre>
-<pre><code>## processing file: /tmp/RtmpmkC91H/spin.R_nolint.Rmd</code></pre>
+<pre><code>## processing file: /tmp/RtmpcVaSc0/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),
@@ -354,7 +354,7 @@ print(my_sum(1:3))
 <h1>Knitr Hooks</h1>
 <p>I change the way knitr translates (see <a href="https://yihui.name/knitr/objects/">here</a>), as it renders messages, warnings and errors to [NOTE|WARNING|ERROR]-blocks in <code>asciidoc</code>, which is … not my choice. To restore knitr`s behaviour, set hooks or replacement to NULL.</p>
 <pre class="r"><code>rasciidoc::render(file.path(tempdir(), basename(file_name)), hooks = NULL)</code></pre>
-<pre><code>## processing file: /tmp/RtmpmkC91H/spin.R_nolint.Rmd</code></pre>
+<pre><code>## processing file: /tmp/RtmpcVaSc0/spin.R_nolint.Rmd</code></pre>
 <pre><code>## output file: spin.R_nolint.md</code></pre>
 <pre><code>## [1] 0</code></pre>
 <pre class="r"><code>if (interactive()) browseURL(file.path(tempdir(),

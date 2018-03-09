@@ -1,13 +1,18 @@
-Installing 1 packages: Rcpp
+Installing 2 packages: Rcpp, yaml
 trying URL 'http://cloud.r-project.org/src/contrib/Rcpp_0.12.15.tar.gz'
 Content type 'application/x-gzip' length 3762481 bytes (3.6 MB)
 ==================================================
 downloaded 3.6 MB
 
+trying URL 'http://cloud.r-project.org/src/contrib/yaml_2.1.18.tar.gz'
+Content type 'application/x-gzip' length 84911 bytes (82 KB)
+==================================================
+downloaded 82 KB
+
 * installing *source* package ‘Rcpp’ ...
 ** package ‘Rcpp’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpPQOlbU/R.INSTALL3f94743f735/Rcpp/src'
+make[1]: Entering directory '/tmp/RtmpMp2btk/R.INSTALL7be67c527e7a/Rcpp/src'
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
@@ -15,8 +20,8 @@ g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/u
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
 g++  -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
 g++ -shared -L/usr/local/lib64 -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
-make[1]: Leaving directory '/tmp/RtmpPQOlbU/R.INSTALL3f94743f735/Rcpp/src'
-installing to /tmp/RtmptXEzke/file3157d998302/Rcpp/libs
+make[1]: Leaving directory '/tmp/RtmpMp2btk/R.INSTALL7be67c527e7a/Rcpp/src'
+installing to /tmp/Rtmp3xrc89/file7aea134c6836/Rcpp/libs
 ** R
 ** inst
 ** preparing package for lazy loading
@@ -26,15 +31,42 @@ installing to /tmp/RtmptXEzke/file3157d998302/Rcpp/libs
 ** installing vignettes
 ** testing if installed package can be loaded
 Error: package or namespace load failed for ‘Rcpp’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/tmp/RtmptXEzke/file3157d998302/Rcpp/libs/Rcpp.so':
-  /tmp/RtmptXEzke/file3157d998302/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
+ unable to load shared object '/tmp/Rtmp3xrc89/file7aea134c6836/Rcpp/libs/Rcpp.so':
+  /tmp/Rtmp3xrc89/file7aea134c6836/Rcpp/libs/Rcpp.so: undefined symbol: DATAPTR
 Error: loading failed
 Execution halted
 ERROR: loading failed
-* removing ‘/tmp/RtmptXEzke/file3157d998302/Rcpp’
+* removing ‘/tmp/Rtmp3xrc89/file7aea134c6836/Rcpp’
+* installing *source* package ‘yaml’ ...
+** package ‘yaml’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpiG2uL0/R.INSTALL7e5b45cd1909/yaml/src'
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c api.c -o api.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c dumper.c -o dumper.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c emitter.c -o emitter.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c implicit.c -o implicit.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c loader.c -o loader.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c parser.c -o parser.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_emit.c -o r_emit.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_ext.c -o r_ext.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c r_parse.c -o r_parse.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c reader.c -o reader.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c scanner.c -o scanner.o
+gcc -I"/home/nik/svn/R/r-devel/build/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include   -fpic  -g -O2  -c writer.c -o writer.o
+gcc -shared -L/usr/local/lib64 -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o
+make[1]: Leaving directory '/tmp/RtmpiG2uL0/R.INSTALL7e5b45cd1909/yaml/src'
+installing to /tmp/Rtmp3xrc89/file7aea134c6836/yaml/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (yaml)
 
 The downloaded source packages are in
-	‘/tmp/RtmptXEzke/downloaded_packages’
+	‘/tmp/Rtmp3xrc89/downloaded_packages’
 * installing *source* package ‘rasciidoc’ ...
 ** R
 ** inst

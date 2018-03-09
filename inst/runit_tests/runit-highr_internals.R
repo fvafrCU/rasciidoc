@@ -16,9 +16,9 @@ test_escape_html <- function() {
 
 test_group_src <- function()  {
     # adapted from highr/tests/testit/test-utils.R
-    RUnit::checkIdentical(rasciidoc:::group_src('1+1'), list('1+1'))
-    RUnit::checkIdentical(rasciidoc:::group_src(c('1+1+', '1')),
-                          list(c('1+1+', '1')))
-    RUnit::checkIdentical(rasciidoc:::group_src(c('1+1+', '1', 'TRUE')),
-                          list(c('1+1+', '1'), 'TRUE'))
+    RUnit::checkIdentical(rasciidoc:::group_src("1+1"), list("1+1"))
+    RUnit::checkIdentical(rasciidoc:::group_src(c("1+1+", "1")),
+                          list(c("1+1+", "1")))
+    RUnit::checkIdentical(rasciidoc:::group_src(c("1+1+", "1", "TRUE")),
+                          list(c("1+1+", "1"), "TRUE"))
 }
