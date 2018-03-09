@@ -16,13 +16,21 @@ Best, Dominik
   Running under: Ubuntu 14.04.5 LTS
 - win-builder (devel)
 
-## Local Test Coverage
+## Test Coverage on Local Machine
 rasciidoc Coverage: 92.00%
 R/knitr_internals.R: 55.56%
 R/knitr_internals_mod.R: 78.18%
 R/highr_internals.R: 100.00%
 R/render.R: 100.00%
 R/throw.R: 100.00%
+
+## Test Coverage on https://codecov.io/gh/fvafrCU/rasciidoc/
+R/highr_internals.R 	24 	24 	0 	0 	100.00%
+R/knitr_internals.R 	9 	5 	0 	4 	55.56%
+R/knitr_internals_mod.R 	52 	40 	0 	12 	76.92%
+R/render.R 	106 	106 	0 	0 	100.00%
+R/throw.R 	4 	4 	0 	0 	100.00%
+Project Totals (5 files) 	195 	179 	0 	16 	91.79%
 
 ## R CMD check results
 Status: OK
