@@ -21,7 +21,8 @@ The return value of
 }
 \description{
 By default, \pkg{knitr} renders messages, warnings and errors to
-[NOTE|WARNING|ERROR]-blocks in \command{asciidoc}, which is ... not my choice.
+[NOTE|WARNING|ERROR]-blocks in \command{asciidoc}, which is ... not my
+choice.
 To restore \pkg{knitr}'s behaviour, set \code{hooks} or \code{replacement} to
 \code{\link{NULL}}.
 }

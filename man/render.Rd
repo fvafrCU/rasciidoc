@@ -30,7 +30,8 @@ the \code{replacement}'s hooks.}
 \item{replacement}{The hook with which to replace the hooks given by
 \code{hooks}.}
 
-\item{asciidoc_args}{arguments passed to \command{asciidoc} via \code{\link{system2}}.}
+\item{asciidoc_args}{arguments passed to \command{asciidoc} via
+\code{\link{system2}}.}
 
 \item{clean}{Remove temporary file(s)?}
 }
@@ -43,7 +44,8 @@ Spin or Knit (if required) and render an `Rasciidoc` file.
 \examples{
 wd <- file.path(tempdir(), "rasciidoc")
 dir.create(wd)
-file  <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+file  <- system.file("files", "minimal", "knit.Rasciidoc",
+                     package = "rasciidoc")
 file.copy(file, wd)
 rasciidoc::render(file.path(wd, basename(file)), asciidoc_args = "-b slidy")
 dir(wd, full.names = TRUE)

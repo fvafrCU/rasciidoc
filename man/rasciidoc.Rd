@@ -12,7 +12,8 @@ rasciidoc(file_name, ...)
 \item{...}{arguments passed to \command{asciidoc} via \code{\link{system2}}.}
 }
 \value{
-\code{\link[base:invisible]{Invisibly}} \command{asciidoc} return value.
+\code{\link[base:invisible]{Invisibly}} \command{asciidoc} return
+value.
 }
 \description{
 This is the basic interface to \command{asciidoc}. Not more than a call to
@@ -24,7 +25,8 @@ You should usually not call it directly, see
 \examples{
 wd <- file.path(tempdir(), "rasciidoc")
 dir.create(wd)
-file  <- system.file("files", "minimal", "knit.asciidoc", package = "rasciidoc")
+file  <- system.file("files", "minimal", "knit.asciidoc",
+                     package = "rasciidoc")
 file.copy(file, wd)
 rasciidoc::rasciidoc(file.path(wd, basename(file)), "-b docbook")
 dir(wd, full.names = TRUE)

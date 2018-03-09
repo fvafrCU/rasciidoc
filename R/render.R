@@ -14,12 +14,14 @@ is_installed <- function(program) {
 #'
 #' @param file_name The file to run \command{asciidoc} on.
 #' @param ... arguments passed to \command{asciidoc} via \code{\link{system2}}.
-#' @return \code{\link[base:invisible]{Invisibly}} \command{asciidoc} return value.
+#' @return \code{\link[base:invisible]{Invisibly}} \command{asciidoc} return
+#' value.
 #' @export
 #' @examples 
 #' wd <- file.path(tempdir(), "rasciidoc")
 #' dir.create(wd)
-#' file  <- system.file("files", "minimal", "knit.asciidoc", package = "rasciidoc")
+#' file  <- system.file("files", "minimal", "knit.asciidoc",
+#'                      package = "rasciidoc")
 #' file.copy(file, wd)
 #' rasciidoc::rasciidoc(file.path(wd, basename(file)), "-b docbook")
 #' dir(wd, full.names = TRUE)
@@ -104,14 +106,16 @@ is_spin_file <- function(file_name) {
 #' @param working_directory Where to run \code{\link[knitr:knit]{knitr::knit}}
 #' or \code{\link[knitr:spin]{knitr::spin}}, defaults to the input file's
 #' directory to ensure that sourcing code into the input file works correctly.
-#' @param asciidoc_args arguments passed to \command{asciidoc} via \code{\link{system2}}.
+#' @param asciidoc_args arguments passed to \command{asciidoc} via
+#' \code{\link{system2}}.
 #' @param clean Remove temporary file(s)?
 #' @return The return value of \code{\link{rasciidoc}}.
 #' @export
 #' @examples 
 #' wd <- file.path(tempdir(), "rasciidoc")
 #' dir.create(wd)
-#' file  <- system.file("files", "minimal", "knit.Rasciidoc", package = "rasciidoc")
+#' file  <- system.file("files", "minimal", "knit.Rasciidoc",
+#'                      package = "rasciidoc")
 #' file.copy(file, wd)
 #' rasciidoc::render(file.path(wd, basename(file)), asciidoc_args = "-b slidy")
 #' dir(wd, full.names = TRUE)
@@ -149,7 +153,8 @@ render <- function(file_name, knit = NA,
 #' @examples
 #' wd <- file.path(tempdir(), "rasciidoc")
 #' dir.create(wd)
-#' file  <- system.file("files", "minimal", "slides.Rasciidoc", package = "rasciidoc")
+#' file  <- system.file("files", "minimal", "slides.Rasciidoc",
+#'                      package ="rasciidoc")
 #' file.copy(file, wd)
 #' files <- rasciidoc::render_slides(file.path(wd, basename(file)))
 #' dir(wd, full.names = TRUE)

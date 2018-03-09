@@ -50,7 +50,8 @@ html output).
 \examples{
 wd <- file.path(tempdir(), "rasciidoc")
 dir.create(wd)
-file  <- system.file("files", "minimal", "slides.Rasciidoc", package = "rasciidoc")
+file  <- system.file("files", "minimal", "slides.Rasciidoc",
+                     package ="rasciidoc")
 file.copy(file, wd)
 files <- rasciidoc::render_slides(file.path(wd, basename(file)))
 dir(wd, full.names = TRUE)
