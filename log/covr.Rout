@@ -1,66 +1,23 @@
                    filename             functions line value
-4       R/highr_internals.R             try_parse    3     0
-8       R/highr_internals.R             try_parse    4     0
-10      R/highr_internals.R             try_parse    5     0
-11      R/highr_internals.R             group_src    9     0
-12      R/highr_internals.R             group_src   10     0
-14      R/highr_internals.R             group_src   11     0
-15      R/highr_internals.R             group_src   12     0
-16      R/highr_internals.R             group_src   13     0
-19      R/highr_internals.R             group_src   14     0
-21      R/highr_internals.R             group_src   15     0
-24      R/highr_internals.R             group_src   16     0
-26      R/highr_internals.R             group_src   17     0
-28      R/highr_internals.R             group_src   18     0
-31      R/highr_internals.R             group_src   19     0
-34      R/highr_internals.R             group_src   20     0
-38      R/highr_internals.R             group_src   21     0
-47      R/highr_internals.R          escape_latex   25     0
-49      R/highr_internals.R          escape_latex   26     0
-51      R/highr_internals.R          escape_latex   27     0
-59      R/highr_internals.R           escape_html   31     0
-62      R/highr_internals.R           escape_html   32     0
-65      R/highr_internals.R           escape_html   33     0
-68      R/highr_internals.R           escape_html   34     0
-71      R/highr_internals.R           escape_html   35     0
 7   R/knitr_internals_mod.R            set_header    4     0
 9   R/knitr_internals_mod.R            set_header    5     0
-20  R/knitr_internals_mod.R        hilight_source   14     0
-22  R/knitr_internals_mod.R        hilight_source   15     0
-25  R/knitr_internals_mod.R        hilight_source   16     0
-27  R/knitr_internals_mod.R        hilight_source   17     0
-29  R/knitr_internals_mod.R        hilight_source   18     0
-32  R/knitr_internals_mod.R        hilight_source   19     0
-36  R/knitr_internals_mod.R        hilight_source   20     0
-40  R/knitr_internals_mod.R        hilight_source   21     0
 43  R/knitr_internals_mod.R        hilight_source   22     0
 45  R/knitr_internals_mod.R        hilight_source   23     0
-46  R/knitr_internals_mod.R        hilight_source   24     0
 48  R/knitr_internals_mod.R        hilight_source   25     0
 50  R/knitr_internals_mod.R        hilight_source   26     0
-52  R/knitr_internals_mod.R        hilight_source   27     0
-53  R/knitr_internals_mod.R        hilight_source   28     0
-63  R/knitr_internals_mod.R        hilight_source   32     0
-66  R/knitr_internals_mod.R        hilight_source   33     0
-69  R/knitr_internals_mod.R        hilight_source   34     0
-104 R/knitr_internals_mod.R adjust_asciidoc_hooks   70     0
-106 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
-112 R/knitr_internals_mod.R adjust_asciidoc_hooks   74     0
-114 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
-120 R/knitr_internals_mod.R adjust_asciidoc_hooks   78     0
-122 R/knitr_internals_mod.R adjust_asciidoc_hooks   79     0
-3       R/knitr_internals.R            merge_list    3     0
-6       R/knitr_internals.R            merge_list    4     0
-13      R/knitr_internals.R           line_prompt   10     0
-18      R/knitr_internals.R               isFALSE   13     0
-23      R/knitr_internals.R        comment_length   16     0
+103 R/knitr_internals_mod.R adjust_asciidoc_hooks   71     0
+105 R/knitr_internals_mod.R adjust_asciidoc_hooks   72     0
+111 R/knitr_internals_mod.R adjust_asciidoc_hooks   75     0
+113 R/knitr_internals_mod.R adjust_asciidoc_hooks   76     0
+119 R/knitr_internals_mod.R adjust_asciidoc_hooks   79     0
+121 R/knitr_internals_mod.R adjust_asciidoc_hooks   80     0
 35      R/knitr_internals.R      highlight_header   20     0
 39      R/knitr_internals.R      highlight_header   21     0
 42      R/knitr_internals.R      highlight_header   22     0
 44      R/knitr_internals.R      highlight_header   23     0
-rasciidoc Coverage: 70.50%
-R/highr_internals.R: 0.00%
-R/knitr_internals.R: 0.00%
-R/knitr_internals_mod.R: 52.73%
+rasciidoc Coverage: 92.00%
+R/knitr_internals.R: 55.56%
+R/knitr_internals_mod.R: 78.18%
+R/highr_internals.R: 100.00%
 R/render.R: 100.00%
 R/throw.R: 100.00%
