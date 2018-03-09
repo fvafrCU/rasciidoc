@@ -131,7 +131,7 @@ render <- function(file_name, knit = NA,
     return(status)
 }
 
-#' Spin or Knit and Render a `Rasciidoc` File to html and slidy
+#' Spin or Knit and Render a `Rasciidoc` File to HTML and slidy
 #'
 #' When creating slides, I usually want a standard HTML output, too. But I do
 #' not want to call \code{\link{render}} twice, knitting or spinning twice.

@@ -5,9 +5,9 @@
 \alias{rasciidoc-package}
 \title{Create Reports Using R and \command{asciidoc}}
 \description{
-Inspired by Karl Broman's reader on using knitr with \command{asciidoc}
+Inspired by Karl Broman`s reader on using \pkg{knitr} with \command{asciidoc}
 \url{http://kbroman.org/knitr_knutshell/pages/asciidoc.html}, this is
-a wrapper to and a slight modification of knitr.
+a wrapper to and a slight modification of \pkg{knitr}.
 }
 \details{
 You will find the details in\cr
