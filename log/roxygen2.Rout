@@ -21,6 +21,6 @@ Type 'q()' to quit R.
 Loading required package: document
 Loading required package: knitr
 Loading required package: highr
-Writing adjust_asciidoc_hooks.Rd
+Writing rasciidoc-package.Rd
 > 
 > 

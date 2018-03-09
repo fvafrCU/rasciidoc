@@ -22,7 +22,7 @@ help("rasciidoc-package", package = "rasciidoc")
 #> Description:
 #> 
 #>      Inspired by Karl Broman`s reader on using 'knitr' with 'asciidoc'
-#>      <URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html>,
+#>      (<URL: http://kbroman.org/knitr_knutshell/pages/asciidoc.html>),
 #>      this is a wrapper to and a slight modification of 'knitr'.
 #> 
 #> Details:
