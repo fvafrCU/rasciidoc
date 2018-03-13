@@ -175,36 +175,42 @@ render_slides <- function(file_name, knit = NA,
                       knit = knit, envir = envir,
                       hooks = hooks, replacement = replacement)
     on.exit(if (isTRUE(clean)) file.remove(adoc))
+    slide_only_pattern <- "// *slide_only"
+    no_slide_pattern <- "// *no_slide"
     basename <- sub("\\..*", "", adoc)
     out_file <- paste0(basename, ".html")
-    slide_only_pattern <- "//slide_only"
-    begin_pattern <- "^//end_only_slide"
+    begin_pattern <- "^// *end_only_slide"
     if (any(grepl(begin_pattern, readLines(adoc))) ||
         any(grepl(slide_only_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
                         begin_pattern = begin_pattern,
-                        end_pattern = "^//begin_only_slide",
+                        end_pattern = "^// *begin_only_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
         excerpt <- grep(slide_only_pattern, excerpt, invert = TRUE,
                         value = TRUE)
+        excerpt <- sub(paste0(no_slide_pattern, ".*"), "", excerpt)
         # The asciidoc file has to be _here_ for sourcing to work!
         excerpt_file <- file.path(dirname(file_name),
                                   basename(tempfile(fileext = ".asciidoc")))
         writeLines(excerpt, excerpt_file)
         status <- c(status, rasciidoc(excerpt_file, paste("-o", out_file)))
-        file.remove(excerpt_file)
+        if (isTRUE(clean)) file.remove(excerpt_file)
     } else {
         status <- c(status, rasciidoc(adoc, paste("-o", out_file)))
     }
     out_files <- c(out_files, out_file)
-    begin_pattern <- "^//end_no_slide"
-    if (any(grepl(begin_pattern, readLines(adoc)))) {
+
+    begin_pattern <- "^// *end_no_slide"
+    if (any(grepl(begin_pattern, readLines(adoc))) ||
+        any(grepl(no_slide_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
         excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
                         begin_pattern = begin_pattern,
-                        end_pattern = "^//begin_no_slide",
+                        end_pattern = "^// *begin_no_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
+        excerpt <- grep(no_slide_pattern, excerpt, invert = TRUE,
+                        value = TRUE)
         excerpt <- sub(paste0(slide_only_pattern, ".*"), "", excerpt)
         excerpt <- sub("(:numbered:)", "// \\1", excerpt)
         # The asciidoc file has to be _here_ for sourcing to work!
@@ -214,7 +220,7 @@ render_slides <- function(file_name, knit = NA,
         out_file <- paste0(basename, "_slidy.html")
         status <- c(status, rasciidoc(excerpt_file, "-b slidy",
                                       paste("-o", out_file)))
-        file.remove(excerpt_file)
+        if (isTRUE(clean)) file.remove(excerpt_file)
         out_files <- c(out_files, out_file)
     }
     return(out_files[status == 0])
