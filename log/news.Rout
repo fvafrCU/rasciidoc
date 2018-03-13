@@ -1,0 +1,3 @@
+Error in packager::check_news() : Version 1.0.0.9000 not covered!
+Calls: <Anonymous> -> throw
+Execution halted
