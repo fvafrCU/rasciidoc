@@ -1,3 +1,4 @@
 <cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cyclops/fvafrcu/rasciidoc/R/render.R  render  found 8 arguments, max_num_arguments was 5
 /home/nik/git/cyclops/fvafrcu/rasciidoc/R/render.R  render_slides  found 7 arguments, max_num_arguments was 5
+render_slides  found 54 lines of code, max_lines_of_code was 50
 /home/nik/git/cyclops/fvafrcu/rasciidoc/R/render.R  run_knitr  found 6 arguments, max_num_arguments was 5>

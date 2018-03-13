@@ -15,7 +15,7 @@
 39      R/knitr_internals.R      highlight_header   21     0
 42      R/knitr_internals.R      highlight_header   22     0
 44      R/knitr_internals.R      highlight_header   23     0
-rasciidoc Coverage: 92.00%
+rasciidoc Coverage: 92.20%
 R/knitr_internals.R: 55.56%
 R/knitr_internals_mod.R: 78.18%
 R/highr_internals.R: 100.00%
