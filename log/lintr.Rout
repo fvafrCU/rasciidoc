@@ -267,4 +267,4 @@ COPY: R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
-  path[1]="/home/nik/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory
+  path[1]="/home/qwer/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

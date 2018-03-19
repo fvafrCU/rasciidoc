@@ -1,13 +1,10 @@
-# rasciidoc 1.0.0.9000
-
-* Allow for skipping single lines in slidy output by tagging them with
-  "//no_slide".
-* Now keeping intermediate files from render\_slides(), too.
-
 # rasciidoc 1.0.0
 
 * Improve testing.
 * Checked for spelling, lints and cleanr.
+* Allow for skipping single lines in slidy output by tagging them with
+  "//no_slide".
+* Now keeping intermediate files from render\_slides(), too.
 
 # rascidoc 0.9.0
 

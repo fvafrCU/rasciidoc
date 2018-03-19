@@ -1,25 +1,14 @@
 checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://www.r-pkg.org/badges/version/rasciidoc
-TlsExceptionHostPort (HandshakeFailed Error_EOF) "www.r-pkg.org" 443
-
-checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-New submission
-
-Version contains large components (1.0.0.9000)
-
-checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-        user system elapsed
-render 5.012  0.136   5.184
-displaying logs for fvafrCU/rasciidoc#72.1
-undefined method `each_pair' for #<String:0x005640f81c92d0>
-Did you mean?  each_char
+pandoc: Failed to retrieve https://www.r-pkg.org/badges/version/rasciidoc
+TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got alert : [(AlertLevel_Fatal,HandshakeFailure)]",True,HandshakeFailure)))
+displaying logs for fvafrCU/rasciidoc#73.1
+undefined method `each_pair' for #<String:0x000000018f87b0>
 Error in if (file.exists(file.path(path, travis_session_info))) { : 
   argument is of length zero
 Calls: <Anonymous>
-In addition: Warning message:
-running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1 
+In addition: Warning messages:
+1: 'DESCRIPTION' file has an 'Encoding' field and re-encoding is not possible 
+2: In system2("sudo", paste("travis logs --repo", travis_repo), stdout = TRUE) :
+  running command ''sudo' travis logs --repo fvafrCU/rasciidoc' had status 1
 Execution halted
