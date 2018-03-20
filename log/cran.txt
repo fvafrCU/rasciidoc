@@ -1,0 +1,153 @@
+
+
+Am 09.03.2018 um 17:54 schrieb CRAN submission:
+> [This was generated from CRAN.R-project.org/submit.html]
+> 
+> The following package was uploaded to CRAN:
+> ===========================================
+> 
+> Package Information:
+> Package: rasciidoc
+> Version: 1.0.0
+> Title: Create Reports Using R and `asciidoc`
+
+Thanks, please use only undirected quotation marks ('asciidoc').
+
+
+
+
+> Author(s): Andreas Dominik Cullmann [aut, cre]
+> Maintainer: Andreas Dominik Cullmann <adc-r@arcor.de>
+> Depends: R (>= 3.3.0)
+> Suggests: rmarkdown, testthat, RUnit, devtools, rprojroot, withr
+> Description: Inspired by Karl Broman's reader on using knitr with asciidoc
+>    (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>),
+>    this is a wrapper to and a slight modification of knitr.
+
+Please write package names and software names in single quotes (e.g. 
+'knitr') in title and description.
+
+Please ensure that your functions do not write by default or in your 
+examples in the user's home filespace. That is not allow by CRAN 
+policies. Please only write/save files if the user has specified a 
+directory. In your examples you can write to tempdir().
+
+
+We also get:
+Check: tests, Result: ERROR
+See attached summary for details.
+
+Please fix and resubmit.
+
+Best,
+Swetlana Herbrandt
+
+
+
+
+
+> License: BSD_2_clause + file LICENSE
+> Imports: document, knitr, highr
+> 
+> 
+> The maintainer confirms that he or she
+> has read and agrees to the CRAN policies.
+> 
+> Submitter's comment: Dear CRAN Team,
+> this is the initial commit of package
+>    'rasciidoc'.
+> 
+> Ever since I read Karl Broman`s reader
+>    on using knitr with asciidoc
+>    (http://kbroman.org/knitr_knutshell/pages/asciidoc.html),
+>    I've been using a bunch of functions to change
+>    knitr's default output hooks for asciidoc, run knitr
+>    on the input file (possibly taking care of options
+>    for slidy output) and run asciidoc from within R. I
+>    have eliminated bugs I encountered while using them
+>    for over a year now and I hope they might be of use
+>    to others.
+> 
+> Please consider uploading it to
+>    CRAN.
+> Best, Dominik
+> 
+> # Package rasciidoc 1.0.0
+> ##
+>    Test  environments
+> - R Under development (unstable)
+>    (2017-08-15 r73096)
+>    Platform: x86_64-pc-linux-gnu
+>    (64-bit)
+>    Running under: Debian GNU/Linux 9
+>    (stretch)
+> - R version 3.4.2 (2017-01-27)
+>    Platform:
+>    x86_64-pc-linux-gnu (64-bit)
+>    Running under: Ubuntu
+>    14.04.5 LTS
+> - win-builder (devel)
+> 
+> ## Test Coverage
+>    on Local Machine
+> rasciidoc Coverage:
+>    92.00%
+> R/knitr_internals.R:
+>    55.56%
+> R/knitr_internals_mod.R:
+>    78.18%
+> R/highr_internals.R: 100.00%
+> R/render.R:
+>    100.00%
+> R/throw.R: 100.00%
+> 
+> ## Test Coverage on
+>    https://codecov.io/gh/fvafrCU/rasciidoc/
+> R/highr_internals.R
+>    	24 	24 	0 	0 	100.00%
+> R/knitr_internals.R 	9 	5 	0
+>    	4 	55.56%
+> R/knitr_internals_mod.R 	52 	40 	0 	12
+>    	76.92%
+> R/render.R 	106 	106 	0 	0 	100.00%
+> R/throw.R
+>    	4 	4 	0 	0 	100.00%
+> Project Totals (5 files) 	195
+>    	179 	0 	16 	91.79%
+> 
+> ## R CMD check results
+> Status:
+>    OK
+> 
+> =================================================
+> 
+> Original content of DESCRIPTION file:
+> 
+> Package: rasciidoc
+> Title: Create Reports Using R and `asciidoc`
+> Version: 1.0.0
+> Authors@R:
+>      person(given = "Andreas Dominik",
+>             family = "Cullmann",
+>             role = c("aut", "cre"),
+>             email = "adc-r@arcor.de")
+> Description: Inspired by Karl Broman's reader on using knitr
+>      with asciidoc
+>      (<http://kbroman.org/knitr_knutshell/pages/asciidoc.html>), this is a
+>      wrapper to and a slight modification of knitr.
+> License: BSD_2_clause + file LICENSE
+> URL: https://github.com/fvafrcu/rasciidoc
+> Depends: R (>= 3.3.0)
+> Imports: document, knitr, highr
+> Suggests: rmarkdown, testthat, RUnit, devtools, rprojroot, withr
+> VignetteBuilder: knitr
+> Encoding: UTF-8
+> LazyData: true
+> RoxygenNote: 6.0.1
+> SystemRequirements: asciidoc (<https://asciidoc.org>), source-highlight
+>          is recommend.
+> NeedsCompilation: no
+> Packaged: 2018-03-09 16:48:58 UTC; nik
+> Author: Andreas Dominik Cullmann [aut, cre]
+> Maintainer: Andreas Dominik Cullmann <adc-r@arcor.de>
+> 
