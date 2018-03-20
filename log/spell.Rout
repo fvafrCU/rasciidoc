@@ -1,8 +1,7 @@
   WORD        FOUND IN
 asciidoc    title:1, description:2,3
 behaviour   adjust_asciidoc_hooks.Rd:26
-Broman      rasciidoc-package.Rd:8
-Broman's    description:1
+Broman      rasciidoc-package.Rd:8, description:1
 http        description:3
 kbroman     description:3
 knitr       description:1,3,4
