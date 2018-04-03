@@ -1,7 +1,7 @@
 if (interactive()) devtools::load_all()
 is_installed_asciidoc <- function() return(rasciidoc:::is_installed("asciidoc"))
 remove_dates <- function(x) {
-    grep(".*CET$", value = TRUE, invert = TRUE,
+    grep(".*CE[S]?T$", value = TRUE, invert = TRUE,
          grep(".*UTC$", value = TRUE, invert = TRUE, x)
          )
 }
