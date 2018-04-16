@@ -13,6 +13,30 @@ NO COPY: inst/runit_tests/runit-render.R:123:33: warning: no visible global func
 NO COPY: inst/runit_tests/runit-render.R:124:34: warning: no visible global function definition for ‘remove_dates’
                         ascii <- remove_dates(readLines("bar.html"))
                                  ^~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:9:6: style: Commented code should be removed.
+    ## ERROR in test_highlight_source: Error in if (res[n] == "\\normalsize") 
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:9:78: style: Trailing whitespace is superfluous.
+    ## ERROR in test_highlight_source: Error in if (res[n] == "\\normalsize") 
+                                                                             ^
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:10:6: style: Commented code should be removed.
+    ##   res = res[-n] : 
+     ^~~~~~~~~~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:10:25: style: Trailing whitespace is superfluous.
+    ##   res = res[-n] : 
+                        ^
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:17:1: style: lines should not be more than 80 characters.
+                                             list(highlight = TRUE, engine = "R",
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:22:1: style: lines should not be more than 80 characters.
+                         paste("<span class=\"hl kwa\">if</span> <span class=\"hl",
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:32:1: style: lines should not be more than 80 characters.
+                               "std\">(</span><span class=\"hl num\">4</span><span",
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COPY: inst/runit_tests/runit-knitr_internals_mod.R:42:1: style: lines should not be more than 80 characters.
+                                             list(highlight = FALSE, engine = "",
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COPY: R/highr_internals.R:2:11: style: Use <-, not =, for assignment.
 try_parse = function(code, silent = TRUE) {
           ^
@@ -267,4 +291,4 @@ COPY: R/knitr_internals.R:25:1: style: Trailing blank lines are superfluous.
 ^
 Warning message:
 In normalizePath(file.path(path, names(settings$exclusions))) :
-  path[1]="/home/qwer/git/cyclops/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory
+  path[1]="/home/nik/git/cs/fvafrcu/rasciidoc/inst/files/simple/spin.R": No such file or directory

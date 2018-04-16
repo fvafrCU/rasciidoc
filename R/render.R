@@ -183,7 +183,7 @@ render_slides <- function(file_name, knit = NA,
     if (any(grepl(begin_pattern, readLines(adoc))) ||
         any(grepl(slide_only_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
-        excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
+        excerpt <- glbt(adoc, keep_tagged_lines = FALSE,
                         begin_pattern = begin_pattern,
                         end_pattern = "^// *begin_only_slide",
                         from_first_line = TRUE, to_last_line = TRUE)
@@ -205,7 +205,7 @@ render_slides <- function(file_name, knit = NA,
     if (any(grepl(begin_pattern, readLines(adoc))) ||
         any(grepl(no_slide_pattern, readLines(adoc)))) {
         glbt <- document::get_lines_between_tags
-        excerpt <- glbt(adoc, keep_tagged_lines = TRUE,
+        excerpt <- glbt(adoc, keep_tagged_lines = FALSE,
                         begin_pattern = begin_pattern,
                         end_pattern = "^// *begin_no_slide",
                         from_first_line = TRUE, to_last_line = TRUE)

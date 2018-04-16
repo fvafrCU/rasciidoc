@@ -1,3 +1,7 @@
+# rasciidoc 1.0.0.9000
+
+* Remove tagged lines from input docs.
+
 # rasciidoc 1.0.0
 
 * Improve testing.
