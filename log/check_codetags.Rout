@@ -1,1 +1,0 @@
-[1] "./R/render.R:         ops <- options() ## TODO: knitr changes the options?!"
